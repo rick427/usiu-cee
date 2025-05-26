@@ -1,0 +1,48 @@
+.cl{
+    padding: 4rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    min-height: 60vh;
+    background: url("@/assets/bg.webp") no-repeat top center / cover;
+
+    &__stack{
+        width: min(40rem, 100%);
+        margin: 0 auto;
+        text-align: center;
+
+        >p{
+            //width: min(35rem, 100%);
+            margin: 0 auto;
+        }
+    }
+
+    &__card{
+        height: 100%;
+    }
+
+    &__box{
+        width: min(30rem, 100%);
+        margin: 0 auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        &__icon{
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            background-color: var(--mantine-color-gray-2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.btnLabel{
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}

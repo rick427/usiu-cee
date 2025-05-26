@@ -1,0 +1,13 @@
+.footer{
+    padding: 1rem 6rem;
+    background-color: var(--mantine-color-primary-8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a{
+        font-size: 0.75rem;
+        text-decoration: none;
+        color: white;
+    }
+}

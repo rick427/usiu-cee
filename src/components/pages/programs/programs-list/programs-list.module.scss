@@ -1,0 +1,24 @@
+.pl{
+    padding: 4rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    min-height: 60vh;
+    background: url("@/assets/bg.webp") no-repeat top center / cover;
+
+    &__stack{
+        width: min(40rem, 100%);
+        margin: 0 auto;
+        text-align: center;
+
+        >p{
+            width: min(35rem, 100%);
+            margin: 0 auto;
+        }
+    }
+}
+
+.btnLabel{
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}

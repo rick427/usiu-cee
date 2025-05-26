@@ -1,0 +1,47 @@
+.dets{
+    padding: 4rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &__tab{
+        border-radius: 0.1rem;
+        border: 1px solid var(--mantine-color-gray-2);
+        border-right-color: transparent;
+
+        &[data-active] {
+            z-index: 1;
+            background-color: var(--mantine-color-primary-7);
+            border-color: transparent;
+            color: var(--mantine-color-white);
+
+            @mixin hover {
+                background-color: var(--mantine-color-primary-filled-hover);
+            }
+        }
+    }
+
+    &__box{
+        width: min(40rem, 100%);
+        overflow-y: auto;
+        margin: 0 auto;
+        max-height: 28rem;
+    }
+
+    &__form{
+        width: min(50rem, 100%);
+
+        &__label{
+            font-size: 0.85rem;
+        }
+
+        &__input{
+            font-size: 0.85rem;
+        }
+    }
+}
+
+.btnLabel{
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}

@@ -1,0 +1,68 @@
+.header{
+    padding: 1rem 6rem;
+    height: 5.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 5;
+    backdrop-filter: saturate(180%) blur(10px);
+    background-color: hsla(0, 0%, 100%, .8);
+    border-bottom: 1px solid var(--mantine-color-gray-2);
+    
+    &__logo{
+        // The Logo's dimensions are attrocious, 
+        // hence the absolute positioning
+        width: 11rem;
+        height: 4.5rem;
+        position: absolute;
+        left: 6rem;
+        top: 50%;
+        opacity: 0;
+        transform: translateY(-50%);
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__links{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 1.5rem;
+
+        > li{
+            font-size: 0.8rem;
+            text-transform: uppercase;
+
+            a{
+                text-decoration: none;
+                color: var(--mantine-color-dark);
+            }
+        }
+    }
+
+    &__socials{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 1rem;
+
+        > li{
+            font-size: 0.8rem;
+            text-transform: uppercase;
+
+            a{
+                text-decoration: none;
+                color: var(--mantine-color-dark);
+            }
+        }
+    }
+}
