@@ -1,5 +1,6 @@
-import { Title, Text } from "@mantine/core";
-import { useParams } from "react-router";
+import { Title, Text, Group } from "@mantine/core";
+import { GoChevronRight } from "react-icons/go";
+import { Link, useParams } from "react-router";
 
 import styles from "./hero.module.scss";
 import { formatSlug } from "@/utils";
@@ -12,7 +13,17 @@ export default function Hero() {
             <Title order={1} fz={50} c="white">
                 {formatSlug(programId?.replace(/-/g, " "))}
             </Title>
-            <Text c="white">Home &rarr; Programs &rarr; {formatSlug(programId)}</Text>
+            <Group gap="xs">
+                <Link to="/">Home</Link>
+
+                <GoChevronRight color="white" />
+
+                <Link to="/programs">Programs</Link>
+
+                <GoChevronRight color="white" />
+                
+                <Text c="white"> {formatSlug(programId)}</Text>
+            </Group>
         </section>
     )
 }

@@ -66,7 +66,7 @@ export const programs:Program[] = [
         id: 2,
         name: "Open Executive Modular Programs.",
         slug: "open-executive-modular-programs",
-        description: "Build leadership skills over time with flexible modules focused on strategy, governance, and institutional excellence—ideal for higher education leaders and managers seeking long-term growth.",
+        description: "Build leadership skills over time with more flexible modules focused on strategy, governance, and institutional excellence ideal for higher education leaders and managers seeking long-term growth. Check out our courses for more details.",
         image: p8,
         courses: [
             {
@@ -108,7 +108,7 @@ export const programs:Program[] = [
         id: 3,
         name: "Organizational Custom Solutions.",
         slug: "organizational-custom-solutions",
-        description: "Tailored programs co-designed with your organization to solve real challenges—whether it's leadership development, cultural transformation, or team-wide upskilling.",
+        description: "Tailored programs co-designed with your organization to solve real challenges—whether it's leadership development, cultural transformation, or team-wide upskilling. Contact us to discuss your organizational needs.",
         image: p3,
         courses: [],
     },

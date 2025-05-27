@@ -8,4 +8,9 @@
     align-items: center;
     gap: 1rem;
     border-bottom: 5px solid var(--mantine-color-secondary-6);
+
+    a{
+        color: var(--mantine-color-white);
+        text-decoration: none;
+    }
 }
