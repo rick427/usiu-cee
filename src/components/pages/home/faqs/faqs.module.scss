@@ -4,6 +4,11 @@
     &__stack{
         width: min(30rem, 100%);
     }
+
+    &__image{
+        border-top: 5px solid var(--mantine-color-primary-6);
+        border-bottom: 5px solid var(--mantine-color-secondary-6);
+    }
 }
 
 .btnLabel{

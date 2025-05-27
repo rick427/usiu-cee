@@ -7,7 +7,7 @@
     justify-content: center;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("@/assets/banner-bg.webp") no-repeat center center / cover fixed;
     position: relative;
-    border-bottom: 5px solid var(--mantine-color-primary-6);
+    border-bottom: 5px solid var(--mantine-color-secondary-6);
 
     &:after{
         content: "";

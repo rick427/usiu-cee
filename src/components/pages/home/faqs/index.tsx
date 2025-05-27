@@ -86,6 +86,8 @@ export default function FAQs() {
                         width={600}
                         height={600}
                         src={faqsImage}
+                        alt="faqs-image"
+                        className={styles.faqs__image}
                     />
                 </Grid.Col>
             </Grid>

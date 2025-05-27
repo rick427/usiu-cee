@@ -1,4 +1,5 @@
 import { StrictMode } from 'react'
+import { Toaster } from 'react-hot-toast';
 import { createRoot } from 'react-dom/client'
 import { createTheme, MantineProvider } from '@mantine/core';
 
@@ -21,6 +22,11 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <MantineProvider theme={theme}>
       <App />
+      <Toaster 
+        toastOptions={{
+          style: { fontSize: "0.8rem" }
+        }} 
+      />
     </MantineProvider>
   </StrictMode>,
 )

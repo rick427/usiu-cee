@@ -1,4 +1,6 @@
-import { Title, Text } from "@mantine/core";
+import { Title, Text, Group } from "@mantine/core";
+import { GoChevronRight } from "react-icons/go";
+import { Link } from "react-router";
 
 import styles from "./hero.module.scss";
 
@@ -6,7 +8,11 @@ export default function Hero() {
     return (
         <section className={styles.hero}>
             <Title order={1} fz={50} c="white">Contact Us</Title>
-            <Text c="white">Home &rarr; Contact</Text>
+            <Group gap="xs">
+                <Link to="/">Home</Link>
+                <GoChevronRight color="white" /> 
+                <Text c="white">Contact Us</Text>
+            </Group>
         </section>
     )
 }

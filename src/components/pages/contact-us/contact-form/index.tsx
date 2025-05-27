@@ -1,9 +1,14 @@
 import { Stack, Title, Text, SimpleGrid, TextInput, Textarea, Button } from "@mantine/core";
 import { useForm } from "@mantine/form";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
+import { useState } from "react";
 
 import styles from "./contact-form.module.scss";
 
 export default function ContactForm() {
+    const [loading, setLoading] = useState<boolean>(false);
+
     const form = useForm({
         initialValues: {
             firstName: "",
@@ -23,9 +28,34 @@ export default function ContactForm() {
         },
     });
 
-    const handleSubmit = (values: typeof form.values) => {
-        console.log("Form submitted with values:", values);
-        // Handle form submission logic here
+    const handleSubmit = async (values: typeof form.values) => {
+        try {
+            setLoading(true);
+            const templateParams = {
+                to_name: "",
+                from_name: `${values.firstName} ${values.lastName}`,
+                from_email: values.email,
+                from_phone: values.phoneNumber,
+                subject: values.subject,
+                message: values.message,
+            };
+
+            const result = await emailjs.send(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                templateParams,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            );
+            if (result.status === 200) {
+                form.reset();
+                toast.success("Message sent successfully!");
+            }
+        } catch (error) {
+            console.error("Email send error:", error);
+            toast.error("Oops! Something went wrong while sending your message.");
+        } finally {
+            setLoading(false);
+        }
     };
     return (
         <section className={styles.cf}>
@@ -119,6 +149,8 @@ export default function ContactForm() {
                     type="submit"
                     variant="filled"
                     color="primary.8"
+                    loading={loading}
+                    loaderProps={{ size: "xs" }}
                     classNames={{ label: styles.btnLabel}}
                 >
                     Send Message

@@ -72,7 +72,8 @@ export default function CoursesList() {
                     icon={<LuCircleAlert size={22} />}
                 >
                     No courses are available for this program at the moment.
-                    Please contact us for more information should you need assistance.
+                    Please contact us for more information should you 
+                    need further assistance.
                 </Alert>
             </section>
         )
