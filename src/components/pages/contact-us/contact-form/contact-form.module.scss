@@ -1,0 +1,38 @@
+.cf{
+    padding: 4rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &__stack{
+        width: min(40rem, 100%);
+        margin: 0 auto;
+        text-align: center;
+
+        >p{
+            width: min(35rem, 100%);
+            margin: 0 auto;
+        }
+    }
+
+    &__form{
+        width: min(40rem, 100%);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &__label{
+            font-size: 0.85rem;
+        }
+
+        &__input{
+            font-size: 0.85rem;
+        }
+    }
+}
+
+.btnLabel{
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}

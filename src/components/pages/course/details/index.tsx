@@ -2,10 +2,9 @@ import { useState } from "react";
 import { useForm } from "@mantine/form";
 import { LuCircleAlert } from "react-icons/lu";
 import { useParams, useNavigate } from "react-router";
-import { Tabs, Title, Text, Box, Group, Stack, List, Alert, TextInput, Divider } from "@mantine/core";
+import { Tabs, Title, Text, Box, SimpleGrid, Stack, List, Alert, TextInput } from "@mantine/core";
 
 import styles from "./details.module.scss";
-import { formatSlug } from "@/utils";
 
 export const TABS = {
   ABOUT: { id: 1, name: "ABOUT" },
@@ -17,6 +16,7 @@ export const TABS = {
   ADMISSIONS: { id: 7, name: "ADMISSIONS" },
   META: { id: 8, name: "META" },
   DOWNLOAD: { id: 9, name: "DOWNLOAD" },
+  ENROLLMENT: { id: 10, name: "ENROLLMENT"},
 } as const;
 
 export default function CourseDetails() {
@@ -44,33 +44,6 @@ export default function CourseDetails() {
     console.log(courseId, programId, navigate, form);
     return (
         <section className={styles.dets}>
-            {/* <Group justify="center" align="center">
-                <Button
-                    mt="md"
-                    size="md"
-                    radius="xs"
-                    color="dark"
-                    variant="primary.9"
-                    //rightSection={<BsDownload />}
-                    classNames={{ label: styles.btnLabel}}
-                    //onClick={() => navigate(`/programs/${program.slug}`)}
-                >
-                    Download Brochure
-                </Button>
-                <Button
-                    mt="md"
-                    size="md"
-                    radius="xs"
-                    color="dark"
-                    variant="primary.9"
-                    //rightSection={<BsArrowRight />}
-                    classNames={{ label: styles.btnLabel}}
-                    //onClick={() => navigate(`/programs/${program.slug}`)}
-                >
-                    Course enrollment
-                </Button>
-            </Group> */}
-
             <Tabs 
                 value={activeTab} 
                 onChange={setActiveTab} 
@@ -78,49 +51,54 @@ export default function CourseDetails() {
                 classNames={{ tab: styles.dets__tab}}
             >
                 <Tabs.List justify="flex-end">
-                    <Tabs.Tab mb="xs" value={TABS.ABOUT["name"]}>
+                    <Tabs.Tab mb={5} value={TABS.ABOUT["name"]}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             About the Course
                         </Text>
                     </Tabs.Tab>
-                    <Tabs.Tab mb="xs" value={TABS.AIM["name"]}>
+                    <Tabs.Tab mb={5} value={TABS.AIM["name"]}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             Aim of the Course
                         </Text>
                     </Tabs.Tab>
-                    <Tabs.Tab mb="xs" value={TABS.TARGET["name"]}>
+                    <Tabs.Tab mb={5} value={TABS.TARGET["name"]}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             The Target Audience
                         </Text>
                     </Tabs.Tab>
-                    <Tabs.Tab mb="xs" value={TABS.OUTCOME["name"]}>
+                    <Tabs.Tab mb={5} value={TABS.OUTCOME["name"]}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             Outcome of the Program
                         </Text>
                     </Tabs.Tab>
-                    <Tabs.Tab mb="xs" value={TABS.DELIVERY["name"]}>
+                    <Tabs.Tab mb={5} value={TABS.DELIVERY["name"]}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             Mode of Delivery & Duration
                         </Text>
                     </Tabs.Tab>
-                    <Tabs.Tab mb="xs" value={TABS.CONTENTS["name"]}>
+                    <Tabs.Tab mb={5} value={TABS.CONTENTS["name"]}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             Course Content
                         </Text>
                     </Tabs.Tab>
-                    <Tabs.Tab mb="xs" value={TABS.ADMISSIONS["name"]}>
+                    <Tabs.Tab mb={5} value={TABS.ADMISSIONS["name"]}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             Course Admissions
                         </Text>
                     </Tabs.Tab>
-                    <Tabs.Tab mb="xs" value={TABS.META["name"]}>
+                    <Tabs.Tab mb={5} value={TABS.META["name"]}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             International Students
                         </Text>
                     </Tabs.Tab>
-                    <Tabs.Tab value={TABS.DOWNLOAD["name"]}>
+                    <Tabs.Tab mb={5} value={TABS.DOWNLOAD["name"]}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             Download Brochure
+                        </Text>
+                    </Tabs.Tab>
+                    <Tabs.Tab value={TABS.ENROLLMENT["name"]}>
+                        <Text tt="uppercase" ta="left" fz={12}>
+                            Course Enrollment
                         </Text>
                     </Tabs.Tab>
                 </Tabs.List>
@@ -242,7 +220,7 @@ export default function CourseDetails() {
 
                 <Tabs.Panel value={TABS.CONTENTS["name"]}>
                     <Box pl="xl">
-                        <Alert variant="light" color="primary" title="Courses Not Found!" icon={<LuCircleAlert size={22} />}>
+                        <Alert variant="light" color="primary" fw={300} title="Courses Not Found!" icon={<LuCircleAlert size={22} />}>
                             No course contents available at the moment.
                             Please check back later or contact us for more information.
                         </Alert>
@@ -302,19 +280,18 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 Download Brochure
                             </Title>
-                            <Divider />
+                            {/* <Divider />
                             <Title order={2} c="gray.9" fw={700}>
                                 {formatSlug(courseId)}
-                            </Title>
+                            </Title> */}
                             <Text c="gray.8" fw={300} fz={15}>
-                                Kindly fill in the foem below and we shall 
+                                Kindly fill in the form below and we shall 
                                 send the brochure to you.
                             </Text>
 
                             <form className={styles.dets__form} onSubmit={form.onSubmit(handleSubmit)}>
-                                <Group>
+                                <SimpleGrid cols={2}>
                                     <TextInput 
-                                        flex={1}
                                         size="md"
                                         withAsterisk 
                                         label="First name"
@@ -326,7 +303,6 @@ export default function CourseDetails() {
                                         }} 
                                     />
                                     <TextInput 
-                                        flex={1}
                                         size="md"
                                         withAsterisk 
                                         label="Last name" 
@@ -337,7 +313,66 @@ export default function CourseDetails() {
                                             label: styles.dets__form__label,
                                         }} 
                                     />
-                                </Group>
+                                </SimpleGrid>
+                                <SimpleGrid cols={2}>
+                                    <TextInput 
+                                        size="md"
+                                        withAsterisk 
+                                        label="Email address" 
+                                        placeholder="Enter your email"
+                                        {...form.getInputProps("email")}
+                                        classNames={{ 
+                                            input: styles.dets__form__input,
+                                            label: styles.dets__form__label,
+                                        }} 
+                                    />
+                                    <TextInput 
+                                        size="md"
+                                        withAsterisk 
+                                        label="Phone number" 
+                                        placeholder="Enter your phone number"
+                                        {...form.getInputProps("phoneNumber")}
+                                        classNames={{ 
+                                            input: styles.dets__form__input,
+                                            label: styles.dets__form__label,
+                                        }} 
+                                    />
+                                </SimpleGrid>
+                                <SimpleGrid cols={2}>
+                                    <TextInput 
+                                        size="md"
+                                        withAsterisk 
+                                        label="Country of Origin" 
+                                        placeholder="Select your country"
+                                        {...form.getInputProps("country")}
+                                        classNames={{ 
+                                            input: styles.dets__form__input,
+                                            label: styles.dets__form__label,
+                                        }} 
+                                    />
+                                    <TextInput 
+                                        size="md"
+                                        withAsterisk 
+                                        label="Job Title / Position" 
+                                        placeholder="Enter your job title"
+                                        {...form.getInputProps("occupation")}
+                                        classNames={{ 
+                                            input: styles.dets__form__input,
+                                            label: styles.dets__form__label,
+                                        }} 
+                                    />
+                                </SimpleGrid>
+                                {/* <TextInput 
+                                    size="md"
+                                    withAsterisk 
+                                    label="Country of Origin" 
+                                    placeholder="Select your country"
+                                    {...form.getInputProps("country")}
+                                    classNames={{ 
+                                        input: styles.dets__form__input,
+                                        label: styles.dets__form__label,
+                                    }} 
+                                /> */}
                             </form>
                         </Stack>
                     </Box>

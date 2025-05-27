@@ -37,7 +37,7 @@ export const programs:Program[] = [
             {
                 id: 1,
                 name : "Business Analytics for Executives Program - (BAEP)",
-                slug: "business-analytics-for-executives-program-baep",
+                slug: "business-analytics-for-executives-program-(BAEP)",
                 description: "The Business Analytics for Executives Program (BAEP) is tailored to empower leaders with the skills to harness data-driven strategies, enabling informed decision-making and a competitive edge in today’s fast-paced market. By integrating internal and external data sources, participants will learn to foster innovation, optimize business processes, and enhance productivity, ultimately allowing organizations to reinvent their products and better respond to evolving market demands.",
                 image: p2,
                 duration: "27th - 31st October 2025",
@@ -46,7 +46,7 @@ export const programs:Program[] = [
             {
                 id: 2,
                 name : "Client Experience Excellence Program - (CEEP)",
-                slug: "client-experience-excellence-program-ceep",
+                slug: "client-experience-excellence-program-(CEEP)",
                 description: "The Client Experience Excellence Program (CEEP) at USIU Africa is designed to go beyond traditional training by enabling executives to implement innovative strategies that truly transform customer interactions and foster deep loyalty. Focusing on practical application and leadership, CEEP is designed to help executives turn satisfied customers into passionate advocates, driving organizational success through a superior and memorable client experience.",
                 image: p4,
                 duration: "15th - 17th October 2025",
@@ -54,7 +54,7 @@ export const programs:Program[] = [
             {
                 id: 3,
                 name : "New Manager Development Program - (NMDP)",
-                slug: "new-manager-development-program-nmdp",
+                slug: "new-manager-development-program-(NMPD)",
                 description: "The New Manager Development Program aims to equip new managers with a solid understanding of business processes, management principles, and essential skills, helping them grasp how core functions interrelate and enhancing their ability to lead effectively within their organizations.",
                 image: p5,
                 duration: "1st - 5th September 2025",
@@ -72,7 +72,7 @@ export const programs:Program[] = [
             {
                 id: 1,
                 name: "Developing Emerging Leaders in Higher Learning Institutions - (DEL-HLIP)",
-                slug: "developing-emerging-leaders-in-higher-learning-institutions-del-hlip",
+                slug: "developing-emerging-leaders-in-higher-learning-institutions-(DEL-HLIP)",
                 description: "Developing Emerging Leaders in Higher Learning Institutions program aims at preparing the next set of higher education managers and administrators towards effectiveness, resilience, accountability and courageous management and leadership while instilling the urge to drive their institutions path towards success.",
                 image: p6,
                 duration: "20th April, 2025"
@@ -80,7 +80,7 @@ export const programs:Program[] = [
             {
                 id: 2,
                 name: "Effective Management Development Program (EMDP)",
-                slug: "effective-management-development-program-emd",
+                slug: "effective-management-development-program-(EMDP)",
                 description: "The primary aim of the Effective Management Development Program is to enhance the effectiveness of the manager through the impartation of managerial skills and competencies, building leadership capabilities, and preparing managers for future strategic leadership roles, ultimately contributing to improved organisational performance and effectiveness.",
                 image: p7,
                 duration: "11th August, 2025",
@@ -89,7 +89,7 @@ export const programs:Program[] = [
             {
                 id: 3,
                 name: "Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL)",
-                slug: "executive-leadership-development-program-for-higher-learning-institutions-leaders-eldp-hlil",
+                slug: "executive-leadership-development-program-for-higher-learning-institutions-leaders-(ELDP-HLIL)",
                 description: "The Executive Leadership Development Program for Higher Learning Institutions (ELDP-HLI) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape.",
                 image: p9,
                 duration: "28th July, 2026",
@@ -98,7 +98,7 @@ export const programs:Program[] = [
             {
                 id: 4,
                 name: "Senior Leadership Development Program (SLDP): For Higher Learning Insitutions Leaders",
-                slug: "senior-leadership-development-program-sldp-for-higher-learning-insitutions-leaders",
+                slug: "senior-leadership-development-program-(SLDP)-for-higher-learning-insitutions-leaders",
                 description: "Executive Leadership Development Program (SLDP): For Higher Learning Institutions Leaders at USIU Africa aims at developing the next set of College Principals, University DVCs and VCs for higher learning institutions. The program aims to develop a wide range of skills that senior executives in higher learning institutions will need to meet the challenges of today's educational environment and serve the students.",
                 image: p10,
             }
@@ -108,7 +108,7 @@ export const programs:Program[] = [
         id: 3,
         name: "Organizational Custom Solutions.",
         slug: "organizational-custom-solutions",
-        description: "Tailored programs co-designed with your organization to solve real challenges—whether it’s leadership development, cultural transformation, or team-wide upskilling.",
+        description: "Tailored programs co-designed with your organization to solve real challenges—whether it's leadership development, cultural transformation, or team-wide upskilling.",
         image: p3,
         courses: [],
     },

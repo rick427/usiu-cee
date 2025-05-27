@@ -1,0 +1,11 @@
+.hero{
+    min-height: 40vh;
+    margin-top: 5.5rem;;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("@/assets/programs-bg.png") no-repeat center center / cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 5px solid var(--mantine-color-secondary-6);
+}
