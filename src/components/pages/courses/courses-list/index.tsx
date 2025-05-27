@@ -55,7 +55,7 @@ export default function CoursesList() {
             <section className={styles.cl}>
                 <Stack className={styles.cl__stack} align="center">
                     <Title c="gray.9" order={1}>
-                        About Program
+                        About program
                     </Title>
                     <Text ta="center" c="gray.7" fw={300}>
                         {program.description}
@@ -83,7 +83,7 @@ export default function CoursesList() {
         <section className={styles.cl}>
             <Stack className={styles.cl__stack} align="center">
                 <Title c="gray.9" order={1}>
-                    About Program
+                    About program
                 </Title>
                 <Text ta="center" c="gray.7" fw={300}>
                     {program.description}
@@ -92,20 +92,34 @@ export default function CoursesList() {
 
             <Stack gap="xl">
                 {program.courses.length > 0 && (
-                    <Group justify="center" align="center" gap="xs">
-                        <TextInput 
-                            w={250} 
-                            value={searchTerm}
-                            placeholder="Search courses"
-                            onChange={(e) => setSearchTerm(e.currentTarget.value)}
-                        />
-                        <DatePickerInput
-                            type="range"
-                            placeholder="Select date range"
-                            value={dateRange}
-                            onChange={setDateRange}
-                            w={220}
-                        />
+                    <Group justify={program.courses.length >= 4 ? "space-between" : "center"} align="center" gap="xl">
+                        <Group>
+                            <TextInput 
+                                w={250} 
+                                value={searchTerm}
+                                placeholder="Search courses"
+                                onChange={(e) => setSearchTerm(e.currentTarget.value)}
+                            />
+                            <DatePickerInput
+                                type="range"
+                                placeholder="Select date range"
+                                value={dateRange}
+                                onChange={setDateRange}
+                                w={220}
+                            />
+                            <NumberInput
+                                w={150}
+                                prefix="Ksh"
+                                placeholder="Min amount"
+                                value={minAmount}
+                                allowNegative={false}
+                                allowDecimal={false}
+                                thousandSeparator=","
+                                onChange={(val) => setMinAmount(val)}
+                                min={0}
+                            />
+                        </Group>
+
                         <Select
                             w={120}
                             clearable
@@ -116,17 +130,6 @@ export default function CoursesList() {
                                 { value: "asc", label: "Sort A-Z" },
                                 { value: "desc", label: "Sort Z-A" },
                             ]}
-                        />
-                        <NumberInput
-                            w={150}
-                            prefix="Ksh"
-                            placeholder="Min amount"
-                            value={minAmount}
-                            allowNegative={false}
-                            allowDecimal={false}
-                            thousandSeparator=","
-                            onChange={(val) => setMinAmount(val)}
-                            min={0}
                         />
                     </Group>
                 )}

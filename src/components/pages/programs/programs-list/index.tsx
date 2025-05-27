@@ -31,8 +31,8 @@ export default function ProgramList() {
     return (
         <section className={styles.pl}>
             <Stack className={styles.pl__stack} align="center">
-                <Title tt="capitalize" c="gray.9" order={1}>
-                    All programs
+                <Title c="gray.9" order={1}>
+                    Browse our Programs
                 </Title>
                 <Text ta="center" c="gray.7" fw={300}>
                     Discover our executive programs from intensive, days long courses 

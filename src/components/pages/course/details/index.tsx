@@ -1,22 +1,24 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "@mantine/form";
-import { LuCircleAlert } from "react-icons/lu";
-import { useParams, useNavigate } from "react-router";
-import { Tabs, Title, Text, Box, SimpleGrid, Stack, List, Alert, TextInput } from "@mantine/core";
+import { useParams } from "react-router";
+import { Tabs, Title, Text, Box, SimpleGrid, Stack, List, TextInput } from "@mantine/core";
 
 import styles from "./details.module.scss";
+import { programs } from "@/common/data/programs";
 
 export const TABS = {
-  ABOUT: { id: 1, name: "ABOUT" },
-  AIM: { id: 2, name: "AIM" },
-  TARGET: { id: 3, name: "TARGET" },
-  OUTCOME: { id: 4, name: "OUTCOME" },
-  DELIVERY: { id: 5, name: "DELIVERY" },
-  CONTENTS: { id: 6, name: "CONTENTS" },
-  ADMISSIONS: { id: 7, name: "ADMISSIONS" },
-  META: { id: 8, name: "META" },
-  DOWNLOAD: { id: 9, name: "DOWNLOAD" },
-  ENROLLMENT: { id: 10, name: "ENROLLMENT"},
+    AIM: { id: 2, name: "AIM" },
+    ABOUT: { id: 1, name: "ABOUT" },
+    TARGET: { id: 3, name: "TARGET" },
+    OUTCOME: { id: 4, name: "OUTCOME" },
+    DELIVERY: { id: 5, name: "DELIVERY" },
+    CONTENTS: { id: 6, name: "CONTENTS" },
+    COACHING: { id: 7, name: "COACHING" },
+    DOWNLOAD: { id: 11, name: "DOWNLOAD" },
+    ENROLLMENT: { id: 12, name: "ENROLLMENT"},
+    ADMISSIONS: { id: 8, name: "ADMISSIONS" },
+    INTERNATIONAL: { id: 9, name: "INTERNATIONAL" },
+    CERTIFICATION: { id: 10, name: "CERTIFICATION" },
 } as const;
 
 export default function CourseDetails() {
@@ -25,8 +27,6 @@ export default function CourseDetails() {
     const params = useParams<{ programId: string, courseId: string }>();
     const programId = params.programId;
     const courseId = params.courseId;
-
-    const navigate = useNavigate();
 
     const form = useForm({
         initialValues: {
@@ -41,7 +41,12 @@ export default function CourseDetails() {
         console.log("Form submitted with values:", values);
     }
 
-    console.log(courseId, programId, navigate, form);
+    const program = programs.find((p) => p.slug === programId);
+    if (!program) return null;
+
+    const course = program.courses.find((c) => c.slug === courseId);
+    if (!course) return null;
+
     return (
         <section className={styles.dets}>
             <Tabs 
@@ -56,7 +61,7 @@ export default function CourseDetails() {
                             About the Course
                         </Text>
                     </Tabs.Tab>
-                    <Tabs.Tab mb={5} value={TABS.AIM["name"]}>
+                    <Tabs.Tab mb={5} value={TABS.AIM["name"]} disabled={!course.tabs.aim}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             Aim of the Course
                         </Text>
@@ -66,31 +71,45 @@ export default function CourseDetails() {
                             The Target Audience
                         </Text>
                     </Tabs.Tab>
-                    <Tabs.Tab mb={5} value={TABS.OUTCOME["name"]}>
+                    <Tabs.Tab mb={5} value={TABS.OUTCOME["name"]} disabled={!course.tabs.outcome.length}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             Outcome of the Program
                         </Text>
                     </Tabs.Tab>
-                    <Tabs.Tab mb={5} value={TABS.DELIVERY["name"]}>
+                    <Tabs.Tab mb={5} value={TABS.DELIVERY["name"]} disabled={!course.tabs.delivery.length}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             Mode of Delivery & Duration
                         </Text>
                     </Tabs.Tab>
-                    <Tabs.Tab mb={5} value={TABS.CONTENTS["name"]}>
+                    <Tabs.Tab mb={5} value={TABS.CONTENTS["name"]} disabled={!course.tabs.contents.length}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             Course Content
                         </Text>
                     </Tabs.Tab>
-                    <Tabs.Tab mb={5} value={TABS.ADMISSIONS["name"]}>
+                    {course.tabs.coaching && (
+                        <Tabs.Tab mb={5} value={TABS.COACHING["name"]}>
+                            <Text tt="uppercase" ta="left" fz={12}>
+                                Course Coaching
+                            </Text>
+                        </Tabs.Tab>
+                    )}
+                    <Tabs.Tab mb={5} value={TABS.ADMISSIONS["name"]} disabled={!course.tabs.admissions.length}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             Course Admissions
                         </Text>
                     </Tabs.Tab>
-                    <Tabs.Tab mb={5} value={TABS.META["name"]}>
+                    <Tabs.Tab mb={5} value={TABS.INTERNATIONAL["name"]} disabled={!course.tabs.international.length}>
                         <Text tt="uppercase" ta="left" fz={12}>
-                            International Students
+                            International Participants
                         </Text>
                     </Tabs.Tab>
+                    {course.tabs.certification && (
+                        <Tabs.Tab mb={5} value={TABS.CERTIFICATION["name"]}>
+                            <Text tt="uppercase" ta="left" fz={12}>
+                                Professional Certification
+                            </Text>
+                        </Tabs.Tab>
+                    )}
                     <Tabs.Tab mb={5} value={TABS.DOWNLOAD["name"]}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             Download Brochure
@@ -109,13 +128,11 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 About the Course
                             </Title>
-                            <Text c="gray.8" fw={300} fz={15}>
-                                The Business Analytics for Executives Program (BAEP) is tailored to empower leaders with the skills to
-                                harness data-driven strategies, enabling informed decision-making and a competitive edge in today's
-                                fast-paced market. By integrating internal and external data sources, participants will learn to foster
-                                innovation, optimize business processes, and enhance productivity, ultimately allowing organizations
-                                to reinvent their products and better respond to evolving market demands.
-                            </Text>
+                            {course.tabs.about.map((entry, idx) => (
+                                <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                    {entry}
+                                </Text>
+                            ))}
                         </Stack>
                     </Box>
                 </Tabs.Panel>
@@ -126,9 +143,8 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 Aim of the Course
                             </Title>
-                            <Text c="gray.8" fw={300} fz={15}>
-                                This course aims to elevate executive capabilities in leveraging analytics for 
-                                organizational success and sustained growth.
+                            <Text c="gray.8" fw={400} fz={14}>
+                                {course.tabs.aim}
                             </Text>
                         </Stack>
                     </Box>
@@ -138,13 +154,12 @@ export default function CourseDetails() {
                     <Box className={styles.dets__box}>
                         <Stack>
                             <Title order={2} c="gray.9" fw={700}>
-                                Target Audience
+                                The Target Audience
                             </Title>
-                            <List c="gray.8" fw={300} fz={15}>
-                                <List.Item>C-Suite Executives</List.Item>
-                                <List.Item>Senior Managers</List.Item>
-                                <List.Item>Decision Makers</List.Item>
-                                <List.Item>Business Owners</List.Item>
+                            <List c="gray.8" fw={400} fz={14}>
+                                {course.tabs.target.map((item, idx) => (
+                                    <List.Item key={idx}>{item}</List.Item>
+                                ))} 
                             </List>
                         </Stack>
                     </Box>
@@ -156,48 +171,23 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 Outcome of the Program
                             </Title>
-                            <List c="gray.8" fw={300} fz={15}>
-                                <List.Item fw={700}>To the Professional</List.Item>
-                                <List withPadding listStyleType="revert">
-                                    <List.Item>
-                                        You will gain professional experience to enable you to make data-driven 
-                                        decisions that impact organizational success
-                                    </List.Item>
-                                    <List.Item>
-                                        You will develop critical skills for enhanced risk management. By understanding the potential
-                                        risks associated with various business decisions, executives will be able to mitigate these risks
-                                        and protect their organizations
-                                    </List.Item>
-                                    <List.Item>
-                                        You will understand how to gain insights from complex datasets
-                                    </List.Item>
-                                    <List.Item>
-                                        Using analytics to enhance operational efficiency and streamline workflows
-                                    </List.Item>
-                                    <List.Item>
-                                        Developing the leadership mindset necessary to drive analytics initiatives 
-                                        within your organization.
-                                    </List.Item>
-                                    <List.Item>
-                                        Applying Artificial Intelligence tools to enhance decision making processes.
-                                    </List.Item>
-                                </List>
-                            </List>
-                            <List c="gray.8" fw={300} fz={15}>
-                                <List.Item fw={700}>To the Organization</List.Item>
-                                <List withPadding listStyleType="revert">
-                                    <List.Item>
-                                        <Text span fw={600}>Market Competitive advantage:</Text> Your organization will absolutely benefit by leveraging data analytics
-                                        to get critical insights into customer behaviour, market trends, and operational efficiencies, enabling
-                                        them to make informed decisions, optimize strategies, and stay ahead of competitors in today's fast-
-                                        paced, data-driven marketplace.
-                                    </List.Item>
-                                    <List.Item>
-                                        <Text span fw={600}>Improved Organizational Performance:</Text> Leveraging data enables executives to make informed
-                                        decisions that streamline operations, cut unnecessary expenses, and enhance customer experiences,
-                                        ultimately boosting organizational performance and competitiveness.
-                                    </List.Item>
-                                </List>
+                            <List type="ordered" c="gray.8" fw={400} fz={15}>
+                                {course.tabs.outcome.map((item, idx) => (
+                                    <React.Fragment key={idx}>
+                                        {item.title ? (
+                                            <List.Item fw={700} mt="md" mb="xs">{item.title}</List.Item>
+                                        ) : (
+                                            <List.Item fw={400} mt="md" mb="xs">{item.meta}</List.Item>
+                                        )}
+                                        <List withPadding listStyleType="revert">
+                                            {item.data.map((subItem, subIdx) => (
+                                                <List.Item key={`${idx}-${subIdx}`}>
+                                                    <Text fz={14} span fw={300}>{subItem}:</Text>
+                                                </List.Item>
+                                            ))}
+                                        </List>
+                                    </React.Fragment>
+                                ))}
                             </List>
                         </Stack>
                     </Box>
@@ -209,21 +199,59 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 Mode of Delivery & Duration
                             </Title>
-                            <Text c="gray.8" fw={300} fz={15}>
-                                The program is delivered in 3 days on campus. The training program combines industry expert-led
-                                and faculty instruction with diverse learning methods like case studies, videos, simulations, role plays,
-                                and group discussions to provide a dynamic and practical learning experience.
-                            </Text>
+                            {course.tabs.delivery.map((entry, idx) => (
+                                <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                    {entry}
+                                </Text>
+                            ))}
                         </Stack>
                     </Box>
                 </Tabs.Panel>
 
                 <Tabs.Panel value={TABS.CONTENTS["name"]}>
-                    <Box h="100%" pl="xl">
-                        <Alert w={600} mx="auto" variant="light" color="primary" fw={300} title="Course Content Unavailable!" icon={<LuCircleAlert size={22} />}>
-                            No course contents are available for this course at the moment.
-                            Please check back later or contact us for more information.
-                        </Alert>
+                    <Box className={styles.dets__box}>
+                        <Stack>
+                            <Title order={2} c="gray.9" fw={700}>
+                                Course Contents
+                            </Title>
+                            {course.tabs.contents.map((content, idx) => {
+                                if(typeof content === "string"){
+                                    return (
+                                        <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                            {content}
+                                        </Text>
+                                    )
+                                }
+
+                                return (
+                                    <Stack>
+                                        <Title>{content.title}</Title>
+                                        <List c="gray.8" fw={300} fz={15}>
+                                            {content.data.map((item, itemIdx) => (
+                                                <List.Item key={`${idx}-${itemIdx}`}>
+                                                    <Text fz={14} span fw={400}>{item}</Text>
+                                                </List.Item>
+                                            ))} 
+                                        </List>
+                                    </Stack>
+                                )
+                            })}
+                        </Stack>
+                    </Box>
+                </Tabs.Panel>
+
+                <Tabs.Panel value={TABS.COACHING["name"]}>
+                    <Box className={styles.dets__box}>
+                        <Stack>
+                            <Title order={2} c="gray.9" fw={700}>
+                                Course Coaching
+                            </Title>
+                            {course.tabs.coaching?.map((entry, idx) => (
+                                <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                    {entry}
+                                </Text>
+                            ))}
+                        </Stack>
                     </Box>
                 </Tabs.Panel>
 
@@ -233,43 +261,41 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 Course Admissions
                             </Title>
-                            <Text c="gray.8" fw={300} fz={15}>
-                                We admit applicants on a rolling and space-available basis. You are therefore 
-                                advised to submit your application as soon as possible. The admissions process 
-                                is based on your professional experience and achievement, your responsibility in
-                                the organisation, and the admissions criteria for each program as described in the 
-                                Target Audience. There are no formal educational requirements for this program 
-                                offered by the USIU-Africa Center for Executive Education.
-                            </Text>
+                            {course.tabs.admissions.map((entry, idx) => (
+                                <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                    {entry}
+                                </Text>
+                            ))}
                         </Stack>
                     </Box>
                 </Tabs.Panel>
 
-                <Tabs.Panel value={TABS.META["name"]}>
+                <Tabs.Panel value={TABS.INTERNATIONAL["name"]}>
                     <Box className={styles.dets__box}>
                         <Stack>
                             <Title order={2} c="gray.9" fw={700}>
                                 International Participants
                             </Title>
-                            <Text c="gray.8" fw={300} fz={15}>
-                                Accommodation: The university does not run student hostels but will assist you in securing affordable
-                                accommodation at your own expense for the short duration of your stay.
-                            </Text>
-                            <Text c="gray.8" fw={300} fz={15}>
-                                Language of Instruction - United States International University utilizes English as its primary
-                                language of instruction, making it essential for students to be proficient in English to effectively engage
-                                with academic materials, participate in discussions, and complete coursework successfully.
-                            </Text>
-                            <Text c="gray.8" fw={300} fz={15}>
-                                Professional Certification: Certified Business Analyst Foundation (CBAF) (Optional)
-                            </Text>
-                            <Text c="gray.8" fw={300} fz={15}>
-                                We will issue certificates on the Business Analytics for Executives Program-(BAEP); however, for those
-                                who are interested in getting the title Certified Business Analyst Foundation (CBAF) will be required
-                                to take a multiple-choice application exam at a separate cost of US$220.
-                                The certification is offered by an American Certifying body in conjunction with United States
-                                International University.
-                            </Text>
+                            {course.tabs.international.map((entry, idx) => (
+                                <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                    {entry}
+                                </Text>
+                            ))}
+                        </Stack>
+                    </Box>
+                </Tabs.Panel>
+
+                <Tabs.Panel value={TABS.CERTIFICATION["name"]}>
+                    <Box className={styles.dets__box}>
+                        <Stack>
+                            <Title order={2} c="gray.9" fw={700}>
+                                Professional Certification: Certified Team Leader (CTL) (Optional)
+                            </Title>
+                            {course.tabs.certification?.map((entry, idx) => (
+                                <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                    {entry}
+                                </Text>
+                            ))}
                         </Stack>
                     </Box>
                 </Tabs.Panel>
@@ -280,10 +306,6 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 Download Brochure
                             </Title>
-                            {/* <Divider />
-                            <Title order={2} c="gray.9" fw={700}>
-                                {formatSlug(courseId)}
-                            </Title> */}
                             <Text c="gray.8" fw={300} fz={15}>
                                 Kindly fill in the form below and we shall 
                                 send the brochure to you.

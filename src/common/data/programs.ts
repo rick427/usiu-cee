@@ -43,7 +43,7 @@ interface Program {
         image: string;
         duration?: string;
         amount?: number;
-        tabs?: CourseTabContent;
+        tabs: CourseTabContent;
     }[];
 }
 
@@ -189,16 +189,16 @@ export const programs:Program[] = [
                         "The one-week training program offers a dynamic blend of face-to-face and virtual sessions, providing participants with a comprehensive learning experience. Led by experienced industry experts and knowledgeable faculty, the program employs diverse teaching methods such as case studies, structured learning materials, video sessions, simulations, role plays, and group discussions to enhance engagement and practical understanding. This multifaceted approach aims to equip participants with relevant skills and insights through interactive and immersive learning techniques.",
                     ],
                     contents: [
-                        "The Shift: From specialist to Manager and leader",
-                        "Understanding the difference between Leadership and Management",
-                        "Understanding the Financial Environment in Business",
-                        "Aligning with organisational strategy",
-                        "Communication in Leadership and Management",
-                        "High-Performing Team Leadership and Management",
-                        "Conflict Management and Resolution",
-                        "Making Informed decisions during a crisis",
-                        "Collaboration and Delegation",
-                        "Receiving, analysing and interpreting feedback"
+                        "Module 1: The Shift: From specialist to Manager and leader",
+                        "Module 2: Understanding the difference between Leadership and Management",
+                        "Module 3: Understanding the Financial Environment in Business",
+                        "Module 4: Aligning with organisational strategy",
+                        "Module 5: Communication in Leadership and Management",
+                        "Module 6: High-Performing Team Leadership and Management",
+                        "Module 7: Conflict Management and Resolution",
+                        "Module 8: Making Informed decisions during a crisis",
+                        "Module 9: Collaboration and Delegation",
+                        "Module 10: Receiving, analysing and interpreting feedback"
                     ],
                     coaching: null,
                     admissions: [
@@ -222,7 +222,7 @@ export const programs:Program[] = [
         id: 2,
         name: "Open Executive Modular Programs.",
         slug: "open-executive-modular-programs",
-        description: "Build leadership skills over time with more flexible modules focused on strategy, governance, and institutional excellence ideal for higher education leaders and managers seeking long-term growth. Check out our courses for more details.",
+        description: "Build leadership skills over time with more flexible modules focused on strategy, governance, and institutional excellence ideal for higher education leaders and managers seeking long-term growth.",
         image: p8,
         courses: [
             {
@@ -469,7 +469,7 @@ export const programs:Program[] = [
                     coaching: null,
                     admissions: [],
                     international: [],
-                    certification: [],
+                    certification: null,
                 }
             }
         ],

@@ -11,8 +11,8 @@ export default function Programs() {
     return (
         <section className={styles.programs}>
             <Stack className={styles.programs__stack} align="center">
-                <Title tt="capitalize" c="gray.9" order={1}>
-                    Browse our programs
+                <Title c="gray.9" order={1}>
+                    Browse our Programs
                 </Title>
                 <Text ta="center" c="gray.7" fw={300}>
                     Explore our diverse range of programs designed to empower you with the 
