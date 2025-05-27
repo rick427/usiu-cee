@@ -1,4 +1,6 @@
 import Hero from "@/components/pages/home/hero";
+import FAQs from "@/components/pages/home/faqs";
+import Banner from "@/components/pages/home/banner";
 import Programs from "@/components/pages/home/programs";
 
 export default function Home() {
@@ -6,6 +8,8 @@ export default function Home() {
         <>
             <Hero />
             <Programs />
+            <Banner />
+            <FAQs />
         </>
     )
 }

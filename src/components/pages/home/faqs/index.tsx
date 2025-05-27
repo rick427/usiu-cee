@@ -1,0 +1,94 @@
+import { Stack, Title, Text, Group, Grid, Button, Image, Accordion } from "@mantine/core";
+import { BsArrowRight } from "react-icons/bs";
+import { useNavigate } from "react-router";
+
+import styles from "./faqs.module.scss";
+import faqsImage from "@/assets/faqs.webp";
+
+const faqsData = [
+    {
+        question: "What programs are offered by the Center for Executive Education?",
+        answer:
+        "The Center offers a range of executive short courses, leadership development programs, and custom training solutions designed for professionals, managers, and organizations seeking to upskill in today's competitive landscape."
+    },
+    {
+        question: "Who are the programs designed for?",
+        answer:
+        "Our programs are tailored for mid- to senior-level professionals, entrepreneurs, and organizational leaders who are looking to enhance their strategic thinking, leadership capabilities, and global competitiveness."
+    },
+    {
+        question: "How do I enroll in a course?",
+        answer:
+        "Enrollment is simple. Visit our official website, select your preferred course, and complete the online registration form. Our team will follow up with further details and support."
+    },
+    {
+        question: "Are the courses offered online or in-person?",
+        answer:
+        "We offer both in-person and hybrid learning formats to accommodate varying needs and schedules. Each program specifies its mode of delivery."
+    },
+];  
+
+export default function FAQs() {
+    const navigate = useNavigate();
+
+    const items = faqsData.map((faq, index) => (
+        <Accordion.Item key={index} value={`item-${index}`}>
+            <Accordion.Control>
+                <Text c="gray.9" fw={600}>
+                    {faq.question}
+                </Text>
+            </Accordion.Control>
+            <Accordion.Panel>
+                <Text c="gray.8" size="sm">{faq.answer}</Text>
+            </Accordion.Panel>
+        </Accordion.Item>
+    ));
+
+    return (
+        <section className={styles.faqs}>
+            <Grid gutter="xl" justify="center" align="center">
+                <Grid.Col span={{base: 12, sm: 6, md: 5}}>
+                    <Stack gap="xl">
+                        <Stack className={styles.faqs__stack}>
+                            <Title>
+                                Frequently Asked Questions
+                            </Title>
+                            <Text fw={300}>
+                                Here are some of the most common questions we receive 
+                                from prospective students. If you have any other questions, 
+                                feel free to reach out to us.
+                            </Text>
+                        </Stack>
+
+                        <Accordion variant="separated" defaultValue="item-0">
+                            {items}
+                        </Accordion>
+
+                        <Group align="center">
+                            <Text fw={500}>My question is not here.</Text>
+                            <Button
+                                size="md"
+                                radius="xs"
+                                variant="filled"
+                                color="primary.8"
+                                rightSection={<BsArrowRight />}
+                                classNames={{ label: styles.btnLabel}}
+                                onClick={() => navigate(`/contact-us`)}
+                            >
+                                Contact Us
+                            </Button>
+                        </Group>
+                    </Stack>
+                </Grid.Col>
+                
+                <Grid.Col span={{base: 12, sm: 6, md: 4}}>
+                    <Image 
+                        width={600}
+                        height={600}
+                        src={faqsImage}
+                    />
+                </Grid.Col>
+            </Grid>
+        </section>
+    )
+}

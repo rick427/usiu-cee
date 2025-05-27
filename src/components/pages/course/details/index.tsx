@@ -220,8 +220,8 @@ export default function CourseDetails() {
 
                 <Tabs.Panel value={TABS.CONTENTS["name"]}>
                     <Box pl="xl">
-                        <Alert variant="light" color="primary" fw={300} title="Courses Not Found!" icon={<LuCircleAlert size={22} />}>
-                            No course contents available at the moment.
+                        <Alert variant="light" color="primary" fw={300} title="Course Content Unavailable!" icon={<LuCircleAlert size={22} />}>
+                            No course contents are available for this course at the moment.
                             Please check back later or contact us for more information.
                         </Alert>
                     </Box>

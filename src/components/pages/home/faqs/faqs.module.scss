@@ -1,0 +1,12 @@
+.faqs{
+    padding: 6rem;
+
+    &__stack{
+        width: min(30rem, 100%);
+    }
+}
+
+.btnLabel{
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}

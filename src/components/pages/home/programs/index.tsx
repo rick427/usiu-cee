@@ -14,7 +14,7 @@ export default function Programs() {
                 <Title tt="capitalize" c="gray.9" order={1}>
                     Browse our programs
                 </Title>
-                <Text ta="center" c="gray.7">
+                <Text ta="center" c="gray.7" fw={300}>
                     Explore our diverse range of programs designed to empower you with the 
                     knowledge and skills needed for success in today's dynamic world. 
                     Whether you're interested in business, technology, arts, or sciences, 
@@ -40,9 +40,9 @@ export default function Programs() {
                                 <Button
                                     mt="md"
                                     size="md"
-                                    color="dark"
                                     radius="xs"
-                                    variant="primary.9"
+                                    variant="filled"
+                                    color="primary.8"
                                     rightSection={<BsArrowRight />}
                                     classNames={{ label: styles.btnLabel}}
                                     onClick={() => navigate(`/programs/${program.slug}`)}

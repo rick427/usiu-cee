@@ -29,14 +29,14 @@ export default function ContactForm() {
     };
     return (
         <section className={styles.cf}>
-            <Stack className={styles.cf__stack} align="center">
+            <Stack className={styles.cf__stack} mb="lg" align="center">
                 <Title c="gray.9" order={1}>
                     Enquiries & Contact
                 </Title>
-                <Text ta="center" c="gray.7" fw={400}>
-                    Got questions, ideas, or just want to say hello?
-                    We're here to listen, help, and collaborate. Drop us a message 
-                    and we'll get back to you promptly.
+                <Text ta="center" c="gray.7" fw={300}>
+                    If you have any questions, feedback, or would like to initiate 
+                    a conversation, we welcome your message. We are committed to 
+                    responding in a timely and thoughtful manner.
                 </Text>
             </Stack>
             
@@ -116,9 +116,9 @@ export default function ContactForm() {
                     mt="md"
                     size="md"
                     radius="xs"
-                    color="dark"
                     type="submit"
-                    variant="primary.9"
+                    variant="filled"
+                    color="primary.8"
                     classNames={{ label: styles.btnLabel}}
                 >
                     Send Message
