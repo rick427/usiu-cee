@@ -2,10 +2,10 @@ import { createBrowserRouter } from "react-router";
 
 import Home from "@/pages/home";
 import Course from "@/pages/course";
-import Support from "@/pages/support";
 import Courses from "@/pages/courses";
 import Brochure from "@/pages/brochure";
 import Programs from "@/pages/programs";
+import ContactUs from "@/pages/contact-us";
 
 import Layout from "@/components/shared/layout";
 
@@ -22,8 +22,8 @@ export const router = createBrowserRouter([
                 element: <Brochure />
             },
             {
-                path: "/support",
-                element: <Support />
+                path: "/contact-us",
+                element: <ContactUs />
             },
             {
                 path: "/programs",

@@ -1,9 +1,11 @@
 import { Box, Stack, Image, Title, Text, Card, Grid, Button } from "@mantine/core";
 import { useNavigate, useParams } from "react-router";
 import { BsArrowRight } from "react-icons/bs";
-import { IoIosAlert } from "react-icons/io";
+import { LuCircleAlert } from "react-icons/lu";
 
 import styles from "./courses-list.module.scss";
+
+import { primary } from "@/common/colors";
 import { programs } from "@/common/data/programs";
 
 export default function CoursesList() {
@@ -52,7 +54,7 @@ export default function CoursesList() {
                                         classNames={{ label: styles.btnLabel}}
                                         onClick={() => navigate(`/programs/${program.slug}/${course.slug}`)}
                                     >
-                                        View courses
+                                        View course
                                     </Button>
                                 </Stack>
                             </Card>
@@ -62,7 +64,7 @@ export default function CoursesList() {
             ) : (
                 <Box className={styles.cl__box}>
                     <Box className={styles.cl__box__icon}>
-                        <IoIosAlert size={30} />
+                        <LuCircleAlert color={primary[8]} size={30} />
                     </Box>
                     <Stack gap={5} align="center">
                         <Title c="gray.8" fw={600} order={3}>

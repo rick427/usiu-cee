@@ -7,7 +7,7 @@ export default function Hero() {
         <section className={styles.hero}>
             <Stack className={styles.hero__stack}>
                 <Title tt="capitalize" order={1} fz={55} c="white">
-                    Briding knowledge with real-world impact
+                    Bridging knowledge with real-world impact
                 </Title>
                 <Text c="white">
                     Discover a world of opportunities at the United States International University Africa (USIU-A). 

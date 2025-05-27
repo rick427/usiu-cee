@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useForm } from "@mantine/form";
+import { LuCircleAlert } from "react-icons/lu";
 import { useParams, useNavigate } from "react-router";
-import { Tabs, Title, Text, Box, Group, Stack, List, TextInput, Divider } from "@mantine/core";
+import { Tabs, Title, Text, Box, Group, Stack, List, Alert, TextInput, Divider } from "@mantine/core";
 
 import styles from "./details.module.scss";
 import { formatSlug } from "@/utils";
@@ -130,7 +131,7 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 About the Course
                             </Title>
-                            <Text c="gray.8">
+                            <Text c="gray.8" fw={300} fz={15}>
                                 The Business Analytics for Executives Program (BAEP) is tailored to empower leaders with the skills to
                                 harness data-driven strategies, enabling informed decision-making and a competitive edge in today's
                                 fast-paced market. By integrating internal and external data sources, participants will learn to foster
@@ -147,7 +148,7 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 Aim of the Course
                             </Title>
-                            <Text c="gray.8">
+                            <Text c="gray.8" fw={300} fz={15}>
                                 This course aims to elevate executive capabilities in leveraging analytics for 
                                 organizational success and sustained growth.
                             </Text>
@@ -161,7 +162,7 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 Target Audience
                             </Title>
-                            <List>
+                            <List c="gray.8" fw={300} fz={15}>
                                 <List.Item>C-Suite Executives</List.Item>
                                 <List.Item>Senior Managers</List.Item>
                                 <List.Item>Decision Makers</List.Item>
@@ -177,9 +178,9 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 Outcome of the Program
                             </Title>
-                            <List>
+                            <List c="gray.8" fw={300} fz={15}>
                                 <List.Item fw={700}>To the Professional</List.Item>
-                                <List withPadding listStyleType="disc">
+                                <List withPadding listStyleType="revert">
                                     <List.Item>
                                         You will gain professional experience to enable you to make data-driven 
                                         decisions that impact organizational success
@@ -204,9 +205,9 @@ export default function CourseDetails() {
                                     </List.Item>
                                 </List>
                             </List>
-                            <List>
+                            <List c="gray.8" fw={300} fz={15}>
                                 <List.Item fw={700}>To the Organization</List.Item>
-                                <List withPadding listStyleType="disc">
+                                <List withPadding listStyleType="revert">
                                     <List.Item>
                                         <Text span fw={600}>Market Competitive advantage:</Text> Your organization will absolutely benefit by leveraging data analytics
                                         to get critical insights into customer behaviour, market trends, and operational efficiencies, enabling
@@ -230,7 +231,7 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 Mode of Delivery & Duration
                             </Title>
-                            <Text c="gray.8">
+                            <Text c="gray.8" fw={300} fz={15}>
                                 The program is delivered in 3 days on campus. The training program combines industry expert-led
                                 and faculty instruction with diverse learning methods like case studies, videos, simulations, role plays,
                                 and group discussions to provide a dynamic and practical learning experience.
@@ -241,7 +242,10 @@ export default function CourseDetails() {
 
                 <Tabs.Panel value={TABS.CONTENTS["name"]}>
                     <Box pl="xl">
-                        
+                        <Alert variant="light" color="primary" title="Courses Not Found!" icon={<LuCircleAlert size={22} />}>
+                            No course contents available at the moment.
+                            Please check back later or contact us for more information.
+                        </Alert>
                     </Box>
                 </Tabs.Panel>
 
@@ -251,7 +255,7 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 Course Admissions
                             </Title>
-                            <Text>
+                            <Text c="gray.8" fw={300} fz={15}>
                                 We admit applicants on a rolling and space-available basis. You are therefore 
                                 advised to submit your application as soon as possible. The admissions process 
                                 is based on your professional experience and achievement, your responsibility in
@@ -269,19 +273,19 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 International Participants
                             </Title>
-                            <Text>
+                            <Text c="gray.8" fw={300} fz={15}>
                                 Accommodation: The university does not run student hostels but will assist you in securing affordable
                                 accommodation at your own expense for the short duration of your stay.
                             </Text>
-                            <Text>
+                            <Text c="gray.8" fw={300} fz={15}>
                                 Language of Instruction - United States International University utilizes English as its primary
                                 language of instruction, making it essential for students to be proficient in English to effectively engage
                                 with academic materials, participate in discussions, and complete coursework successfully.
                             </Text>
-                            <Text>
+                            <Text c="gray.8" fw={300} fz={15}>
                                 Professional Certification: Certified Business Analyst Foundation (CBAF) (Optional)
                             </Text>
-                            <Text>
+                            <Text c="gray.8" fw={300} fz={15}>
                                 We will issue certificates on the Business Analytics for Executives Program-(BAEP); however, for those
                                 who are interested in getting the title Certified Business Analyst Foundation (CBAF) will be required
                                 to take a multiple-choice application exam at a separate cost of US$220.
@@ -302,7 +306,7 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 {formatSlug(courseId)}
                             </Title>
-                            <Text>
+                            <Text c="gray.8" fw={300} fz={15}>
                                 Kindly fill in the foem below and we shall 
                                 send the brochure to you.
                             </Text>

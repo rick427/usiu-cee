@@ -22,15 +22,11 @@
     }
 
     &__box{
-        width: min(40rem, 100%);
-        overflow-y: auto;
+        width: min(55rem, 100%);
         margin: 0 auto;
-        max-height: 28rem;
     }
 
     &__form{
-        width: min(50rem, 100%);
-
         &__label{
             font-size: 0.85rem;
         }

@@ -46,7 +46,7 @@ export default function ProgramList() {
                                     classNames={{ label: styles.btnLabel}}
                                     onClick={() => navigate(`/programs/${program.slug}`)}
                                 >
-                                    View courses
+                                    View program
                                 </Button>
                             </Stack>
                         </Card>

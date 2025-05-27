@@ -12,7 +12,7 @@ export default function Hero() {
             <Title order={1} fz={50} c="white">
                 {formatSlug(programId?.replace(/-/g, " "))}
             </Title>
-            <Text c="white">Home &rarr; Programs</Text>
+            <Text c="white">Home &rarr; Programs &rarr; {formatSlug(programId)}</Text>
         </section>
     )
 }
