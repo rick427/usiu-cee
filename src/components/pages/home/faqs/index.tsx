@@ -39,7 +39,9 @@ export default function FAQs() {
                 </Text>
             </Accordion.Control>
             <Accordion.Panel>
-                <Text c="gray.8" size="sm">{faq.answer}</Text>
+                <Text c="gray.8" size="sm" fw={300}>
+                    {faq.answer}
+                </Text>
             </Accordion.Panel>
         </Accordion.Item>
     ));
@@ -53,7 +55,7 @@ export default function FAQs() {
                             <Title>
                                 Frequently Asked Questions
                             </Title>
-                            <Text fw={300}>
+                            <Text fz={14.5} fw={300}>
                                 Here are some of the most common questions we receive 
                                 from prospective students. If you have any other questions, 
                                 feel free to reach out to us.

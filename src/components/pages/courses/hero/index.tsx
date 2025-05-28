@@ -13,16 +13,20 @@ export default function Hero() {
             <Title order={1} fz={50} c="white">
                 {formatSlug(programId?.replace(/-/g, " "))}
             </Title>
-            <Group gap="xs">
+            <Group gap={5}>
                 <Link to="/">Home</Link>
 
                 <GoChevronRight color="white" />
 
-                <Link to="/programs">Programs</Link>
+                <Link to="/programs">
+                    Programs
+                </Link>
 
                 <GoChevronRight color="white" />
                 
-                <Text c="white"> {formatSlug(programId)}</Text>
+                <Text fz={13.5} c="white">
+                    {formatSlug(programId)}
+                </Text>
             </Group>
         </section>
     )

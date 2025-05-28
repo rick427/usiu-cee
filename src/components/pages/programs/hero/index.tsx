@@ -8,10 +8,10 @@ export default function Hero() {
     return (
         <section className={styles.hero}>
             <Title order={1} fz={50} c="white">Programs</Title>
-            <Group gap="xs">
+            <Group gap={5}>
                 <Link to="/">Home</Link>
                 <GoChevronRight color="white" /> 
-                <Text c="white">Programs</Text>
+                <Text fz={13.5} c="white">Programs</Text>
             </Group>
         </section>
     )

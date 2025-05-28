@@ -37,6 +37,7 @@ export default function Brochure() {
             organizationName: (value) => (value.trim().length < 3 ? "Org. name should be at least 3 characters" : null),
             jobTitle: (value) => (value.trim().length < 5 ? "Job title should be at least 5 characters" : null),
             yearsOfExperience: (value) => (value ? null : "Years of experience is required"),
+            country: (value) => (value ? null : "Country of origin is required"),
             tos: (value) => (value ? null : "Terms of service must be agreed"),
         }
     });
@@ -89,7 +90,7 @@ export default function Brochure() {
                 <Title order={2} c="gray.9" fw={700}>
                     Download Brochure - ({formatSlug(courseId)})
                 </Title>
-                <Text c="gray.8" fw={300} fz={15}>
+                <Text c="gray.8" fw={300} fz={14}>
                     Kindly fill in the form below and we shall 
                     send the brochure to you.
                 </Text>
@@ -99,8 +100,8 @@ export default function Brochure() {
                         <TextInput 
                             size="md"
                             withAsterisk 
-                            label="First name"
-                            placeholder="Enter your first name"
+                            label="First Name"
+                            placeholder="Eren"
                             {...form.getInputProps("firstName")}
                             classNames={{ 
                                 input: styles.form__input,
@@ -110,8 +111,8 @@ export default function Brochure() {
                         <TextInput 
                             size="md"
                             withAsterisk 
-                            label="Last name" 
-                            placeholder="Enter your last name"
+                            label="Last Name" 
+                            placeholder="Yeager"
                             {...form.getInputProps("lastName")}
                             classNames={{ 
                                 input: styles.form__input,
@@ -121,8 +122,8 @@ export default function Brochure() {
                         <TextInput 
                             size="md"
                             withAsterisk 
-                            label="Email address" 
-                            placeholder="Enter your email"
+                            label="Email Address" 
+                            placeholder="erenyeager@gmail.com"
                             {...form.getInputProps("email")}
                             classNames={{ 
                                 input: styles.form__input,
@@ -134,8 +135,8 @@ export default function Brochure() {
                         <TextInput 
                             size="md"
                             withAsterisk 
-                            label="Phone number" 
-                            placeholder="Enter your phone number"
+                            label="Phone Number" 
+                            placeholder="0705987678"
                             {...form.getInputProps("phoneNumber")}
                             classNames={{ 
                                 input: styles.form__input,
@@ -162,8 +163,8 @@ export default function Brochure() {
                         <TextInput 
                             size="md"
                             withAsterisk 
-                            label="Organization name" 
-                            placeholder="Select your country"
+                            label="Organization Name" 
+                            placeholder="Safaricom Limited"
                             {...form.getInputProps("organizationName")}
                             classNames={{ 
                                 input: styles.form__input,
@@ -174,7 +175,7 @@ export default function Brochure() {
                             size="md"
                             withAsterisk 
                             label="Job Title / Position" 
-                            placeholder="Enter your job title"
+                            placeholder="Senior Product Manager"
                             {...form.getInputProps("jobTitle")}
                             classNames={{ 
                                 input: styles.form__input,
@@ -185,7 +186,7 @@ export default function Brochure() {
                             size="md"
                             withAsterisk 
                             label="Total Years of Experience" 
-                            placeholder="Enter your job title"
+                            placeholder="2 Years | 4 Months | 3 Weeks"
                             {...form.getInputProps("yearsOfExperience")}
                             classNames={{ 
                                 input: styles.form__input,
