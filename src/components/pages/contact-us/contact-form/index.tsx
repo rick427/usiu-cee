@@ -32,7 +32,8 @@ export default function ContactForm() {
         try {
             setLoading(true);
             const templateParams = {
-                to_name: "",
+                to_email: `jmmunyao@usiu.ac.ke`,
+                //to_email: `ceeinfo@usiu.ac.ke`,
                 from_name: `${values.firstName} ${values.lastName}`,
                 from_email: values.email,
                 from_phone: values.phoneNumber,

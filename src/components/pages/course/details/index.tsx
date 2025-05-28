@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { useForm } from "@mantine/form";
 import { useParams } from "react-router";
-import { Tabs, Title, Text, Box, SimpleGrid, Stack, List, TextInput } from "@mantine/core";
+import { Tabs, Title, Text, Box, Stack, List } from "@mantine/core";
 
 import styles from "./details.module.scss";
+
 import { programs } from "@/common/data/programs";
+import Brochure from "@/components/pages/course/brochure";
+import Enrollment from "@/components/pages/course/enrollment";
 
 export const TABS = {
     AIM: { id: 2, name: "AIM" },
@@ -28,19 +30,6 @@ export default function CourseDetails() {
     const programId = params.programId;
     const courseId = params.courseId;
 
-    const form = useForm({
-        initialValues: {
-
-        },
-        validate: {
-
-        }
-    });
-
-    const handleSubmit = (values: typeof form.values) => {
-        console.log("Form submitted with values:", values);
-    }
-
     const program = programs.find((p) => p.slug === programId);
     if (!program) return null;
 
@@ -55,7 +44,7 @@ export default function CourseDetails() {
                 orientation="vertical"
                 classNames={{ tab: styles.dets__tab}}
             >
-                <Tabs.List justify="flex-end">
+                <Tabs.List>
                     <Tabs.Tab mb={5} value={TABS.ABOUT["name"]}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             About the Course
@@ -225,7 +214,9 @@ export default function CourseDetails() {
 
                                 return (
                                     <Stack>
-                                        <Title>{content.title}</Title>
+                                        <Title order={3} c="gray.9" fw={700}>
+                                            {content.title}
+                                        </Title>
                                         <List c="gray.8" fw={300} fz={15}>
                                             {content.data.map((item, itemIdx) => (
                                                 <List.Item key={`${idx}-${itemIdx}`}>
@@ -289,7 +280,8 @@ export default function CourseDetails() {
                     <Box className={styles.dets__box}>
                         <Stack>
                             <Title order={2} c="gray.9" fw={700}>
-                                Professional Certification: Certified Team Leader (CTL) (Optional)
+                                Professional Certification: Certified 
+                                Team Leader (CTL) (Optional)
                             </Title>
                             {course.tabs.certification?.map((entry, idx) => (
                                 <Text key={idx} c="gray.8" fw={400} fz={14}>
@@ -301,103 +293,11 @@ export default function CourseDetails() {
                 </Tabs.Panel>
 
                 <Tabs.Panel value={TABS.DOWNLOAD["name"]}>
-                    <Box className={styles.dets__box}>
-                        <Stack>
-                            <Title order={2} c="gray.9" fw={700}>
-                                Download Brochure
-                            </Title>
-                            <Text c="gray.8" fw={300} fz={15}>
-                                Kindly fill in the form below and we shall 
-                                send the brochure to you.
-                            </Text>
+                    <Brochure />
+                </Tabs.Panel>
 
-                            <form className={styles.dets__form} onSubmit={form.onSubmit(handleSubmit)}>
-                                <SimpleGrid cols={2}>
-                                    <TextInput 
-                                        size="md"
-                                        withAsterisk 
-                                        label="First name"
-                                        placeholder="Enter your first name"
-                                        {...form.getInputProps("firstName")}
-                                        classNames={{ 
-                                            input: styles.dets__form__input,
-                                            label: styles.dets__form__label,
-                                        }} 
-                                    />
-                                    <TextInput 
-                                        size="md"
-                                        withAsterisk 
-                                        label="Last name" 
-                                        placeholder="Enter your last name"
-                                        {...form.getInputProps("lastName")}
-                                        classNames={{ 
-                                            input: styles.dets__form__input,
-                                            label: styles.dets__form__label,
-                                        }} 
-                                    />
-                                </SimpleGrid>
-                                <SimpleGrid cols={2}>
-                                    <TextInput 
-                                        size="md"
-                                        withAsterisk 
-                                        label="Email address" 
-                                        placeholder="Enter your email"
-                                        {...form.getInputProps("email")}
-                                        classNames={{ 
-                                            input: styles.dets__form__input,
-                                            label: styles.dets__form__label,
-                                        }} 
-                                    />
-                                    <TextInput 
-                                        size="md"
-                                        withAsterisk 
-                                        label="Phone number" 
-                                        placeholder="Enter your phone number"
-                                        {...form.getInputProps("phoneNumber")}
-                                        classNames={{ 
-                                            input: styles.dets__form__input,
-                                            label: styles.dets__form__label,
-                                        }} 
-                                    />
-                                </SimpleGrid>
-                                <SimpleGrid cols={2}>
-                                    <TextInput 
-                                        size="md"
-                                        withAsterisk 
-                                        label="Country of Origin" 
-                                        placeholder="Select your country"
-                                        {...form.getInputProps("country")}
-                                        classNames={{ 
-                                            input: styles.dets__form__input,
-                                            label: styles.dets__form__label,
-                                        }} 
-                                    />
-                                    <TextInput 
-                                        size="md"
-                                        withAsterisk 
-                                        label="Job Title / Position" 
-                                        placeholder="Enter your job title"
-                                        {...form.getInputProps("occupation")}
-                                        classNames={{ 
-                                            input: styles.dets__form__input,
-                                            label: styles.dets__form__label,
-                                        }} 
-                                    />
-                                </SimpleGrid>
-                                {/* <TextInput 
-                                    size="md"
-                                    withAsterisk 
-                                    label="Country of Origin" 
-                                    placeholder="Select your country"
-                                    {...form.getInputProps("country")}
-                                    classNames={{ 
-                                        input: styles.dets__form__input,
-                                        label: styles.dets__form__label,
-                                    }} 
-                                /> */}
-                            </form>
-                        </Stack>
-                    </Box>
+                <Tabs.Panel value={TABS.ENROLLMENT["name"]}>
+                    <Enrollment />
                 </Tabs.Panel>
             </Tabs>
         </section>

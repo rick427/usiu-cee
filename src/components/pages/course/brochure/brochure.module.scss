@@ -1,0 +1,27 @@
+.box{
+    width: min(55rem, 100%);
+    margin: 0 auto;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+
+    &__label{
+        font-size: 0.85rem;
+    }
+
+    &__input{
+        font-size: 0.85rem;
+    }
+    &__option{
+        font-size: 0.85rem;
+    }
+}
+
+.btnLabel{
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}

@@ -92,33 +92,31 @@ export default function CoursesList() {
 
             <Stack gap="xl">
                 {program.courses.length > 0 && (
-                    <Group justify={program.courses.length >= 4 ? "space-between" : "center"} align="center" gap="xl">
-                        <Group>
-                            <TextInput 
-                                w={250} 
-                                value={searchTerm}
-                                placeholder="Search courses"
-                                onChange={(e) => setSearchTerm(e.currentTarget.value)}
-                            />
-                            <DatePickerInput
-                                type="range"
-                                placeholder="Select date range"
-                                value={dateRange}
-                                onChange={setDateRange}
-                                w={220}
-                            />
-                            <NumberInput
-                                w={150}
-                                prefix="Ksh"
-                                placeholder="Min amount"
-                                value={minAmount}
-                                allowNegative={false}
-                                allowDecimal={false}
-                                thousandSeparator=","
-                                onChange={(val) => setMinAmount(val)}
-                                min={0}
-                            />
-                        </Group>
+                    <Group justify="center" align="center" gap="xs">
+                        <TextInput 
+                            w={250} 
+                            value={searchTerm}
+                            placeholder="Search courses"
+                            onChange={(e) => setSearchTerm(e.currentTarget.value)}
+                        />
+                        <DatePickerInput
+                            type="range"
+                            placeholder="Select date range"
+                            value={dateRange}
+                            onChange={setDateRange}
+                            w={220}
+                        />
+                        <NumberInput
+                            w={150}
+                            prefix="Ksh"
+                            placeholder="Min amount"
+                            value={minAmount}
+                            allowNegative={false}
+                            allowDecimal={false}
+                            thousandSeparator=","
+                            onChange={(val) => setMinAmount(val)}
+                            min={0}
+                        />
 
                         <Select
                             w={120}

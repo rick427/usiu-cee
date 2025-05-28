@@ -1,0 +1,19 @@
+.box{
+    width: min(55rem, 100%);
+    margin: 0 auto;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    &__label{
+        font-size: 0.85rem;
+    }
+
+    &__input{
+        font-size: 0.85rem;
+    }
+}
