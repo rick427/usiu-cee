@@ -65,9 +65,14 @@ export default function ProgramList() {
 
                 <Grid justify="center">
                     {filteredPrograms.length > 0 ? (
-                        filteredPrograms.map((program) => (
-                            <Grid.Col key={program.id} span={{base: 12, sm: 6, md: 4, lg: 3}}>
-                                <Card className={styles.programs__card} shadow="sm" p="lg">
+                        filteredPrograms.map((program, index) => (
+                            <Grid.Col 
+                                key={program.id} 
+                                data-index={index}
+                                className={styles.pl__gridcol}
+                                span={{base: 12, sm: 6, md: 4, lg: 3}}
+                            >
+                                <Card className={styles.pl__card} shadow="sm" p="lg">
                                     <Card.Section>
                                         <Image h={200} src={program.image} alt={program.slug} />
                                     </Card.Section>

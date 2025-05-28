@@ -134,8 +134,13 @@ export default function CoursesList() {
 
                 {filteredCourses.length > 0 ? (
                     <Grid justify="center">
-                        {filteredCourses.map((course) => (
-                            <Grid.Col key={course.id} span={{base: 12, sm: 6, md: 4, lg: 3}}>
+                        {filteredCourses.map((course, index) => (
+                            <Grid.Col 
+                                key={course.id} 
+                                data-index={index}
+                                className={styles.cl__gridcol}
+                                span={{base: 12, sm: 6, md: 4, lg: 3}}
+                            >
                                 <Card className={styles.cl__card} shadow="sm" p="lg">
                                     <Card.Section>
                                         <Image h={200} src={course.image} alt={course.slug} />
