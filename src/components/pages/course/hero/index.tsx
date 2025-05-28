@@ -3,6 +3,8 @@ import { GoChevronRight } from "react-icons/go";
 import { Link, useParams } from "react-router";
 
 import styles from "./hero.module.scss";
+import Reveal from "@/components/shared/io/reveal";
+
 import { formatSlug } from "@/utils";
 
 export default function Hero() {
@@ -11,24 +13,29 @@ export default function Hero() {
     const courseId = params.courseId;
     return (
         <section className={styles.hero}>
-            <Title order={1} fz={50} c="white">
-                Course details
-            </Title>
-            <Group gap={5}>
-                <Link to="/">Home</Link>
+            <Reveal>
+                <Title order={1} fz={50} c="white">
+                    Course details
+                </Title>
+            </Reveal>
 
-                <GoChevronRight color="white" />
+            <Reveal>
+                <Group gap={5}>
+                    <Link to="/">Home</Link>
 
-                <Link to={`/programs/${programId}`}>
-                    {formatSlug(programId?.replace(/-/g, " "))}
-                </Link>
+                    <GoChevronRight color="white" />
 
-                <GoChevronRight color="white" />
-                
-                <Text fz={13.5} c="white">
-                    {formatSlug(courseId?.replace(/-/g, " "))}
-                </Text>
-            </Group>
+                    <Link to={`/programs/${programId}`}>
+                        {formatSlug(programId?.replace(/-/g, " "))}
+                    </Link>
+
+                    <GoChevronRight color="white" />
+                    
+                    <Text fz={13.5} c="white">
+                        {formatSlug(courseId?.replace(/-/g, " "))}
+                    </Text>
+                </Group>
+            </Reveal>
         </section>
     )
 }

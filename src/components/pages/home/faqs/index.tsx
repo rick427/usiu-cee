@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 
 import styles from "./faqs.module.scss";
 import faqsImage from "@/assets/faqs.webp";
+import SlideIn from "@/components/shared/io/slide-in";
 
 const faqsData = [
     {
@@ -50,47 +51,51 @@ export default function FAQs() {
         <section className={styles.faqs}>
             <Grid gutter="xl" justify="center" align="center">
                 <Grid.Col span={{base: 12, sm: 6, md: 5}}>
-                    <Stack gap="xl">
-                        <Stack className={styles.faqs__stack}>
-                            <Title>
-                                Frequently Asked Questions
-                            </Title>
-                            <Text fz={14.5} fw={300}>
-                                Here are some of the most common questions we receive 
-                                from prospective students. If you have any other questions, 
-                                feel free to reach out to us.
-                            </Text>
+                    <SlideIn direction="left">
+                        <Stack gap="xl">
+                            <Stack className={styles.faqs__stack}>
+                                <Title>
+                                    Frequently Asked Questions
+                                </Title>
+                                <Text fz={14.5} fw={300}>
+                                    Here are some of the most common questions we receive 
+                                    from prospective students. If you have any other questions, 
+                                    feel free to reach out to us.
+                                </Text>
+                            </Stack>
+
+                            <Accordion variant="separated" defaultValue="item-0">
+                                {items}
+                            </Accordion>
+
+                            <Group align="center">
+                                <Text fw={500}>My question is not here.</Text>
+                                <Button
+                                    size="md"
+                                    radius="xs"
+                                    variant="filled"
+                                    color="primary.8"
+                                    rightSection={<BsArrowRight />}
+                                    classNames={{ label: styles.btnLabel}}
+                                    onClick={() => navigate(`/contact-us`)}
+                                >
+                                    Contact Us
+                                </Button>
+                            </Group>
                         </Stack>
-
-                        <Accordion variant="separated" defaultValue="item-0">
-                            {items}
-                        </Accordion>
-
-                        <Group align="center">
-                            <Text fw={500}>My question is not here.</Text>
-                            <Button
-                                size="md"
-                                radius="xs"
-                                variant="filled"
-                                color="primary.8"
-                                rightSection={<BsArrowRight />}
-                                classNames={{ label: styles.btnLabel}}
-                                onClick={() => navigate(`/contact-us`)}
-                            >
-                                Contact Us
-                            </Button>
-                        </Group>
-                    </Stack>
+                    </SlideIn>
                 </Grid.Col>
                 
                 <Grid.Col span={{base: 12, sm: 6, md: 4}}>
-                    <Image 
-                        width={600}
-                        height={600}
-                        src={faqsImage}
-                        alt="faqs-image"
-                        className={styles.faqs__image}
-                    />
+                    <SlideIn direction="right">
+                        <Image 
+                            width={600}
+                            height={600}
+                            src={faqsImage}
+                            alt="faqs-image"
+                            className={styles.faqs__image}
+                        />
+                    </SlideIn>
                 </Grid.Col>
             </Grid>
         </section>

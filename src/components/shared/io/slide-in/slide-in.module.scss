@@ -1,0 +1,18 @@
+.slideIn {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slideIn.left {
+  transform: translateX(-50px);
+}
+
+.slideIn.right {
+  transform: translateX(50px);
+}
+
+.slideIn.visible {
+  opacity: 1;
+  transform: translateX(0);
+}

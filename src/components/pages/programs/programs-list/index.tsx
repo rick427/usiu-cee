@@ -5,6 +5,7 @@ import { useNavigate } from "react-router";
 import { useState } from "react";
 
 import styles from "./programs-list.module.scss";
+import Reveal from "@/components/shared/io/reveal";
 
 import { programs } from "@/common/data/programs";
 
@@ -30,16 +31,19 @@ export default function ProgramList() {
     }
     return (
         <section className={styles.pl}>
-            <Stack className={styles.pl__stack} align="center">
-                <Title c="gray.9" order={1}>
-                    Browse our Programs
-                </Title>
-                <Text ta="center" c="gray.7" fw={300}>
-                    Discover our executive programs from intensive, days long courses 
-                    for rapid skill gains to flexible modular tracks you can customize 
-                    over time designed to sharpen your leadership and drive real results.
-                </Text>
-            </Stack>
+            <Reveal>
+                <Stack className={styles.pl__stack} align="center">
+                    <Title c="gray.9" order={1}>
+                        Browse our Programs
+                    </Title>
+                    <Text ta="center" c="gray.7" fw={300}>
+                        Discover our executive programs from intensive, days long courses 
+                        for rapid skill gains to flexible modular tracks you can customize 
+                        over time designed to sharpen your leadership and drive real results.
+                    </Text>
+                </Stack>
+            </Reveal>
+
 
             <Stack gap="xl">
                 <Group justify="center" align="center" gap="xs">

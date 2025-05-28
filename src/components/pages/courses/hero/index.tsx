@@ -3,6 +3,8 @@ import { GoChevronRight } from "react-icons/go";
 import { Link, useParams } from "react-router";
 
 import styles from "./hero.module.scss";
+import Reveal from "@/components/shared/io/reveal";
+
 import { formatSlug } from "@/utils";
 
 export default function Hero() {
@@ -10,24 +12,29 @@ export default function Hero() {
     const programId = params.programId;
     return (
         <section className={styles.hero}>
-            <Title order={1} fz={50} c="white">
-                {formatSlug(programId?.replace(/-/g, " "))}
-            </Title>
-            <Group gap={5}>
-                <Link to="/">Home</Link>
+            <Reveal>
+                <Title order={1} fz={50} c="white">
+                    {formatSlug(programId?.replace(/-/g, " "))}
+                </Title>
+            </Reveal>
 
-                <GoChevronRight color="white" />
+            <Reveal delay={200}>
+                <Group gap={5}>
+                    <Link to="/">Home</Link>
 
-                <Link to="/programs">
-                    Programs
-                </Link>
+                    <GoChevronRight color="white" />
 
-                <GoChevronRight color="white" />
-                
-                <Text fz={13.5} c="white">
-                    {formatSlug(programId)}
-                </Text>
-            </Group>
+                    <Link to="/programs">
+                        Programs
+                    </Link>
+
+                    <GoChevronRight color="white" />
+                    
+                    <Text fz={13.5} c="white">
+                        {formatSlug(programId)}
+                    </Text>
+                </Group>
+            </Reveal>
         </section>
     )
 }

@@ -6,6 +6,8 @@ import { BsArrowRight } from "react-icons/bs";
 import { useState } from "react";
 
 import styles from "./courses-list.module.scss";
+import Reveal from "@/components/shared/io/reveal";
+
 import { programs } from "@/common/data/programs";
 
 export default function CoursesList() {
@@ -81,14 +83,16 @@ export default function CoursesList() {
 
     return (
         <section className={styles.cl}>
-            <Stack className={styles.cl__stack} align="center">
-                <Title c="gray.9" order={1}>
-                    About program
-                </Title>
-                <Text ta="center" c="gray.7" fw={300}>
-                    {program.description}
-                </Text>
-            </Stack>
+            <Reveal>
+                <Stack className={styles.cl__stack} align="center">
+                    <Title c="gray.9" order={1}>
+                        About program
+                    </Title>
+                    <Text ta="center" c="gray.7" fw={300}>
+                        {program.description}
+                    </Text>
+                </Stack>
+            </Reveal>
 
             <Stack gap="xl">
                 {program.courses.length > 0 && (

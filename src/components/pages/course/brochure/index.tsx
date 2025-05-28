@@ -88,7 +88,7 @@ export default function Brochure() {
         <Box className={styles.box}>
             <Stack>
                 <Title order={2} c="gray.9" fw={700}>
-                    Download Brochure - ({formatSlug(courseId)})
+                    Download Brochure - {formatSlug(courseId)}
                 </Title>
                 <Text c="gray.8" fw={300} fz={14}>
                     Kindly fill in the form below and we shall 

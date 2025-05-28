@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { useState } from "react";
 
 import styles from "./contact-form.module.scss";
+import Reveal from "@/components/shared/io/reveal";
 
 export default function ContactForm() {
     const [loading, setLoading] = useState<boolean>(false);
@@ -60,16 +61,18 @@ export default function ContactForm() {
     };
     return (
         <section className={styles.cf}>
-            <Stack className={styles.cf__stack} mb="lg" align="center">
-                <Title c="gray.9" order={1}>
-                    Enquiries & Contact
-                </Title>
-                <Text ta="center" c="gray.7" fw={300}>
-                    If you have any questions, feedback, or would like to initiate 
-                    a conversation, we welcome your message. We are committed to 
-                    responding in a timely and thoughtful manner.
-                </Text>
-            </Stack>
+            <Reveal>
+                <Stack className={styles.cf__stack} mb="lg" align="center">
+                    <Title c="gray.9" order={1}>
+                        Enquiries & Contact
+                    </Title>
+                    <Text ta="center" c="gray.7" fw={300}>
+                        If you have any questions, feedback, or would like to initiate 
+                        a conversation, we welcome your message. We are committed to 
+                        responding in a timely and thoughtful manner.
+                    </Text>
+                </Stack>
+            </Reveal>
             
             <form onSubmit={form.onSubmit(handleSubmit)} className={styles.cf__form}>
                 <SimpleGrid cols={2}>

@@ -13,10 +13,20 @@ export default function Enrollment() {
 
     const form = useForm({
         initialValues: {
-
+            firstName: "",
+            lastName: "",
+            email: "",
+            phoneNumber: "",
+            country: "",
+            tos: false,
         },
         validate: {
-
+            phoneNumber: (value) => value ? null : "Phone number is required",
+            email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
+            lastName: (value) => (value.trim().length < 2 ? "Last name is too short" : null),
+            firstName: (value) => (value.trim().length < 2 ? "First name is too short" : null),
+            country: (value) => (value ? null : "Country of origin is required"),
+            tos: (value) => (value ? null : "Terms of service must be agreed"),
         }
     });
 
