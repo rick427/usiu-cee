@@ -185,7 +185,7 @@ export default function CustomSolutions() {
                             </Title>
                             <Text c="gray.8" fw={300} fz={14}>
                                 Kindly fill in the form below and we shall 
-                                send the brochure to you.
+                                get back to you as soon as possible.
                             </Text>
                             <form onSubmit={form.onSubmit(handleSubmit)} className={styles.cs__form}>
                                 <SimpleGrid cols={3}>
