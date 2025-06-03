@@ -1,21 +1,27 @@
 .hero{
     margin-top: 5.5rem;
-    padding: 4rem 6rem;
-    min-height: 60vh;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("@/assets/hero.jpg") no-repeat center center / cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 60vh;
+    position: relative;
     border-bottom: 5px solid var(--mantine-color-secondary-6);
+
+    &__bg{
+        height: 100%;
+        display: flex;
+        padding: 4rem 6rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center;
+    }
 
     &__stack{
         width: min(40rem, 100%);
         margin: 0 auto;
         text-align: center;
 
-        >p{
-            width: min(32rem, 100%);
+        p{
+            width: min(30rem, 100%);
             margin: 0 auto;
         }
     }

@@ -7,6 +7,7 @@ import { useState } from "react";
 
 import styles from "./courses-list.module.scss";
 import Reveal from "@/components/shared/io/reveal";
+import CustomSolutions from "@/components/pages/programs/custom-solutions";
 
 import { programs } from "@/common/data/programs";
 
@@ -51,6 +52,8 @@ export default function CoursesList() {
             return sortOrder === "asc" ? aName.localeCompare(bName) : bName.localeCompare(aName);
         });
     }
+
+    if(program.is_custom) return <CustomSolutions />
 
     if(program.courses.length === 0) {
         return (

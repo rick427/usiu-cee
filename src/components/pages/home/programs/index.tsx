@@ -52,7 +52,7 @@ export default function Programs() {
                                         classNames={{ label: styles.btnLabel}}
                                         onClick={() => navigate(`/programs/${program.slug}`)}
                                     >
-                                        View courses
+                                        {program.courses.length ? `View courses (${program.courses.length})` : "View program"}
                                     </Button>
                                 </Stack>
                             </Card>

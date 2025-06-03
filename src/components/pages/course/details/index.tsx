@@ -8,7 +8,7 @@ import { programs } from "@/common/data/programs";
 import Brochure from "@/components/pages/course/brochure";
 import Enrollment from "@/components/pages/course/enrollment";
 
-export const TABS = {
+const TABS = {
     AIM: { id: 2, name: "AIM" },
     ABOUT: { id: 1, name: "ABOUT" },
     TARGET: { id: 3, name: "TARGET" },
@@ -31,10 +31,10 @@ export default function CourseDetails() {
     const courseId = params.courseId;
 
     const program = programs.find((p) => p.slug === programId);
-    if (!program) return null;
+    if (!program) return <div style={{margin: "20rem, 0"}}>No program</div>;
 
     const course = program.courses.find((c) => c.slug === courseId);
-    if (!course) return null;
+    if (!course) return <div style={{margin: "20rem, 0"}}>No course</div>;
 
     return (
         <section className={styles.dets}>
@@ -42,7 +42,11 @@ export default function CourseDetails() {
                 value={activeTab} 
                 onChange={setActiveTab} 
                 orientation="vertical"
-                classNames={{ tab: styles.dets__tab}}
+                classNames={{ 
+                    root: styles.dets__root,
+                    tab: styles.dets__tab,
+                    panel: styles.dets__panel,
+                }}
             >
                 <Tabs.List>
                     <Tabs.Tab mb={5} value={TABS.ABOUT["name"]}>
@@ -106,7 +110,7 @@ export default function CourseDetails() {
                     </Tabs.Tab>
                     <Tabs.Tab value={TABS.ENROLLMENT["name"]}>
                         <Text tt="uppercase" ta="left" fz={12}>
-                            Course Enrollment
+                            Make Application
                         </Text>
                     </Tabs.Tab>
                 </Tabs.List>
@@ -169,11 +173,20 @@ export default function CourseDetails() {
                                             <List.Item fw={400} mt="md" mb="xs">{item.meta}</List.Item>
                                         )}
                                         <List withPadding listStyleType="revert">
-                                            {item.data.map((subItem, subIdx) => (
-                                                <List.Item key={`${idx}-${subIdx}`}>
-                                                    <Text fz={14} span fw={300}>{subItem}:</Text>
-                                                </List.Item>
-                                            ))}
+                                            {item.data.map((subItem, subIdx) => {
+                                                return (
+                                                    <List.Item key={`${idx}-${subIdx}`}>
+                                                        <Text fz={14} span fw={300}>
+                                                            {subItem.includes(":") ? (
+                                                                <>
+                                                                    <Text span fz={14} fw={600}>{subItem.split(":")[0]}:</Text>
+                                                                    {subItem.split(":").slice(1).join(":")}
+                                                                </>
+                                                            ) : subItem}
+                                                        </Text>
+                                                    </List.Item>
+                                                )
+                                            })}
                                         </List>
                                     </React.Fragment>
                                 ))}
@@ -214,7 +227,7 @@ export default function CourseDetails() {
 
                                 return (
                                     <Stack>
-                                        <Title order={3} c="gray.9" fw={700}>
+                                        <Title order={4} c="gray.9" fw={700}>
                                             {content.title}
                                         </Title>
                                         <List c="gray.8" fw={300} fz={15}>
@@ -269,7 +282,12 @@ export default function CourseDetails() {
                             </Title>
                             {course.tabs.international.map((entry, idx) => (
                                 <Text key={idx} c="gray.8" fw={400} fz={14}>
-                                    {entry}
+                                    {entry.includes(":") ? (
+                                        <>
+                                            <Text span fz={15} fw={600}>{entry.split(":")[0]}:</Text>
+                                            {entry.split(":").slice(1).join(":")}
+                                        </>
+                                    ) : entry}
                                 </Text>
                             ))}
                         </Stack>
@@ -280,14 +298,16 @@ export default function CourseDetails() {
                     <Box className={styles.dets__box}>
                         <Stack>
                             <Title order={2} c="gray.9" fw={700}>
-                                Professional Certification: Certified 
-                                Team Leader (CTL) (Optional)
+                                {course.tabs.certification?.title}
                             </Title>
-                            {course.tabs.certification?.map((entry, idx) => (
-                                <Text key={idx} c="gray.8" fw={400} fz={14}>
-                                    {entry}
-                                </Text>
-                            ))}
+                            {course.tabs.certification?.data?.map((entry, idx) => {
+                                
+                                return (
+                                    <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                        {entry}
+                                    </Text>
+                                )
+                            })}
                         </Stack>
                     </Box>
                 </Tabs.Panel>

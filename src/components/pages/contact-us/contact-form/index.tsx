@@ -32,9 +32,8 @@ export default function ContactForm() {
     const handleSubmit = async (values: typeof form.values) => {
         try {
             setLoading(true);
-            const templateParams = {
-                to_email: `jmmunyao@usiu.ac.ke`,
-                //to_email: `ceeinfo@usiu.ac.ke`,
+            const universityParams = {
+                to_email: `ceeinfo@usiu.ac.ke`,
                 from_name: `${values.firstName} ${values.lastName}`,
                 from_email: values.email,
                 from_phone: values.phoneNumber,
@@ -42,10 +41,15 @@ export default function ContactForm() {
                 message: values.message,
             };
 
+            // const autoReplyParams = {
+            //     user_name: `${values.firstName} ${values.lastName}`,
+            //     user_email: values.email,
+            // }
+
             const result = await emailjs.send(
                 import.meta.env.VITE_EMAILJS_SERVICE_ID,
                 import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                templateParams,
+                universityParams,
                 import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             );
             if (result.status === 200) {
@@ -59,6 +63,7 @@ export default function ContactForm() {
             setLoading(false);
         }
     };
+
     return (
         <section className={styles.cf}>
             <Reveal>

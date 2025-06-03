@@ -26,7 +26,10 @@ interface CourseTabContent {
     admissions: string[];
     coaching: string[] | null;
     international: string[];
-    certification: string[] | null;
+    certification: {
+        title: string;
+        data: string[];
+    } | null;
 }
 
 interface Program {
@@ -45,6 +48,7 @@ interface Program {
         amount?: number;
         tabs: CourseTabContent;
     }[];
+    is_custom?: boolean;
 }
 
 export const programs:Program[] = [
@@ -67,12 +71,13 @@ export const programs:Program[] = [
                     about: [
                         "The Business Analytics for Executives Program (BAEP) is tailored to empower leaders with the skills to harness data-driven strategies, enabling informed decision-making and a competitive edge in today's fast-paced market. By integrating internal and external data sources, participants will learn to foster innovation, optimize business processes, and enhance productivity, ultimately allowing organizations to reinvent their products and better respond to evolving market demands.",
                     ],
-                    aim: "This course aims to elevate executive capabilities in leveraging analytics for organizational success and sustained growth.",
+                    aim: "The Business Analytics for Executives program aims to equip leaders with the skills to interpret and apply data-driven insights for strategic decision-making, focusing on practical frameworks that address real business challenges. By emphasizing understanding and utilization of data rather than technical details, the program helps executives improve business performance, optimize operations, and maintain a competitive advantage in their industries.",
                     target: [
                         "C-Suite Executives",
                         "Senior Managers",
                         "Decision Makers",
                         "Business Owners",
+                        "Employees interested in data-based decision making"
                     ],
                     outcome: [
                         {
@@ -87,17 +92,46 @@ export const programs:Program[] = [
                             ]
                         },
                         {
-                            title: "To the Organization",
+                            title: "To the organization",
                             data: [
-                                "Market Competitive advantage: Your organization will absolutely benefit by leveraging data analytics to get critical insights into customer behaviour, market trends, and operational efficiencies, enabling them to make informed decisions, optimize strategies, and stay ahead of competitors in today&#39;s fast-paced, data-driven marketplace.",
-                                "Improved Organizational Performance-Leveraging data enables executives to make informed decisions that streamline operations, cut unnecessary expenses, and enhance customer experiences, ultimately boosting organizational performance and competitiveness.",
+                                "Market Competitive advantage: Your organization will absolutely benefit by leveraging data analytics to get critical insights into customer behaviour, market trends, and operational efficiencies, enabling them to make informed decisions, optimize strategies, and stay ahead of competitors in today's fast-paced, data-driven marketplace.",
+                                "Improved Organizational Performance: Leveraging data enables executives to make informed decisions that streamline operations, cut unnecessary expenses, and enhance customer experiences, ultimately boosting organizational performance and competitiveness.",
                             ]
                         }
                     ],
                     delivery: [
                         "The program is delivered in 3 days on campus. The training program combines industry expert-led and faculty instruction with diverse learning methods like case studies, videos, simulations, role plays, and group discussions to provide a dynamic and practical learning experience.",
                     ],
-                    contents: [],
+                    contents: [
+                        {
+                            title: "Describing and Summarizing Data",
+                            data: [
+                                "Visualizing Data",
+                                "Descriptive Statistics",
+                                "Relationship Between Two Variables",
+                                "Case Study"
+                            ],
+                        },
+                        {
+                            title: "Sampling and Estimation",
+                            data: [
+                                "Creating Representative and Unbiased Samples",
+                                "The Normal Distribution",
+                                "Confidence Intervals",
+                                "Amazon's Inventory Sampling"
+                            ],
+                        },
+                        {
+                            title: "Single Variable Linear Regression",
+                            data: [
+                                "The Regression Line",
+                                "Forecasting",
+                                "Interpreting the Regression Output",
+                                "Performing Regression Analyses",
+                                "Making Decisions"
+                            ],
+                        },
+                    ],
                     coaching: null,
                     admissions: [
                         "We admit applicants on a rolling and space-available basis. You are therefore advised to submit your application as soon as possible.",
@@ -107,10 +141,13 @@ export const programs:Program[] = [
                         "Accommodation: The university does not run student hostels but will assist you in securing affordable accommodation at your own expense for the short duration of your stay.",
                         "Language of Instruction: United States International University utilizes English as its primary language of instruction, making it essential for students to be proficient in English to effectively engage with academic materials, participate in discussions, and complete coursework successfully.",
                     ],
-                    certification: [
-                        "We will issue certificates on the Business Analytics for Executives Program-(BAEP); however, for those who are interested in getting the title Certified Business Analyst Foundation (CBAF) will be required to take a multiple-choice application exam at a separate cost of US$220.", 
-                        "The certification is offered by an American Certifying body in conjunction with United States International University.",
-                    ],
+                    certification: {
+                        title: "Professional Certification: Certified Business Analyst Foundation (CBAF) (Optional)",
+                        data: [
+                            "We will issue certificates on the Business Analytics for Executives Program-(BAEP); however, for those who are interested in getting the title Certified Business Analyst Foundation (CBAF) will be required to take a multiple-choice application exam at a separate cost of US$220.", 
+                            "The certification is offered by an American Certifying body in conjunction with United States International University.",
+                        ],
+                    }
                 },
             },
             {
@@ -124,29 +161,88 @@ export const programs:Program[] = [
                     about: [
                         "The Client Experience Excellence Program (CEEP) at USIU Africa is designed to go beyond traditional training by enabling executives to implement innovative strategies that truly transform customer interactions and foster deep loyalty. Focusing on practical application and leadership, CEEP is designed to help executives turn satisfied customers into passionate advocates, driving organizational success through a superior and memorable client experience."
                     ],
-                    aim: "",
+                    aim: "The Client Experience Excellence Program (CEEP) is designed to empower executives to foster a customer-centric culture that emphasizes exceptional service, proactive engagement, and continuous improvement, ultimately boosting customer satisfaction, loyalty, retention, and lifetime value by ensuring every interaction aligns with the organization's commitment to exceeding customer expectations.",
                     target: [
-                        "C-Suite executives &amp; Business Level Executives (Directors, Vice Presidents, General Managers).",
-                        "Functional level executives (Customer Service Managers &amp; Practitioners, Marketers, Sales professionals, Business Developers, and Human Resources Practitioners).",
-                        "Entrepreneurs &amp; Business Owners",
+                        "C-Suite executives: Business Level Executives (Directors, Vice Presidents, General Managers).",
+                        "Functional level executives (Customer Service Managers: Practitioners, Marketers, Sales professionals, Business Developers, and Human Resources Practitioners).",
+                        "Entrepreneurs: Business Owners",
                     ],
-                    outcome: [],
-                    delivery: [],
+                    outcome: [
+                        {
+                            title: "To the professional",
+                            data: [
+                                "Your skills in customer interaction, conflict resolution, and strategic service design will be enhanced significantly elevating your professionalism.",
+                                "You will be enabled to build stronger client relationships, effectively manage disputes, and develop innovative service strategies that meet diverse needs and drive organizational success.",
+                                "You will get the chance of professional certification earning the title Certified Customer Service Professional (CCSP)-(optional)."
+                            ]
+                        },
+                        {
+                            title: "To the organization",
+                            data: [
+                                "Enhanced Customer Loyalty: Positive experiences foster loyalty, leading customers to return for repeat business and recommend the company to others.",
+                                "Improved Customer Retention: Lower customer churn rates are a direct result of increased satisfaction and loyalty, leading to a more stable customer base.",
+                                "Stronger Brand Reputation: Positive customer experiences contribute to a positive brand image, attracting new customers and enhancing the company&#39;s reputation.",
+                            ]
+                        }
+                    ],
+                    delivery: [
+                        "The program is delivered in 3 days on campus. The training program combines industry expert-led and faculty instruction with diverse learning methods like case studies, videos, simulations, role plays, and group discussions to provide a dynamic and practical learning experience."
+                    ],
                     contents: [
-                        "The Psychology of Customers: To deliver exceptional customer experiences, employees must have insight into the customer mindset. Understanding of the Customer Service Trinity and the Head, Heart and Hand model introduces the employees to the “Why” of customer excellence.",
-                        "Customer Experience Journey Mapping: Attendees map their organization&#39;s customer experience journey, focusing on TEA: Touchpoints, Emotions, and Action points.",
-                        "The Human-Process-Human Principle: This emphasizes on the human touch in customer interactions, using primacy and recency laws; discuss small touches for memorable visits, minimizing complaints, and enhancing experiences.",
-                        "Focus on Self-care: Undoubtedly, the responsibility of catering to customers can be emotionally taxing, highlighting the crucial need for employees to prioritize their mental well-being. This program delves into positive intelligence, equipping attendees with valuable tools to navigate stress and handle challenging situations. Our course empowers individuals to manage these pressures effectively, ensuring they don&#39;t become mentally drained in the process.",
-                        "Focus on Experience, not just Service: The course focuses on shifting the mindset from delivering service to orchestrating exceptional customer experiences. This involves understanding the emotional journey beyond transactions, building genuine connections, and fostering brand loyalty.",
-                        "Innovation and Future-proofing: The course delves into emerging trends and the future. It discusses how customer service is evolving with new technologies and changing customer expectations, preparing executives for the future of customer interactions.",
+                        {
+                            title: "The Psychology of Customers",
+                            data: [
+                                "To deliver exceptional customer experiences, employees must have insight into the customer mindset.",
+                                "Understanding of the Customer Service Trinity and the Head, Heart and Hand model introduces the employees to the “Why” of customer excellence."
+                            ]
+                        },
+                        {
+                            title: "Customer Experience Journey Mapping",
+                            data: [
+                                "Attendees map their organization&#39;s customer experience journey, focusing on TEA: Touchpoints, Emotions, and Action points."
+                            ]
+                        },
+                        {
+                            title: "The Human-Process-Human Principle",
+                            data: [
+                                "This emphasizes on the human touch in customer interactions, using primacy and recency laws; discuss small touches for memorable visits, minimizing complaints, and enhancing experiences."
+                            ]
+                        },
+                        {
+                            title: "Focus on Self-care",
+                            data: [
+                                "Undoubtedly, the responsibility of catering to customers can be emotionally taxing, highlighting the crucial need for employees to prioritize their mental well-being. This program delves into positive intelligence, equipping attendees with valuable tools to navigate stress and handle challenging situations. Our course empowers individuals to manage these pressures effectively, ensuring they don&#39;t become mentally drained in the process."
+                            ]
+                        },
+                        {
+                            title: "Focus on Experience, not just Service",
+                            data: [
+                                "Shifting the mindset from delivering service to orchestrating exceptional customer experiences. This involves understanding the emotional journey beyond transactions, building genuine connections, and fostering brand loyalty."
+                            ]
+                        },
+                        {
+                            title: "Innovation and Future-proofing",
+                            data: [
+                                "Delve into emerging trends and the future. It discusses how customer service is evolving with new technologies and changing customer expectations, preparing executives for the future of customer interactions."
+                            ]
+                        }
                     ],
                     coaching: null,
-                    admissions: [],
-                    international: [],
-                    certification: [
-                        "We will issue certificates on the Client Experience Excellence Program (CEEP); however, for those who are interested in getting the title Certified Customer Service Professional (CCSP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
-                        "The certification is offered by an American Certifying body in conjunction with United States International University."
+                    admissions: [
+                        "We admit applicants on a rolling and space-available basis. You are therefore advised to submit your application as soon as possible.",
+                        "The admissions process is based on your professional experience and achievement, your responsibility in the organisation, and the admissions criteria for each program as described in the Target Audience. There are no formal educational requirements for this program offered by the USIU-Africa Center for Executive Education."
                     ],
+                    international: [
+                        "Accommodation: The university does not run student hostels but will assist you in securing affordable accommodation at your own expense for the short duration of your stay.",
+                        "Language of Instruction: United States International University utilizes English as its primary language of instruction, making it essential for students to be proficient in English to effectively engage with academic materials, participate in discussions, and complete coursework successfully."
+                    ],
+                    certification: {
+                        title: "Professional Certification: Certified Customer Service Professional (CCSP) (Optional)",
+                        data: [
+                            "We will issue certificates on the Client Experience Excellence Program (CEEP); however, for those who are interested in getting the title Certified Customer Service Professional (CCSP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
+                            "The certification is offered by an American Certifying body in conjunction with United States International University."
+                        ],
+                    }
                 },
             },
             {
@@ -189,16 +285,16 @@ export const programs:Program[] = [
                         "The one-week training program offers a dynamic blend of face-to-face and virtual sessions, providing participants with a comprehensive learning experience. Led by experienced industry experts and knowledgeable faculty, the program employs diverse teaching methods such as case studies, structured learning materials, video sessions, simulations, role plays, and group discussions to enhance engagement and practical understanding. This multifaceted approach aims to equip participants with relevant skills and insights through interactive and immersive learning techniques.",
                     ],
                     contents: [
-                        "Module 1: The Shift: From specialist to Manager and leader",
-                        "Module 2: Understanding the difference between Leadership and Management",
-                        "Module 3: Understanding the Financial Environment in Business",
-                        "Module 4: Aligning with organisational strategy",
-                        "Module 5: Communication in Leadership and Management",
-                        "Module 6: High-Performing Team Leadership and Management",
-                        "Module 7: Conflict Management and Resolution",
-                        "Module 8: Making Informed decisions during a crisis",
-                        "Module 9: Collaboration and Delegation",
-                        "Module 10: Receiving, analysing and interpreting feedback"
+                        "The Shift: From specialist to Manager and leader",
+                        "Understanding the difference between Leadership and Management",
+                        "Understanding the Financial Environment in Business",
+                        "Aligning with organisational strategy",
+                        "Communication in Leadership and Management",
+                        "High-Performing Team Leadership and Management",
+                        "Conflict Management and Resolution",
+                        "Making Informed decisions during a crisis",
+                        "Collaboration and Delegation",
+                        "Receiving, analysing and interpreting feedback"
                     ],
                     coaching: null,
                     admissions: [
@@ -209,10 +305,13 @@ export const programs:Program[] = [
                         "Accommodation: The university does not run student hostels but will assist you in securing affordable accommodation at your own expense for the short duration of your stay.",
                         "Language of Instruction: United States International University utilizes English as its primary language of instruction, making it essential for students to be proficient in English to effectively engage with academic materials, participate in discussions, and complete coursework successfully."
                     ],
-                    certification: [
-                        "We will issue certificates on the New Manager Development Program (NMDP); however, for those who are interested in getting the title Certified Team Leader (CTL) will be required to take a multiple-choice application exam at a separate cost of US$250.", 
-                        "The certification is offered by an American Certifying body in conjunction with United States International University.",
-                    ],
+                    certification: {
+                        title: "Professional Certification: New Manager Development Program (NMDP) (Optional)",
+                        data: [
+                            "We will issue certificates on the New Manager Development Program (NMDP); however, for those who are interested in getting the title Certified Team Leader (CTL) will be required to take a multiple-choice application exam at a separate cost of US$250.", 
+                            "The certification is offered by an American Certifying body in conjunction with United States International University.",
+                        ],
+                    }
                 }
             },
         ]
@@ -287,19 +386,19 @@ export const programs:Program[] = [
             },
             {
                 id: 2,
-                name: "Effective Management Development Program (EMDP)",
-                slug: "effective-management-development-program-(EMDP)",
-                description: "The primary aim of the Effective Management Development Program is to enhance the effectiveness of the manager through the impartation of managerial skills and competencies, building leadership capabilities, and preparing managers for future strategic leadership roles, ultimately contributing to improved organisational performance and effectiveness.",
+                name: "Strategic Management Development Program (SMDP)",
+                slug: "strategic-management-development-program-(SMDP)",
+                description: "The Strategic Management Development Program (SMDP) is designed to enhance managers effectiveness by developing their skills, building leadership abilities, and preparing them for strategic leadership roles, which collectively contribute to improved organizational performance and sustained success.",
                 image: p7,
                 duration: "11th August, 2025",
                 amount: 360_000,
                 tabs: {
                     about: [
-                        "Globally, there is a vast number of challenges that mid-level managers face during their day-to-day engagements in their workplace, including effective strategies implementation, managing conflicting expectations, and ensuring optimal team engagement, all while often lacking the necessary skills, resources and support.",
-                        "The Effective Management &amp; Leadership Development Program (EMLDP) at the Center for Executive Education is meant to give solutions to the said challenges for mid-level management, and it empowers you to take charge of your future as a manager.",
-                        "It teaches you how to inspire productive and meaningful change within your organisation gives you the best skills on how to lead the implementation of the organisational strategic plan as a manager. By the end of this program, you will have the skills, knowledge, and confidence to enter into a new strategic level of leadership.",
+                        "Mid-level managers worldwide encounter numerous challenges such as implementing strategies effectively, balancing conflicting stakeholder expectations, and maintaining high team engagement, often compounded by limited skills, inadequate resources, and insufficient support systems, which hinder their ability to lead efficiently and achieve organizational goals.",
+                        "The Strategic Management Development Program (SMDP) at the Center for Executive Education is designed to equip mid-level managers with the skills and knowledge necessary to address current organizational challenges, enhance strategic thinking, and develop leadership capabilities, thereby empowering participants to proactively shape their careers and lead their teams effectively into the future.",
+                        "This program therefore, equips managers with the essential skills, knowledge, and confidence needed to effectively inspire meaningful change and lead the implementation of their organization's strategic plan, empowering them to reach a new level of strategic leadership and drive productive organizational transformation.",
                     ],
-                    aim: "The primary aim of the Effective Management Development Program is to enhance the effectiveness of the manager through the impartation of managerial skills and competencies, building leadership capabilities, and preparing managers for future strategic leadership roles, ultimately contributing to improved organisational performance and effectiveness.",
+                    aim: "The Strategic Management Development Program (SMDP) is designed to enhance managers effectiveness by developing their skills, building leadership abilities, and preparing them for strategic leadership roles, which collectively contribute to improved organizational performance and sustained success.",
                     target: [
                         "Middle-level managers",
                         "Managers aspiring for higher strategic leadership roles",
@@ -342,10 +441,13 @@ export const programs:Program[] = [
                         "Accommodation: The university does not run student hostels but will assist you in securing affordable accommodation at your own expense for the short duration of your stay.",
                         "Language of Instruction: United States International University utilizes English as its primary language of instruction, making it essential for students to be proficient in English to effectively engage with academic materials, participate in discussions, and complete coursework successfully.",
                     ],
-                    certification: [
-                        "We will issue certificates on the Effective Management Development Program (EMDP); however, for those who are interested in getting the title Business Management Professional (BMP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
-                        "The certification is offered by an American Certifying Body in conjunction with United States International University."
-                    ],
+                    certification: {
+                        title: "Professional Certification: Business Management Professional (BMP) (Optional)",
+                        data: [
+                            "We will issue certificates on the Strategic Management Development Program (SMDP); however, for those who are interested in getting the title Business Management Professional (BMP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
+                            "The certification is offered by an American Certifying Body in conjunction with United States International University."
+                        ],
+                    }
                 }
             },
             {
@@ -360,7 +462,7 @@ export const programs:Program[] = [
                     about: [
                         "The Executive Leadership Development Program for Higher Learning Institutions (ELDP-HLI) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape."
                     ],
-                    aim: "The program aims to make you a better leader in higher learning institution through creation of understanding and awareness of how to sustain an institutional culture of informed decision making from evidence through use of data effectively. It will also help you create a better understanding of the 5 principles of exemplary leadership in higher education institutions i.e. demonstrate the path, inspire a mutual vision, challenge the process, enable others to act, and reassure the future.",
+                    aim: "This program is designed to enhance leadership capabilities in higher education by fostering a deep understanding of sustaining an institutional culture rooted in evidence-based decision making through effective data utilization. It also aims to cultivate leadership qualities aligned with the five principles of exemplary leadership, i.e. demonstrating the path, inspiring a shared vision, challenging the status quo, empowering others, and ensuring future resilience and ultimately enabling leaders to guide their institutions with informed, innovative, and collaborative strategies.",
                     target: [
                         "College Principals, Deans, DVCs, and Senior Leaders in the institutions of higher learning."
                     ],
@@ -388,13 +490,14 @@ export const programs:Program[] = [
                     ],
                     contents: [
                         {
-                            title: "Module 1: Higher Learning Institution Processes and Resource Management",
+                            title: "Module 1: Leading Higher Learning Institution Processes and Resource Management",
                             data: [
-                                "Resource Administration and Integrated Academic Program Planning",
-                                "Partnerships for Institutional Success",
+                                "Navigating through Change: Leading change through challenges in Learning institutions",
+                                "Leading Resource Administration and Integrated Academic Program Planning",
+                                "Leading Partnerships for Institutional Success",
                                 "Case Analysis: Leadership Challenge Case Studies",
-                                "Student success",
-                                "Budgeting for success",
+                                "Understanding the art of leading Student success",
+                                "Budgeting for Success",
                             ]
                         },
                         {
@@ -419,10 +522,13 @@ export const programs:Program[] = [
                         "Accommodation: The university does not run student hostels but will assist you in securing affordable accommodation at your own expense for the short duration of your stay.",
                         "Language of Instruction: United States International University utilizes English as its primary language of instruction, making it essential for students to be proficient in English to effectively engage with academic materials, participate in discussions, and complete coursework successfully."
                     ],
-                    certification: [
-                        "We will issue certificates on the Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL); however, for those who are interested in getting the title Certified Business Continuity Professional (CBCP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
-                        "The certification is offered by an American Certifying body in conjunction with United States International University."
-                    ],
+                    certification: {
+                        title: "Professional Certification: Certified Business Continuity Professional (CBCP) (Optional)",
+                        data: [
+                            "We will issue certificates on the Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL); however, for those who are interested in getting the title Certified Business Continuity Professional (CBCP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
+                            "The certification is offered by an American Certifying body in conjunction with United States International University."
+                        ],
+                    }
                 }
             },
             {
@@ -479,8 +585,9 @@ export const programs:Program[] = [
         id: 3,
         name: "Organizational Custom Solutions.",
         slug: "organizational-custom-solutions",
-        description: "Tailored programs co-designed with your organization to solve real challenges—whether it's leadership development, cultural transformation, or team-wide upskilling. Contact us to discuss your organizational needs.",
+        description: "Customized solutions development programs are tailored training initiatives designed to meet your organization's specific goals and employee needs. They address unique challenges, enhance performance and productivity, and foster a culture of continuous growth unlike one-size-fits-all training approaches.",
         image: p3,
         courses: [],
+        is_custom: true,
     },
 ]

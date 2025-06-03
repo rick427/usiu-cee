@@ -49,10 +49,10 @@ export default function Brochure() {
 
             setLoading(true);
             const templateParams = {
-                //to_email: `ceeinfo@usiu.ac.ke`,
-                to_email: `jmmunyao@usiu.ac.ke`,
+                to_email: `ceeinfo@usiu.ac.ke`,
+                //to_email: `jmmunyao@usiu.ac.ke`,
                 firstName: values.firstName,
-                lastName: values.firstName,
+                lastName: values.lastName,
                 email: values.email,
                 phoneNumber: values.phoneNumber,
                 country: countryName,

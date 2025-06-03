@@ -1,0 +1,24 @@
+.teams{
+    padding: 4rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &__stack{
+        width: min(40rem, 100%);
+        margin: 0 auto;
+        text-align: center;
+
+        >p{
+            width: min(35rem, 100%);
+            margin: 0 auto;
+        }
+    }
+
+    &__user{
+        background: linear-gradient(90deg, var(--mantine-color-primary-9), var(--mantine-color-secondary-3));
+        padding: 1rem;
+        border-radius: 50%;
+        display: inline-block;
+    }
+}

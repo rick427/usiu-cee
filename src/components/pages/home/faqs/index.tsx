@@ -15,7 +15,7 @@ const faqsData = [
     {
         question: "Who are the programs designed for?",
         answer:
-        "Our programs are tailored for mid- to senior-level professionals, entrepreneurs, and organizational leaders who are looking to enhance their strategic thinking, leadership capabilities, and global competitiveness."
+        "Our programs are specifically designed to cater to a diverse range of executives, including operational staff, mid- to senior-level professionals, entrepreneurs, and organizational leaders, aiming to strengthen their strategic thinking, leadership skills, and global competitiveness to drive organizational success and personal growth."
     },
     {
         question: "How do I enroll in a course?",
