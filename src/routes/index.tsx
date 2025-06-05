@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 
 import Home from "@/pages/home";
+import Team from "@/pages/team";
 import Course from "@/pages/course";
 import Courses from "@/pages/courses";
 import Brochure from "@/pages/brochure";
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
             {
                 path: "/programs/:programId/:courseId",
                 element: <Course />
+            },
+            {
+                path: "/teams/:teamId",
+                element: <Team />
             },
         ]
     }

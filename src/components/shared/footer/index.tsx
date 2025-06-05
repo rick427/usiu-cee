@@ -7,7 +7,7 @@ export default function Footer() {
     return (
         <footer className={styles.footer}>
             <Text size="xs" c="white">
-                &copy; {new Date().getFullYear()} USIU-Africa
+                &copy; {new Date().getFullYear()} USIU-Africa - Center for Executive Education
             </Text>
 
             <Group>
@@ -15,7 +15,6 @@ export default function Footer() {
                 <a href="/">Virtual Tours</a>
                 <a href="/">Accessibility</a>
                 <a href="/">Privacy Policy</a>
-                <a href="/">USIS-Africa Online</a>
             </Group>
         </footer>
     )

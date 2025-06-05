@@ -1,0 +1,22 @@
+.ca{
+    padding: 4rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &__stack{
+        width: min(40rem, 100%);
+        margin: 0 auto;
+        text-align: center;
+
+        p{
+            width: min(34rem, 100%);
+            margin: 0 auto;
+        }
+    }
+
+    &__div{
+        width: min(35rem, 100%);
+        margin: 0 auto;
+    }
+}

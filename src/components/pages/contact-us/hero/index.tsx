@@ -16,7 +16,7 @@ export default function Hero() {
                 <Group gap="xs">
                     <Link to="/">Home</Link>
                     <GoChevronRight color="white" /> 
-                    <Text c="white">Contact Us</Text>
+                    <Text fz={13.5} c="white">Contact Us</Text>
                 </Group>
             </Reveal>
         </section>

@@ -1,11 +1,10 @@
-import { Stack, Title, Text, SimpleGrid, TextInput, Textarea, Button } from "@mantine/core";
+import { SimpleGrid, TextInput, Textarea, Button } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import { useState } from "react";
 
 import styles from "./contact-form.module.scss";
-import Reveal from "@/components/shared/io/reveal";
 
 export default function ContactForm() {
     const [loading, setLoading] = useState<boolean>(false);
@@ -65,106 +64,91 @@ export default function ContactForm() {
     };
 
     return (
-        <section className={styles.cf}>
-            <Reveal>
-                <Stack className={styles.cf__stack} mb="lg" align="center">
-                    <Title c="gray.9" order={1}>
-                        Enquiries & Contact
-                    </Title>
-                    <Text ta="center" c="gray.7" fw={300}>
-                        If you have any questions, feedback, or would like to initiate 
-                        a conversation, we welcome your message. We are committed to 
-                        responding in a timely and thoughtful manner.
-                    </Text>
-                </Stack>
-            </Reveal>
-            
-            <form onSubmit={form.onSubmit(handleSubmit)} className={styles.cf__form}>
-                <SimpleGrid cols={2}>
-                    <TextInput 
-                        size="md"
-                        withAsterisk 
-                        label="First name"
-                        placeholder="Enter your first name"
-                        {...form.getInputProps("firstName")}
-                        classNames={{ 
-                            input: styles.cf__form__input,
-                            label: styles.cf__form__label,
-                        }} 
-                    />
-                    <TextInput 
-                        size="md"
-                        withAsterisk 
-                        label="Last name" 
-                        placeholder="Enter your last name"
-                        {...form.getInputProps("lastName")}
-                        classNames={{ 
-                            input: styles.cf__form__input,
-                            label: styles.cf__form__label,
-                        }} 
-                    />
-                </SimpleGrid>
-                <SimpleGrid cols={2}>
-                    <TextInput 
-                        size="md"
-                        withAsterisk 
-                        label="Email address" 
-                        placeholder="Enter your email"
-                        {...form.getInputProps("email")}
-                        classNames={{ 
-                            input: styles.cf__form__input,
-                            label: styles.cf__form__label,
-                        }} 
-                    />
-                    <TextInput 
-                        size="md"
-                        withAsterisk 
-                        label="Phone number" 
-                        placeholder="Enter your phone number"
-                        {...form.getInputProps("phoneNumber")}
-                        classNames={{ 
-                            input: styles.cf__form__input,
-                            label: styles.cf__form__label,
-                        }} 
-                    />
-                </SimpleGrid>
+        <form onSubmit={form.onSubmit(handleSubmit)} className={styles.form}>
+            <SimpleGrid cols={2}>
                 <TextInput 
                     size="md"
                     withAsterisk 
-                    label="Subject" 
-                    placeholder="Tell us the subject"
-                    {...form.getInputProps("subject")}
+                    label="First name"
+                    placeholder="Enter your first name"
+                    {...form.getInputProps("firstName")}
                     classNames={{ 
-                        input: styles.cf__form__input,
-                        label: styles.cf__form__label,
+                        input: styles.form__input,
+                        label: styles.form__label,
                     }} 
                 />
-                <Textarea 
-                    rows={6}
+                <TextInput 
                     size="md"
                     withAsterisk 
-                    label="Message" 
-                    placeholder="Your message here"
-                    {...form.getInputProps("message")}
+                    label="Last name" 
+                    placeholder="Enter your last name"
+                    {...form.getInputProps("lastName")}
                     classNames={{ 
-                        input: styles.cf__form__input,
-                        label: styles.cf__form__label,
+                        input: styles.form__input,
+                        label: styles.form__label,
                     }} 
                 />
-                <Button
-                    mt="md"
+            </SimpleGrid>
+            <SimpleGrid cols={2}>
+                <TextInput 
                     size="md"
-                    radius="xs"
-                    type="submit"
-                    variant="filled"
-                    color="primary.8"
-                    loading={loading}
-                    loaderProps={{ size: "xs" }}
-                    classNames={{ label: styles.btnLabel}}
-                >
-                    Send Message
-                </Button>
-            </form>
-        </section>
+                    withAsterisk 
+                    label="Email address" 
+                    placeholder="Enter your email"
+                    {...form.getInputProps("email")}
+                    classNames={{ 
+                        input: styles.form__input,
+                        label: styles.form__label,
+                    }} 
+                />
+                <TextInput 
+                    size="md"
+                    withAsterisk 
+                    label="Phone number" 
+                    placeholder="Enter your phone number"
+                    {...form.getInputProps("phoneNumber")}
+                    classNames={{ 
+                        input: styles.form__input,
+                        label: styles.form__label,
+                    }} 
+                />
+            </SimpleGrid>
+            <TextInput 
+                size="md"
+                withAsterisk 
+                label="Subject" 
+                placeholder="Tell us the subject"
+                {...form.getInputProps("subject")}
+                classNames={{ 
+                    input: styles.form__input,
+                    label: styles.form__label,
+                }} 
+            />
+            <Textarea 
+                rows={6}
+                size="md"
+                withAsterisk 
+                label="Message" 
+                placeholder="Your message here"
+                {...form.getInputProps("message")}
+                classNames={{ 
+                    input: styles.form__input,
+                    label: styles.form__label,
+                }} 
+            />
+            <Button
+                mt="md"
+                size="md"
+                radius="xs"
+                type="submit"
+                variant="filled"
+                color="primary.8"
+                loading={loading}
+                loaderProps={{ size: "xs" }}
+                classNames={{ label: styles.btnLabel}}
+            >
+                Send Message
+            </Button>
+        </form>
     )
 }

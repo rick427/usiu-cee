@@ -57,8 +57,8 @@ export default function FAQs() {
                                 <Title>
                                     Frequently Asked Questions
                                 </Title>
-                                <Text fz={14.5} fw={300}>
-                                    Here are some of the most common questions we receive 
+                                <Text size="sm" c="gray.7" fw={400}>
+                                    Here are some of the most frequently asked questions we receive 
                                     from prospective students. If you have any other questions, 
                                     feel free to reach out to us.
                                 </Text>

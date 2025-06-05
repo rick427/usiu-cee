@@ -8,26 +8,24 @@ import Reveal from "@/components/shared/io/reveal";
 import { formatSlug } from "@/utils";
 
 export default function Hero() {
-    const params = useParams<{ programId: string }>();
-    const programId = params.programId;
+    const params = useParams<{ teamId: string }>();
+    const teamId = params.teamId;
     return (
         <section className={styles.hero}>
             <Reveal>
                 <Title order={1} fz={50} c="white">
-                    {formatSlug(programId?.replace(/-/g, " "))}
+                    Our Faculty
                 </Title>
             </Reveal>
 
             <Reveal delay={200}>
                 <Group gap={5}>
                     <Link to="/">Home</Link>
-                    <GoChevronRight color="white" />
-                    <Link to="/programs">
-                        Programs
-                    </Link>
-                    <GoChevronRight color="white" />
+                    <GoChevronRight color="white" /> 
+                    <Text fz={13.5} c="white">Team</Text>
+                    <GoChevronRight color="white" /> 
                     <Text fz={13.5} c="white">
-                        {formatSlug(programId)}
+                        {formatSlug(teamId)}
                     </Text>
                 </Group>
             </Reveal>

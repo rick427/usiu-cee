@@ -17,6 +17,10 @@
     }
   }
 
+  &__card{
+    border: 1px solid var(--mantine-color-gray-1);
+  }
+
   &__gridcol{
     opacity: 0;
     animation: fadeSlideIn 0.6s ease forwards;

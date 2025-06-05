@@ -1,5 +1,4 @@
 .teams{
-    padding: 4rem 6rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -10,15 +9,24 @@
         text-align: center;
 
         >p{
-            width: min(35rem, 100%);
+            width: min(25rem, 100%);
             margin: 0 auto;
         }
     }
 
+    &__card{
+        border: 1px solid var(--mantine-color-gray-1);
+    }
+
     &__user{
         background: linear-gradient(90deg, var(--mantine-color-primary-9), var(--mantine-color-secondary-3));
-        padding: 1rem;
+        padding: 0.5rem;
         border-radius: 50%;
         display: inline-block;
     }
+}
+
+.btnLabel{
+    font-size: 0.75rem;
+    text-transform: uppercase;
 }

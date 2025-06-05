@@ -1,5 +1,9 @@
-import { Stack, Group, Title, Text, Grid, Avatar, Card } from "@mantine/core";
+import { Stack, Group, Title, Text, Avatar, Card, Button } from "@mantine/core";
 import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
+import Autoplay from "embla-carousel-autoplay";
+import { Carousel } from "@mantine/carousel";
+import { useNavigate } from "react-router";
+import { useRef } from "react";
 
 import styles from "./teams.module.scss";
 import Reveal from "@/components/shared/io/reveal";
@@ -8,6 +12,7 @@ const teams = [
     {
         id: 1,
         name: "Dr. Miriam Okoth",
+        slug: "dr-miriam-okoth",
         image: "https://randomuser.me/api/portraits/women/16.jpg",
         role: "DVC Transformative Teaching",
         description:
@@ -16,6 +21,7 @@ const teams = [
     {
         id: 2,
         name: "Prof. Daniel Wanjala",
+        slug: "prof-daniel-wanjala",
         image: "https://randomuser.me/api/portraits/men/80.jpg",
         role: "Learning & Research",
         description:
@@ -24,6 +30,7 @@ const teams = [
     {
         id: 3,
         name: "Dr. Brenda Kamau",
+        slug: "dr-brenda-kamau",
         image: "https://randomuser.me/api/portraits/women/2.jpg",
         role: "Center Director (HBD)",
         description:
@@ -32,6 +39,7 @@ const teams = [
     {
         id: 4,
         name: "Sarah Mwikali",
+        slug: "sarah-mwikali",
         image: "https://randomuser.me/api/portraits/women/24.jpg",
         role: "Office Administrator & Provision",
         description:
@@ -40,14 +48,17 @@ const teams = [
 ];
 
 export default function Teams() {
+    const navigate = useNavigate();
+    const autoplay = useRef(Autoplay({ delay: 5000 }));
+
     return (
         <section className={styles.teams}>
             <Reveal>
-                <Stack className={styles.teams__stack} mb="lg"  align="center">
-                    <Title c="gray.9" order={1}>
+                <Stack className={styles.teams__stack} gap={10} mb="lg"  align="center">
+                    <Title c="gray.9" order={2} fz={28}>
                         Meet the Team
                     </Title>
-                    <Text ta="center" c="gray.7" fw={300}>
+                    <Text size="sm" ta="center" c="gray.7" fw={400}>
                         Our Internationally acclaimed researchers and teachers are all 
                         dedicated and gifted individuals who contribute 
                         directly to USIU-A's reputation of excellence.
@@ -55,17 +66,28 @@ export default function Teams() {
                 </Stack>
             </Reveal>
 
-            <Grid justify="center">
-                {teams.map((team, _index) => (
-                    <Grid.Col key={team.id} span={{base: 12, md: 6, lg: 3}}>
-                        <Card className={styles.pl__card} shadow="sm" p="lg">
+            <Carousel
+                slideSize={{ base: "100%", sm: "50%", md: "33.3%", lg: "25%" }}
+                plugins={teams.length > 4 ? [autoplay.current] : []}
+                slideGap={{ base: "sm", sm: "md", md: "lg" }}
+                withIndicators={true}
+                withControls={false}
+                styles={{
+                    indicator: {
+                        backgroundColor: "var(--mantine-color-primary-8)"
+                    }
+                }}
+            >
+                {teams.map(team => (
+                    <Carousel.Slide key={team.id} py="sm">
+                        <Card className={styles.teams__card} shadow="sm" p="lg">
                             <Card.Section p="xl">
                                 <Stack align="center">
                                     <div className={styles.teams__user}>
-                                        <Avatar w={100} h={100} src={team.image} alt={team.name}>
+                                        <Avatar w={80} h={80} src={team.image} alt={team.name}>
                                             {team.name
                                                 .split(" ")
-                                                .map((n) => n[0])
+                                                .map((n:string) => n[0])
                                                 .join("")
                                                 .slice(0, 2)
                                                 .toUpperCase()
@@ -85,7 +107,7 @@ export default function Teams() {
                                     </Title>
                                 </Stack>
 
-                                <Text ta="center" c="gray.6" size="sm" lineClamp={3}>
+                                <Text ta="left" c="gray.6" size="sm" lineClamp={3}>
                                     {team.description}
                                 </Text>    
 
@@ -93,12 +115,23 @@ export default function Teams() {
                                     <FaFacebook color="gray" />
                                     <FaInstagram color="gray" />
                                     <FaLinkedin color="gray" />
-                                </Group>                        
+                                </Group>
+                                <Button
+                                    size="md"
+                                    radius="xs"
+                                    fullWidth
+                                    color="primary.8"
+                                    variant="filled"
+                                    classNames={{ label: styles.btnLabel}}
+                                    onClick={() => navigate(`/teams/${team.slug}`)}
+                                >
+                                    view profile
+                                </Button>                        
                             </Stack>
                         </Card>
-                    </Grid.Col>
+                    </Carousel.Slide>
                 ))}
-            </Grid>
+            </Carousel>
         </section>
     )
 }

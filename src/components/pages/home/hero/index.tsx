@@ -29,7 +29,7 @@ const slides = [
 
 export default function Hero() {
     const autoplay = useRef(Autoplay({
-        delay: 8_000, 
+        delay: 6_000, 
         stopOnInteraction: false,
     }));
     return (

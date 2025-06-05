@@ -5,22 +5,24 @@ import { Tabs, Title, Text, Box, Stack, List } from "@mantine/core";
 import styles from "./details.module.scss";
 
 import { programs } from "@/common/data/programs";
+import Teams from "@/components/pages/course/teams";
 import Brochure from "@/components/pages/course/brochure";
 import Enrollment from "@/components/pages/course/enrollment";
 
 const TABS = {
-    AIM: { id: 2, name: "AIM" },
-    ABOUT: { id: 1, name: "ABOUT" },
-    TARGET: { id: 3, name: "TARGET" },
-    OUTCOME: { id: 4, name: "OUTCOME" },
-    DELIVERY: { id: 5, name: "DELIVERY" },
-    CONTENTS: { id: 6, name: "CONTENTS" },
-    COACHING: { id: 7, name: "COACHING" },
-    DOWNLOAD: { id: 11, name: "DOWNLOAD" },
-    ENROLLMENT: { id: 12, name: "ENROLLMENT"},
-    ADMISSIONS: { id: 8, name: "ADMISSIONS" },
-    INTERNATIONAL: { id: 9, name: "INTERNATIONAL" },
-    CERTIFICATION: { id: 10, name: "CERTIFICATION" },
+    AIM: { id: 1, name: "AIM" },
+    COSTS: {id: 2, name: "COSTS"},
+    ABOUT: { id: 3, name: "ABOUT" },
+    TARGET: { id: 4, name: "TARGET" },
+    OUTCOME: { id: 5, name: "OUTCOME" },
+    DELIVERY: { id: 6, name: "DELIVERY" },
+    CONTENTS: { id: 7, name: "CONTENTS" },
+    COACHING: { id: 8, name: "COACHING" },
+    DOWNLOAD: { id: 9, name: "DOWNLOAD" },
+    ENROLLMENT: { id: 10, name: "ENROLLMENT"},
+    ADMISSIONS: { id: 11, name: "ADMISSIONS" },
+    INTERNATIONAL: { id: 12, name: "INTERNATIONAL" },
+    CERTIFICATION: { id: 13, name: "CERTIFICATION" },
 } as const;
 
 export default function CourseDetails() {
@@ -72,6 +74,11 @@ export default function CourseDetails() {
                     <Tabs.Tab mb={5} value={TABS.DELIVERY["name"]} disabled={!course.tabs.delivery.length}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             Mode of Delivery & Duration
+                        </Text>
+                    </Tabs.Tab>
+                    <Tabs.Tab mb={5} value={TABS.COSTS["name"]} disabled={!course.tabs.costs.length}>
+                        <Text tt="uppercase" ta="left" fz={12}>
+                            Course Costs & Dates
                         </Text>
                     </Tabs.Tab>
                     <Tabs.Tab mb={5} value={TABS.CONTENTS["name"]} disabled={!course.tabs.contents.length}>
@@ -176,7 +183,7 @@ export default function CourseDetails() {
                                             {item.data.map((subItem, subIdx) => {
                                                 return (
                                                     <List.Item key={`${idx}-${subIdx}`}>
-                                                        <Text fz={14} span fw={300}>
+                                                        <Text fz={14} span fw={400}>
                                                             {subItem.includes(":") ? (
                                                                 <>
                                                                     <Text span fz={14} fw={600}>{subItem.split(":")[0]}:</Text>
@@ -210,6 +217,39 @@ export default function CourseDetails() {
                     </Box>
                 </Tabs.Panel>
 
+                <Tabs.Panel value={TABS.COSTS["name"]}>
+                    <Box className={styles.dets__box}>
+                        <Stack>
+                            <Title order={2} c="gray.9" fw={700}>
+                                Course Costs & Dates
+                            </Title>
+                            {course.tabs.costs.map((entry, idx) => {
+                                if(typeof entry === "string"){
+                                    return (
+                                        <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                            {entry}
+                                        </Text>
+                                    )
+                                }
+                                return (
+                                    <Stack>
+                                        <Title order={4} c="gray.9" fw={700}>
+                                            {entry.title}
+                                        </Title>
+                                        <List c="gray.8" fw={400} fz={15}>
+                                            {entry.data.map((item, itemIdx) => (
+                                                <List.Item key={`${idx}-${itemIdx}`} fw={itemIdx === 0 ? 600 : 400}>
+                                                    <Text fz={14} span fw={400}>{item}</Text>
+                                                </List.Item>
+                                            ))} 
+                                        </List>
+                                    </Stack>
+                                )
+                            })}
+                        </Stack>
+                    </Box>
+                </Tabs.Panel>
+
                 <Tabs.Panel value={TABS.CONTENTS["name"]}>
                     <Box className={styles.dets__box}>
                         <Stack>
@@ -224,13 +264,12 @@ export default function CourseDetails() {
                                         </Text>
                                     )
                                 }
-
                                 return (
                                     <Stack>
                                         <Title order={4} c="gray.9" fw={700}>
                                             {content.title}
                                         </Title>
-                                        <List c="gray.8" fw={300} fz={15}>
+                                        <List c="gray.8" fw={400} fz={15}>
                                             {content.data.map((item, itemIdx) => (
                                                 <List.Item key={`${idx}-${itemIdx}`}>
                                                     <Text fz={14} span fw={400}>{item}</Text>
@@ -301,7 +340,6 @@ export default function CourseDetails() {
                                 {course.tabs.certification?.title}
                             </Title>
                             {course.tabs.certification?.data?.map((entry, idx) => {
-                                
                                 return (
                                     <Text key={idx} c="gray.8" fw={400} fz={14}>
                                         {entry}
@@ -320,6 +358,8 @@ export default function CourseDetails() {
                     <Enrollment />
                 </Tabs.Panel>
             </Tabs>
+
+            <Teams />
         </section>
     )
 }

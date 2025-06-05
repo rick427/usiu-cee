@@ -60,9 +60,9 @@ export default function CoursesList() {
             <section className={styles.cl}>
                 <Stack className={styles.cl__stack} align="center">
                     <Title c="gray.9" order={1}>
-                        About program
+                        About Program
                     </Title>
-                    <Text ta="center" c="gray.7" fw={300}>
+                    <Text size="sm" ta="center" c="gray.6" fw={400}>
                         {program.description}
                     </Text>
                 </Stack>
@@ -89,9 +89,9 @@ export default function CoursesList() {
             <Reveal>
                 <Stack className={styles.cl__stack} align="center">
                     <Title c="gray.9" order={1}>
-                        About program
+                        About Program
                     </Title>
-                    <Text ta="center" c="gray.7" fw={300}>
+                    <Text size="sm" ta="center" c="gray.7" fw={400}>
                         {program.description}
                     </Text>
                 </Stack>
@@ -150,7 +150,7 @@ export default function CoursesList() {
                             >
                                 <Card className={styles.cl__card} shadow="sm" p="lg">
                                     <Card.Section>
-                                        <Image h={200} src={course.image} alt={course.slug} />
+                                        <Image h={200} radius="sm" src={course.image} alt={course.slug} />
                                     </Card.Section>
                                     <Stack flex={1} gap="xs" mt="md" justify="space-between">
                                         <Stack>

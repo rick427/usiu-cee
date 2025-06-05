@@ -17,7 +17,7 @@ export default function Programs() {
                     <Title c="gray.9" order={1}>
                         Browse our Programs
                     </Title>
-                    <Text ta="center" c="gray.7" fw={300}>
+                    <Text size="sm" ta="center" c="gray.7" fw={400}>
                         Explore our diverse range of programs designed to empower you with the 
                         knowledge and skills needed for success in today's dynamic world. 
                         Whether you're interested in business, technology, arts, or sciences, 
@@ -32,7 +32,7 @@ export default function Programs() {
                         <Stagger index={index}>
                             <Card className={styles.programs__card} shadow="sm" p="lg">
                                 <Card.Section>
-                                    <Image h={200} src={program.image} alt={program.slug} />
+                                    <Image h={200} radius="sm" src={program.image} alt={program.slug} />
                                 </Card.Section>
                                 <Stack gap="xs" mt="md">
                                     <Title fw={600} order={4}>

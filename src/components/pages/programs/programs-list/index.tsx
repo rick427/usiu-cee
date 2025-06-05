@@ -36,7 +36,7 @@ export default function ProgramList() {
                     <Title c="gray.9" order={1}>
                         Browse our Programs
                     </Title>
-                    <Text ta="center" c="gray.7" fw={300}>
+                    <Text size="sm" ta="center" c="gray.7" fw={400}>
                         Discover our executive programs from intensive, days long courses 
                         for rapid skill gains to flexible modular tracks you can customize 
                         over time designed to sharpen your leadership and drive real results.
@@ -78,7 +78,7 @@ export default function ProgramList() {
                             >
                                 <Card className={styles.pl__card} shadow="sm" p="lg">
                                     <Card.Section>
-                                        <Image h={200} src={program.image} alt={program.slug} />
+                                        <Image h={200} radius="sm" src={program.image} alt={program.slug} />
                                     </Card.Section>
                                     <Stack gap="xs" mt="md">
                                         <Title fw={600} order={4}>

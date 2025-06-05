@@ -310,7 +310,7 @@ export default function CustomSolutions() {
                                     style={{alignSelf: "baseline"}}
                                     classNames={{ label: styles.btnLabel}}
                                 >
-                                    Send Message
+                                    Send program enquiry
                                 </Button>
                             </form>
                         </Stack>

@@ -23,6 +23,10 @@ interface CourseTabContent {
         title: string;
         data: string[];
     }[];
+    costs: {
+        title: string;
+        data: string[];
+    }[] | string[];
     admissions: string[];
     coaching: string[] | null;
     international: string[];
@@ -132,6 +136,16 @@ export const programs:Program[] = [
                             ],
                         },
                     ],
+                    costs: [
+                        {
+                            title: "Cost - Kshs 45,000",
+                            data: [
+                                "Cohort 1: 27th - 31st Oct 2025",
+                                "Cohort 2: 13th - 17th April 2026",
+                                "Cohort 3: 10th - 14th Aug 2026",
+                            ]
+                        },
+                    ],
                     coaching: null,
                     admissions: [
                         "We admit applicants on a rolling and space-available basis. You are therefore advised to submit your application as soon as possible.",
@@ -227,6 +241,16 @@ export const programs:Program[] = [
                             ]
                         }
                     ],
+                    costs: [
+                        {
+                            title: "Cost - Kshs 51,000",
+                            data: [
+                                "Cohort 1: 15th - 17th Oct 2025",
+                                "Cohort 2: 11th - 13th March 2026",
+                                "Cohort 3: 8th - 10th Aug 2026",
+                            ]
+                        }
+                    ],
                     coaching: null,
                     admissions: [
                         "We admit applicants on a rolling and space-available basis. You are therefore advised to submit your application as soon as possible.",
@@ -295,6 +319,17 @@ export const programs:Program[] = [
                         "Making Informed decisions during a crisis",
                         "Collaboration and Delegation",
                         "Receiving, analysing and interpreting feedback"
+                    ],
+                    costs: [
+                        {
+                            title: "Cost - Kshs 55,000",
+                            data: [
+                                "Cohort 1: 1st - 5th Sept 2025",
+                                "Cohort 2: 1st - 5th Dec 2025",
+                                "Cohort 3: 4th - 8th May 2026",
+                                "Cohort 4: 3rd - 7th Aug 2026",
+                            ]
+                        },
                     ],
                     coaching: null,
                     admissions: [
@@ -370,6 +405,15 @@ export const programs:Program[] = [
                         "Module 3: Developing Management and Leadership skills for higher learning (International)",
                         "Module 4: Strategic thinking towards the future of higher learning"
                     ],
+                    costs: [
+                        {
+                            title: "Cost - Kshs 407,000",
+                            data: [
+                                "Module 1: 20th - 24th April 2026",
+                                "Module 2: 21st - 25th July 2026"
+                            ]
+                        }
+                    ],
                     coaching: [
                         "Participants will spearhead a strategic project within their organization during the program, guided by a designated Coach to ensure successful implementation and growth. The project is designed to generate meaningful organizational impact while supporting the participant’s professional development goals, fostering leadership skills and aligning personal aspirations with organizational priorities."
                     ],
@@ -430,6 +474,17 @@ export const programs:Program[] = [
                         "Module 3: Understanding how to manage organisational strategy. (16th - 20th 2026)-International Module-South Africa",
                         "Module 4: Learn how to lead organisational change and inspire high-performing teams. (18th - 22nd May 2026)"
                     ],
+                    costs: [
+                        {
+                            title: "Cost-Kshs 360,000",
+                            data: [
+                                "Module 1: 18th - 22nd Aug 2025 Cohort 1",
+                                "Module 2: 17th - 21st Nov 2025",
+                                "Module 3: 5th - 9th Oct 2026",
+                                "Module 4: 7th - 11th Dec 2026"
+                            ]
+                        }
+                    ],
                     coaching: [
                         "Participants will spearhead a strategic project within their organization during the program, guided by a designated Coach to ensure successful implementation and growth. The project is designed to generate meaningful organizational impact while supporting the participant’s professional development goals, fostering leadership skills and aligning personal aspirations with organizational priorities.",
                     ],
@@ -454,13 +509,13 @@ export const programs:Program[] = [
                 id: 3,
                 name: "Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL)",
                 slug: "executive-leadership-development-program-for-higher-learning-institutions-leaders-(ELDP-HLIL)",
-                description: "The Executive Leadership Development Program for Higher Learning Institutions (ELDP-HLI) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape.",
+                description: "The Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape.",
                 image: p9,
                 duration: "28th July, 2026",
                 amount: 530_000,
                 tabs: {
                     about: [
-                        "The Executive Leadership Development Program for Higher Learning Institutions (ELDP-HLI) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape."
+                        "The Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape."
                     ],
                     aim: "This program is designed to enhance leadership capabilities in higher education by fostering a deep understanding of sustaining an institutional culture rooted in evidence-based decision making through effective data utilization. It also aims to cultivate leadership qualities aligned with the five principles of exemplary leadership, i.e. demonstrating the path, inspiring a shared vision, challenging the status quo, empowering others, and ensuring future resilience and ultimately enabling leaders to guide their institutions with informed, innovative, and collaborative strategies.",
                     target: [
@@ -511,6 +566,17 @@ export const programs:Program[] = [
                             ]
                         }
                     ],
+                    costs: [
+                        {
+                            title: "Cost-Kshs 530,000",
+                            data: [
+                                "Module 1: Cohort 1: 28 th July - 1 st Aug 2025 (Nairobi, Kenya)",
+                                "Module 2: Cohort 1: 25 th - 29 th May 2026 (International Module-South Africa)",
+                                "Module 1: Cohort 2: 25th - 29th May 2026 (International Module-South Africa)",
+                                "Module 2: Cohort 2: 7 th -11 th Dec 2026 (Nairobi Kenya)"
+                            ]
+                        }
+                    ],
                     coaching: [
                         "Participants will spearhead a strategic project within their organization during the program, guided by a designated Coach to ensure successful implementation and growth. The project is designed to generate meaningful organizational impact while supporting the participant’s professional development goals, fostering leadership skills and aligning personal aspirations with organizational priorities."
                     ],
@@ -539,43 +605,107 @@ export const programs:Program[] = [
                 image: p10,
                 tabs: {
                     about: [
-                        "This Program at USIU Africa is designed to prepare the mid-level and experienced academic Managers, directors and academic professionals for leadership roles in the next levels of DVCs and VCs of Universities and other institutions of higher learning. The program dissects through all major aspects of the higher learning institutions and instils a better understanding to the participants making them ready for the top positions. It covers areas of strategic planning, student recruitment &amp; enrolment, financial management, marketing, fundraising, endowment fund management, governmental &amp; alumni relations, athletics and student affairs among others."
+                        "The Senior Leadership Development Program at USIU Africa's Center for Executive Education is designed to enhance strategic thinking and leadership skills among senior executives. This program integrates essential management concepts and best practices, providing a transformational learning experience that equips leaders to navigate complex market dynamics and maintain a sustainable competitive edge. The curriculum emphasizes integrated leadership, entrepreneurial skills, and collaboration, utilizing interactive learning techniques that include real-life case studies and insights from global executives. Participants can expect to develop a comprehensive understanding of the business landscape, which not only enhances individual capabilities but also fosters a holistic view of organizational challenges and opportunities."
                     ],
-                    aim: "Executive Leadership Development Program (SLDP): For Higher Learning Institutions Leaders at USIU Africa aims at developing the next set of College Principals, University DVCs and VCs for higher learning institutions. The program aims to develop a wide range of skills that senior executives in higher learning institutions will need to meet the challenges of today’s educational environment and serve the students.",
+                    aim: "The primary aim of the Senior Leadership Development Program (SLDP) at USIU Africa's Center for Executive Education is to equip current and future senior leaders with the skills, knowledge, and mindset necessary to effectively lead their organizations and achieve strategic objectives. The key components in this program involve developing strategic thinking, strategic business acumen, strategic ambidextrous leadership abilities, strategic management, and the capacity to foster a culture of innovation and change.",
                     target: [
-                        "Senior Academic, senior administrative and managerial professionals in higher learning institutions who are exploring opportunities to the next levels of leadership in higher institutions of learning such as College Principals, University DVCs and VCs."
+                        "Senior Leadership Development Program (SLDP) is designed for executives and high-performing senior managers who have significant management responsibilities. It's also suitable for functional senior leaders, principals of small and medium firms, entrepreneurs, and executives seeking to enhance their strategic leadership capabilities.",
+                        "They typically include: - General Managers, Cross-functional Heads such as Heads of Human Resource, Heads of Training and Development, Heads of Sales and Marketing, Heads of Customer Service, Heads of Finance, Heads of Compliance, Heads of Operations, Heads of Strategy, Heads of Quality, Heads of Business Development, Heads of Production, Heads of Fleet Management, Heads of Projects, functional Directors, Senior Managers, and Regional Managers among others."
                     ],
                     outcome: [
                         {
-                            meta: "You will walk away with skills and knowledge to navigate complex challenges in higher learning institutions.",
-                            data: [],
+                            title: "Outcome of the Program to you",
+                            data: [
+                                "You will walk away with skills and knowledge to navigate complex challenges in dynamic organizational and group leadership.",
+                                "You will be able to ultimately lead an enhanced institutional performance and a stronger impact on organizational success.",
+                                "You will be enabled as a leader to understand and manage your own emotions, as well as those of your team members. This will result in more effective communication and collaboration within the organization.",
+                                "You will walk away with a better understanding of how to involve your team in decision-making, which creates a more collaborative and productive work environment.",
+                                "You will get an understanding of strategic planning and strategy development as well as fostered effective governance skills for success."
+                            ],
                         },
                         {
-                            meta: "You will get an understanding of strategic planning and strategy development as well as fostered effective governance skills for institution of higher learning.",
-                            data: [],
-                        },
-                        {
-                            meta: "You will be able to ultimately lead an enhanced institutional performance and a stronger impact on higher learning leadership.",
-                            data: [],
-                        },
+                            title: "Outcome of the Program to your organization",
+                            data: [
+                                "Your organization will benefit from improved employee engagement and retention",
+                                "There will be enhanced organizational performance and productivity",
+                                "The clarity of vision and goals imparted to individual participant will lead to clearer and more defined organizational culture.",
+                                "It will also strengthen succession planning, fostering a more agile and innovative organizational environment."
+                            ]
+                        }
                     ],
                     delivery: [
-                        "The program is delivered in 4 modules spread across a period of 8 months. Each module equals a week of 5 days and there is a blend of online and face to face interaction for each module of 5 days. One module is offered internationally through our partner institutions in either South Africa, Europe or USA while the other 3 modules are offered in selected venues in Kenya including USIU Africa Campus.",
-                        "The admission is only done once a year with a specific and limited number of slots and therefore you are encouraged to reserve your slot early in advance to avoid inconveniences.",
-                        "Experienced industry experts and knowledgeable faculty both from Kenya and abroad will deliver the training. Case studies, structured learning materials, videos sessions, simulations &amp; role plays and group discussions will be used to deliver the program.",
+                        "The program spans four modules over eight months, with each module lasting five days and incorporating a blend of three days on campus and two days online/zoom. One module is delivered internationally through partner institutions in South Africa, Europe, or the USA, providing a global learning experience, while the other three modules are conducted at USIU Africa Campus, offering a balanced mix of local and international engagement.",
+                        "The training program combines industry expert-led and faculty instruction with diverse learning methods like case studies, videos, simulations, role plays, and group discussions to provide a dynamic and practical learning experience. The inclusion of coaching from seasoned professionals further personalizes the training, helping participants apply concepts effectively and develop their skills in real-world scenarios."
                     ],
                     contents: [
-                        "Module 1: Enrollment and marketing",
-                        "Module 2: Endowment and financial management",
-                        "Module 3: Government relations",
-                        "Module 4: Alumni relations",
-                        "Module 5: Crisis communications",
-                        "Module 6: Strategic planning",
+                        {
+                            title: "Module 1: Developing Emotional Intelligence and Strategic Communication.",
+                            data: [
+                                "Emotional Awareness and Self-Regulation",
+                                "Empathy and Stress Management",
+                                "Active Listening and Self-Reflection",
+                                "Building Resilience",
+                                "Creating a Communication Strategy and Audience analysis",
+                                "Change Management and Communication",
+                                "Feedback Mechanisms",
+                                "Crisis Communication",
+                                "Evaluation and Feedback",
+                            ],
+                        },
+                        {
+                            title: "Module 2: Understanding different Leadership styles and Self-Leadership",
+                            data: [
+                                "Transformational Leadership: vision and innovation.",
+                                "Transactional Leadership: Effective in structured environments where tasks are clear.",
+                                "Servant Leadership: Encourage collaboration and empowerment among team members.",
+                                "Autocratic Leadership: Individual control over all decisions",
+                                "Democratic Leadership: Team Members&#39; involvement in decision making",
+                                "Laissez-Faire Leadership: Minimal supervision-team members make decisions"
+                            ]
+                        },
+                        {
+                            title: "Module 3: Building and Leading High-Performing Teams.",
+                            data: [
+                                "Understanding the difference between high-performing teams and Dysfunctional teams",
+                                "Synergy and Teamwork in the workplace",
+                                "Setting the right expectations for team members",
+                                "Organizing, planning and prioritizing",
+                                "Acknowledging and Improving on weak spots",
+                            ]
+                        },
+                        {
+                            title: "Module 4: Leading Organizational Success through Turbulence: Innovation, resilience, and adaptive capacity in the face of crises.",
+                            data: [
+                                "Recognizing the sources and signs of organizational turbulence",
+                                "Building resilience in teams",
+                                "Adapting to change, and developing leadership skills to navigate disruption",
+                                "Creating meaning for employees, fostering trust and psychological safety.",
+                                "Promoting effective decision-making.",
+                                "Developing and implementing strategies that can withstand turbulent times.",
+                            ]
+                        }
                     ],
-                    coaching: null,
-                    admissions: [],
-                    international: [],
-                    certification: null,
+                    costs: [
+                        "Kshs 375,000 - The fee includes the program Delivery, lunches, coffee breaks and accommodation during the international module. Air tickets for the international module are NOT included and will need to be organised by participants separately."
+                    ],
+                    coaching: [
+                        "Participants will spearhead a strategic project within their organization during the program, guided by a designated Coach to ensure successful implementation and growth. The project is designed to generate meaningful organizational impact while supporting the participant's professional development goals, fostering leadership skills and aligning personal aspirations with organizational priorities."
+                    ],
+                    admissions: [
+                        "We admit applicants on a rolling and space-available basis. You are therefore advised to submit your application as soon as possible.",
+                        "The admissions process is based on your professional experience and achievement, your responsibility in the organisation, and the admissions criteria for each program as described in the Target Audience. There are no formal educational requirements for this program offered by the USIU-Africa Center for Executive Education."
+                    ],
+                    international: [
+                        "Accommodation: The university does not run student hostels but will assist you in securing affordable accommodation at your own expense for the short duration of your stay.",
+                        "Language of Instruction: United States International University utilizes English as its primary language of instruction, making it essential for students to be proficient in English to effectively engage with academic materials, participate in discussions, and complete coursework successfully."
+                    ],
+                    certification: {
+                        title: "Professional Certification: Business Management Professional (BMP) (Optional)",
+                        data: [
+                            "We will issue certificates on the Senior Leadership Development Program (SLDP); however, for those who are interested in getting the title Business Management Professional (BMP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
+                            "The certification is offered by an American Certifying Body in conjunction with United States International University."
+                        ]
+                    }
                 }
             }
         ],
