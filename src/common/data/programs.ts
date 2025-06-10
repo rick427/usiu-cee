@@ -409,8 +409,10 @@ export const programs:Program[] = [
                         {
                             title: "Cost - Kshs 407,000",
                             data: [
-                                "Module 1: 20th - 24th April 2026",
-                                "Module 2: 21st - 25th July 2026"
+                                "Module 1: 20th - 24th April 2026 (Nairobi Kenya)",
+                                "Module 2: 6th - 10th July 2026 (International Module South Africa)",
+                                "Module 3: 7th - 11th Sept 2026 (Nairobi Kenya)",
+                                "Module 4: 1st - 5th Dec 2026 (Nairobi Kenya)"
                             ]
                         }
                     ],
@@ -478,10 +480,16 @@ export const programs:Program[] = [
                         {
                             title: "Cost-Kshs 360,000",
                             data: [
-                                "Module 1: 18th - 22nd Aug 2025 Cohort 1",
-                                "Module 2: 17th - 21st Nov 2025",
-                                "Module 3: 5th - 9th Oct 2026",
-                                "Module 4: 7th - 11th Dec 2026"
+                                "Module 1: 18th - 22nd Aug 2025 (Nairobi Kenya) Cohort 1",
+                                "Module 2: 17th - 21st Nov 2025 (Nairobi Kenya) Cohort 1",
+                                "Module 3: 16th - 20th Feb 2026 (International Module-South Africa) Cohort 1 & 2",
+                                "Module 4: 18th - 22nd May 2026 (Nairobi Kenya) Cohort 1"
+                            ]
+                        },
+                        {
+                            title: "Cohort 2 Start Date",
+                            data: [
+                                "Module 1: 16th - 20th Feb 2026 (International Module-South Africa) Cohort 1 & 2"
                             ]
                         }
                     ],
@@ -599,9 +607,9 @@ export const programs:Program[] = [
             },
             {
                 id: 4,
-                name: "Senior Leadership Development Program (SLDP): For Higher Learning Insitutions Leaders",
-                slug: "senior-leadership-development-program-(SLDP)-for-higher-learning-insitutions-leaders",
-                description: "Executive Leadership Development Program (SLDP): For Higher Learning Institutions Leaders at USIU Africa aims at developing the next set of College Principals, University DVCs and VCs for higher learning institutions. The program aims to develop a wide range of skills that senior executives in higher learning institutions will need to meet the challenges of today's educational environment and serve the students.",
+                name: "Senior Leadership Development Program (SLDP)",
+                slug: "senior-leadership-development-program-(SLDP)",
+                description: "Executive Leadership Development Program (SLDP) at USIU Africa aims at developing the next set of College Principals, University DVCs and VCs for higher learning institutions. The program aims to develop a wide range of skills that senior executives in higher learning institutions will need to meet the challenges of today's educational environment and serve the students.",
                 image: p10,
                 tabs: {
                     about: [
@@ -610,7 +618,8 @@ export const programs:Program[] = [
                     aim: "The primary aim of the Senior Leadership Development Program (SLDP) at USIU Africa's Center for Executive Education is to equip current and future senior leaders with the skills, knowledge, and mindset necessary to effectively lead their organizations and achieve strategic objectives. The key components in this program involve developing strategic thinking, strategic business acumen, strategic ambidextrous leadership abilities, strategic management, and the capacity to foster a culture of innovation and change.",
                     target: [
                         "Senior Leadership Development Program (SLDP) is designed for executives and high-performing senior managers who have significant management responsibilities. It's also suitable for functional senior leaders, principals of small and medium firms, entrepreneurs, and executives seeking to enhance their strategic leadership capabilities.",
-                        "They typically include: - General Managers, Cross-functional Heads such as Heads of Human Resource, Heads of Training and Development, Heads of Sales and Marketing, Heads of Customer Service, Heads of Finance, Heads of Compliance, Heads of Operations, Heads of Strategy, Heads of Quality, Heads of Business Development, Heads of Production, Heads of Fleet Management, Heads of Projects, functional Directors, Senior Managers, and Regional Managers among others."
+                        "They typically include:",
+                        "General Managers, Cross-functional Heads such as Heads of Human Resource, Heads of Training and Development, Heads of Sales and Marketing, Heads of Customer Service, Heads of Finance, Heads of Compliance, Heads of Operations, Heads of Strategy, Heads of Quality, Heads of Business Development, Heads of Production, Heads of Fleet Management, Heads of Projects, functional Directors, Senior Managers, and Regional Managers among others."
                     ],
                     outcome: [
                         {
@@ -686,7 +695,15 @@ export const programs:Program[] = [
                         }
                     ],
                     costs: [
-                        "Kshs 375,000 - The fee includes the program Delivery, lunches, coffee breaks and accommodation during the international module. Air tickets for the international module are NOT included and will need to be organised by participants separately."
+                        {
+                            title: "Costs - Kshs 375,000",
+                            data: [
+                                "Module 1: 4th to 8th May 2026",
+                                "Module 2: 24th to 28th May 2026",
+                                "Module 3: 5th to 9th Oct 2026",
+                                "Module 4: 7th to 11th Dec 2026",
+                            ]
+                        }
                     ],
                     coaching: [
                         "Participants will spearhead a strategic project within their organization during the program, guided by a designated Coach to ensure successful implementation and growth. The project is designed to generate meaningful organizational impact while supporting the participant's professional development goals, fostering leadership skills and aligning personal aspirations with organizational priorities."
