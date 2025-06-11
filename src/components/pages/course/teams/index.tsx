@@ -143,7 +143,7 @@ export default function Teams() {
                             <Card.Section p="xl">
                                 <Stack align="center">
                                     <div className={styles.teams__user}>
-                                        <Avatar w={80} h={80} color="white" src={team.image} alt={team.name}>
+                                        <Avatar size={80} color="white" src={team.image} alt={team.name}>
                                             {team.name
                                                 .split(" ")
                                                 .map((n:string) => n[0])

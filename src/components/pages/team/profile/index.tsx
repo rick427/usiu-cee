@@ -18,7 +18,15 @@ export default function Profile() {
                 <Grid.Col span={{base: 12, md: 4, lg: 3}}>
                     <SlideIn direction="left">
                         <div className={styles.profile__user}>
-                            <Avatar size={220} src={user.image} />
+                            <Avatar size={220} color="white" src={user.image} alt={user.name}>
+                                {user.name
+                                    .split(" ")
+                                    .map((n:string) => n[0])
+                                    .join("")
+                                    .slice(0, 2)
+                                    .toUpperCase()
+                                }
+                            </Avatar>
                         </div>
                     </SlideIn>
                 </Grid.Col>
