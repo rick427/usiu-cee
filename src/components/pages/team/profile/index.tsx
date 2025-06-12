@@ -49,6 +49,12 @@ export default function Profile() {
                                     {el}
                                 </Text>
                             ))}
+                            {user.publication && (
+                                <Text c="gray.7" fz={14} ta="justify">
+                                    His publications can he 
+                                    accessed via this <a href={user.publication} rel="noreferrer" target="_blank">Link</a>
+                                </Text>
+                            )}
                         </Stack>
                     </SlideIn>
                 </Grid.Col>

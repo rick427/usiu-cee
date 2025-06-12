@@ -11,4 +11,9 @@
         border-radius: 50%;
         display: inline-block;
     }
+
+    a{
+        text-decoration: none;
+        color: var(--mantine-color-primary-8);
+    }
 }
