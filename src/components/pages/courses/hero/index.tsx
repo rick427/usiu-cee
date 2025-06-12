@@ -26,7 +26,7 @@ export default function Hero() {
                         Programs
                     </Link>
                     <GoChevronRight color="white" />
-                    <Text fz={13.5} c="white">
+                    <Text fz={13.5} c="white" tt="capitalize">
                         {formatSlug(programId)}
                     </Text>
                 </Group>

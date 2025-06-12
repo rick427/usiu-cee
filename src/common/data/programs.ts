@@ -213,7 +213,7 @@ export const programs:Program[] = [
                         {
                             title: "Customer Experience Journey Mapping",
                             data: [
-                                "Attendees map their organization&#39;s customer experience journey, focusing on TEA: Touchpoints, Emotions, and Action points."
+                                "Attendees map their organization's customer experience journey, focusing on TEA: Touchpoints, Emotions, and Action points."
                             ]
                         },
                         {
@@ -225,7 +225,7 @@ export const programs:Program[] = [
                         {
                             title: "Focus on Self-care",
                             data: [
-                                "Undoubtedly, the responsibility of catering to customers can be emotionally taxing, highlighting the crucial need for employees to prioritize their mental well-being. This program delves into positive intelligence, equipping attendees with valuable tools to navigate stress and handle challenging situations. Our course empowers individuals to manage these pressures effectively, ensuring they don&#39;t become mentally drained in the process."
+                                "Undoubtedly, the responsibility of catering to customers can be emotionally taxing, highlighting the crucial need for employees to prioritize their mental well-being. This program delves into positive intelligence, equipping attendees with valuable tools to navigate stress and handle challenging situations. Our course empowers individuals to manage these pressures effectively, ensuring they don't become mentally drained in the process."
                             ]
                         },
                         {
@@ -272,7 +272,7 @@ export const programs:Program[] = [
             {
                 id: 3,
                 name : "New Manager Development Program - (NMDP)",
-                slug: "new-manager-development-program-(NMPD)",
+                slug: "new-manager-development-program-(NMDP)",
                 description: "The New Manager Development Program aims to equip new managers with a solid understanding of business processes, management principles, and essential skills, helping them grasp how core functions interrelate and enhancing their ability to lead effectively within their organizations.",
                 image: p12,
                 duration: "1st - 5th September 2025",
@@ -360,77 +360,6 @@ export const programs:Program[] = [
         image: p8,
         courses: [
             {
-                id: 1,
-                name: "Developing Emerging Leaders in Higher Learning Institutions - (DEL-HLIP)",
-                slug: "developing-emerging-leaders-in-higher-learning-institutions-(DEL-HLIP)",
-                description: "Developing Emerging Leaders in Higher Learning Institutions program aims at preparing the next set of higher education managers and administrators towards effectiveness, resilience, accountability and courageous management and leadership while instilling the urge to drive their institutions path towards success.",
-                image: p6,
-                duration: "20th April, 2025",
-                tabs: {
-                    about: [
-                        "The USIU Africa DEL-HLIP program aims to equip academic and administrative professionals in higher education with the skills, mindset, and networks needed to effectively lead university initiatives as well as prepare them for transition into senior leadership roles. By focusing on understanding the diverse responsibilities within higher learning institutions, the program fosters professional growth, enhances leadership capabilities, and provides participants with valuable connections and support to advance their careers both in academia and administrative roles in institutions of higher learning across the world."
-                    ],
-                    aim: "Developing Emerging Leaders in Higher Learning Institutions program aims at preparing the next set of higher education managers and administrators towards effectiveness, resilience, accountability and courageous management and leadership while instilling the urge to drive their institutions' path towards success.",
-                    target: [
-                        "Academic, administrative and managerial professionals in higher learning institutions who are exploring opportunities to advance to higher-level administrative positions.",
-                        "Newly appointed academicians, managers and administrators looking to sharpen their leadership skills and mindset."
-                    ],
-                    outcome: [
-                        {
-                            title: "To the Professional",
-                            data: [
-                                "You will gain professional as well as personal growth through a comprehensive understanding of the various aspects of the higher learning institution management and how they relate to each other.",
-                                "You will develop critical skills for managing complex projects and leading institutional positive change towards growth.",
-                                "You will get the correct tools, which will help you to step into leadership roles in higher learning institutions.",
-                                "You will get a broader and possibly global network. You will build a strong and supportive network of peers and mentors.",
-                                "Through your coach&#39;s guidance, you will demonstrate your leadership skills by leading your own chosen project or initiative within your workplace from start to end.",
-                            ]
-                        },
-                        {
-                            title: "To the Organization",
-                            data: [
-                                "Your organization will get increased productivity &amp; performance due to better team synergy, outcomes and organizational results derived from the leadership course.",
-                                "Your organization will have increased employee retention, which will help talent growth while building a strong leadership pipeline.",
-                                "Your organization will have stronger employee motivational and skill growth culture promoted by the culture of continuous learning and development.",
-                            ]
-                        }
-                    ],
-                    delivery: [
-                        "The program spans four modules over eight months, with each module lasting five days and incorporating a blend of three days on campus and two days online/Zoom. One module is delivered internationally through partner institutions in South Africa, Europe, or the USA, providing a global learning experience, while the other three modules are conducted at USIU Africa Campus, offering a balanced mix of local and international engagement.",
-                        "The training program combines industry expert-led and faculty instruction with diverse learning methods like case studies, videos, simulations, role plays, and group discussions to provide a dynamic and practical learning experience. The inclusion of coaching from seasoned professionals further personalizes the training, helping participants apply concepts effectively and develop their skills in real-world scenarios."
-                    ],
-                    contents: [
-                        "Module 1: Self-awareness: Understanding your capabilities in Management and Leadership",
-                        "Module 2: Environment Awareness: Understanding Higher Education Systems",
-                        "Module 3: Developing Management and Leadership skills for higher learning (International)",
-                        "Module 4: Strategic thinking towards the future of higher learning"
-                    ],
-                    costs: [
-                        {
-                            title: "Cost - Kshs 407,000",
-                            data: [
-                                "Module 1: 20th - 24th April 2026 (Nairobi Kenya)",
-                                "Module 2: 6th - 10th July 2026 (International Module South Africa)",
-                                "Module 3: 7th - 11th Sept 2026 (Nairobi Kenya)",
-                                "Module 4: 1st - 5th Dec 2026 (Nairobi Kenya)"
-                            ]
-                        }
-                    ],
-                    coaching: [
-                        "Participants will spearhead a strategic project within their organization during the program, guided by a designated Coach to ensure successful implementation and growth. The project is designed to generate meaningful organizational impact while supporting the participant’s professional development goals, fostering leadership skills and aligning personal aspirations with organizational priorities."
-                    ],
-                    admissions: [
-                        "We admit applicants on a rolling and space-available basis. You are therefore advised to submit your application as soon as possible.", 
-                        "The admissions process is based on your professional experience and achievement, your responsibility in the organisation, and the admissions criteria for each program as described in the Target Audience. There are no formal educational requirements for this program offered by the USIU-Africa Center for Executive Education.",
-                    ],
-                    international: [
-                        "Accommodation: The university does not run student hostels but will assist you in securing affordable accommodation at your own expense for the short duration of your stay.",
-                        "Language of Instruction: United States International University utilizes English as its primary language of instruction, making it essential for students to be proficient in English to effectively engage with academic materials, participate in discussions, and complete coursework successfully."
-                    ],
-                    certification: null
-                }
-            },
-            {
                 id: 2,
                 name: "Strategic Management Development Program (SMDP)",
                 slug: "strategic-management-development-program-(SMDP)",
@@ -514,98 +443,6 @@ export const programs:Program[] = [
                 }
             },
             {
-                id: 3,
-                name: "Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL)",
-                slug: "executive-leadership-development-program-for-higher-learning-institutions-leaders-(ELDP-HLIL)",
-                description: "The Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape.",
-                image: p9,
-                duration: "28th July, 2026",
-                amount: 530_000,
-                tabs: {
-                    about: [
-                        "The Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape."
-                    ],
-                    aim: "This program is designed to enhance leadership capabilities in higher education by fostering a deep understanding of sustaining an institutional culture rooted in evidence-based decision making through effective data utilization. It also aims to cultivate leadership qualities aligned with the five principles of exemplary leadership, i.e. demonstrating the path, inspiring a shared vision, challenging the status quo, empowering others, and ensuring future resilience and ultimately enabling leaders to guide their institutions with informed, innovative, and collaborative strategies.",
-                    target: [
-                        "College Principals, Deans, DVCs, and Senior Leaders in the institutions of higher learning."
-                    ],
-                    outcome: [
-                        {
-                            title: "To you the Participant",
-                            data: [
-                                "You will get a better perception and comprehension of the effective change management in higher learning institutions, university finance and budget administration.",
-                                "You will better understand how to navigate through the organizational strategic plan, leadership vision, and institutional expectations.",
-                                "You will get better adeptness to integrate academic planning with university resources while building trust through effective communication.",
-                                "You will get an inspiring mastery of a transformational and ethical leadership in building and maintaining institutional resilience."
-                            ]
-                        },
-                        {
-                            title: "To your Organization",
-                            data: [
-                                "Your organization will get increased productivity &amp; performance due to better leadership outcomes and organizational results derived from the expanded capabilities achieved from the leadership upskilling.",
-                                "Your organization will have stronger organizational skill growth culture promoted by the culture of continuous learning and development.",
-                            ]
-                        }
-                    ],
-                    delivery: [
-                        "The program spans two modules over eight months, with each module lasting five days and incorporating a blend of three days on campus and two days online/zoom. One module is delivered internationally through partner institutions in South Africa, Europe, or the USA, providing a global learning experience, while the other module will be conducted in Kenya at a designated conducive learning environment, offering a balanced mix of local and international engagement.",
-                        "The training program combines industry expert-led and faculty instruction with diverse learning methods like case studies, videos, simulations, role plays, and group discussions to provide a dynamic and practical learning experience. The inclusion of coaching from seasoned professionals further personalizes the training, helping participants apply concepts effectively and develop their skills in real-world scenarios."
-                    ],
-                    contents: [
-                        {
-                            title: "Module 1: Leading Higher Learning Institution Processes and Resource Management",
-                            data: [
-                                "Navigating through Change: Leading change through challenges in Learning institutions",
-                                "Leading Resource Administration and Integrated Academic Program Planning",
-                                "Leading Partnerships for Institutional Success",
-                                "Case Analysis: Leadership Challenge Case Studies",
-                                "Understanding the art of leading Student success",
-                                "Budgeting for Success",
-                            ]
-                        },
-                        {
-                            title: "Module 2: Developing Holistic Bold Leadership Skills for higher learning institutions",
-                            data: [
-                                "Your role as the leader in a higher learning institution- Exemplary Leadership",
-                                "Navigating uncertainty in higher learning institutions -Leading through crisis",
-                                "Case Analysis: Bold and Brave Leadership",
-                                "Building and maintaining institutional resilience",
-                                "Building trust: Strategic Communication",
-                            ]
-                        }
-                    ],
-                    costs: [
-                        {
-                            title: "Cost-Kshs 530,000",
-                            data: [
-                                "Module 1: Cohort 1: 28 th July - 1 st Aug 2025 (Nairobi, Kenya)",
-                                "Module 2: Cohort 1: 25 th - 29 th May 2026 (International Module-South Africa)",
-                                "Module 1: Cohort 2: 25th - 29th May 2026 (International Module-South Africa)",
-                                "Module 2: Cohort 2: 7 th -11 th Dec 2026 (Nairobi Kenya)"
-                            ]
-                        }
-                    ],
-                    coaching: [
-                        "Participants will spearhead a strategic project within their organization during the program, guided by a designated Coach to ensure successful implementation and growth. The project is designed to generate meaningful organizational impact while supporting the participant’s professional development goals, fostering leadership skills and aligning personal aspirations with organizational priorities."
-                    ],
-                    admissions: [
-                        "We admit applicants on a rolling and space-available basis. You are therefore advised to submit your application as soon as possible.",
-                        "The admissions process is based on your professional experience and achievement, your responsibility in the organisation, and the admissions criteria for each program as described in the Target Audience. There are no formal educational requirements for this program offered by the USIU-Africa Center for Executive Education."
-                    ],
-                    international: [
-                        "Accommodation: The university does not run student hostels but will assist you in securing affordable accommodation at your own expense for the short duration of your stay.",
-                        "Language of Instruction: United States International University utilizes English as its primary language of instruction, making it essential for students to be proficient in English to effectively engage with academic materials, participate in discussions, and complete coursework successfully."
-                    ],
-                    certification: {
-                        title: "Professional Certification: Certified Business Continuity Professional (CBCP) (Optional)",
-                        data: [
-                            "We will issue certificates on the Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL); however, for those who are interested in getting the title Certified Business Continuity Professional (CBCP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
-                            "The certification is offered by an American Certifying body in conjunction with United States International University."
-                        ],
-                    }
-                }
-            },
-            {
                 id: 4,
                 name: "Senior Leadership Development Program (SLDP)",
                 slug: "senior-leadership-development-program-(SLDP)",
@@ -618,8 +455,24 @@ export const programs:Program[] = [
                     aim: "The primary aim of the Senior Leadership Development Program (SLDP) at USIU Africa's Center for Executive Education is to equip current and future senior leaders with the skills, knowledge, and mindset necessary to effectively lead their organizations and achieve strategic objectives. The key components in this program involve developing strategic thinking, strategic business acumen, strategic ambidextrous leadership abilities, strategic management, and the capacity to foster a culture of innovation and change.",
                     target: [
                         "Senior Leadership Development Program (SLDP) is designed for executives and high-performing senior managers who have significant management responsibilities. It's also suitable for functional senior leaders, principals of small and medium firms, entrepreneurs, and executives seeking to enhance their strategic leadership capabilities.",
-                        "They typically include:",
-                        "General Managers, Cross-functional Heads such as Heads of Human Resource, Heads of Training and Development, Heads of Sales and Marketing, Heads of Customer Service, Heads of Finance, Heads of Compliance, Heads of Operations, Heads of Strategy, Heads of Quality, Heads of Business Development, Heads of Production, Heads of Fleet Management, Heads of Projects, functional Directors, Senior Managers, and Regional Managers among others."
+                        "They specifically include:\n",
+                        "General Managers",
+                        "Cross-functional Heads such as Heads of Human Resource",
+                        "Heads of Training and Development",
+                        "Heads of Sales and Marketing",
+                        "Heads of Customer Service",
+                        "Heads of Finance",
+                        "Heads of Compliance",
+                        "Heads of Operations",
+                        "Heads of Strategy",
+                        "Heads of Quality",
+                        "Heads of Business Development",
+                        "Heads of Production",
+                        "Heads of Fleet Management",
+                        "Heads of Projects",
+                        "Functional Directors",
+                        "Senior Managers",
+                        "Regional Managers among others"
                     ],
                     outcome: [
                         {
@@ -724,7 +577,170 @@ export const programs:Program[] = [
                         ]
                     }
                 }
-            }
+            },
+            {
+                id: 3,
+                name: "Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL)",
+                slug: "executive-leadership-development-program-for-higher-learning-institutions-leaders-(ELDP-HLIL)",
+                description: "The Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape.",
+                image: p9,
+                duration: "28th July, 2026",
+                amount: 530_000,
+                tabs: {
+                    about: [
+                        "The Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape."
+                    ],
+                    aim: "This program is designed to enhance leadership capabilities in higher education by fostering a deep understanding of sustaining an institutional culture rooted in evidence-based decision making through effective data utilization. It also aims to cultivate leadership qualities aligned with the five principles of exemplary leadership, i.e. demonstrating the path, inspiring a shared vision, challenging the status quo, empowering others, and ensuring future resilience and ultimately enabling leaders to guide their institutions with informed, innovative, and collaborative strategies.",
+                    target: [
+                        "College Principals, Deans, DVCs, and Senior Leaders in the institutions of higher learning."
+                    ],
+                    outcome: [
+                        {
+                            title: "To you the Participant",
+                            data: [
+                                "You will get a better perception and comprehension of the effective change management in higher learning institutions, university finance and budget administration.",
+                                "You will better understand how to navigate through the organizational strategic plan, leadership vision, and institutional expectations.",
+                                "You will get better adeptness to integrate academic planning with university resources while building trust through effective communication.",
+                                "You will get an inspiring mastery of a transformational and ethical leadership in building and maintaining institutional resilience."
+                            ]
+                        },
+                        {
+                            title: "To your Organization",
+                            data: [
+                                "Your organization will get increased productivity &amp; performance due to better leadership outcomes and organizational results derived from the expanded capabilities achieved from the leadership upskilling.",
+                                "Your organization will have stronger organizational skill growth culture promoted by the culture of continuous learning and development.",
+                            ]
+                        }
+                    ],
+                    delivery: [
+                        "The program spans two modules over eight months, with each module lasting five days and incorporating a blend of three days on campus and two days online/zoom. One module is delivered internationally through partner institutions in South Africa, Europe, or the USA, providing a global learning experience, while the other module will be conducted in Kenya at a designated conducive learning environment, offering a balanced mix of local and international engagement.",
+                        "The training program combines industry expert-led and faculty instruction with diverse learning methods like case studies, videos, simulations, role plays, and group discussions to provide a dynamic and practical learning experience. The inclusion of coaching from seasoned professionals further personalizes the training, helping participants apply concepts effectively and develop their skills in real-world scenarios."
+                    ],
+                    contents: [
+                        {
+                            title: "Module 1: Leading Higher Learning Institution Processes and Resource Management",
+                            data: [
+                                "Navigating through Change: Leading change through challenges in Learning institutions",
+                                "Leading Resource Administration and Integrated Academic Program Planning",
+                                "Leading Partnerships for Institutional Success",
+                                "Case Analysis: Leadership Challenge Case Studies",
+                                "Understanding the art of leading Student success",
+                                "Budgeting for Success",
+                            ]
+                        },
+                        {
+                            title: "Module 2: Developing Holistic Bold Leadership Skills for higher learning institutions",
+                            data: [
+                                "Your role as the leader in a higher learning institution- Exemplary Leadership",
+                                "Navigating uncertainty in higher learning institutions -Leading through crisis",
+                                "Case Analysis: Bold and Brave Leadership",
+                                "Building and maintaining institutional resilience",
+                                "Building trust: Strategic Communication",
+                            ]
+                        }
+                    ],
+                    costs: [
+                        {
+                            title: "Cost-Kshs 530,000",
+                            data: [
+                                "Module 1: Cohort 1: 28 th July - 1 st Aug 2025 (Nairobi, Kenya)",
+                                "Module 2: Cohort 1: 25 th - 29 th May 2026 (International Module-South Africa)",
+                                "Module 1: Cohort 2: 25th - 29th May 2026 (International Module-South Africa)",
+                                "Module 2: Cohort 2: 7 th -11 th Dec 2026 (Nairobi Kenya)"
+                            ]
+                        }
+                    ],
+                    coaching: [
+                        "Participants will spearhead a strategic project within their organization during the program, guided by a designated Coach to ensure successful implementation and growth. The project is designed to generate meaningful organizational impact while supporting the participant’s professional development goals, fostering leadership skills and aligning personal aspirations with organizational priorities."
+                    ],
+                    admissions: [
+                        "We admit applicants on a rolling and space-available basis. You are therefore advised to submit your application as soon as possible.",
+                        "The admissions process is based on your professional experience and achievement, your responsibility in the organisation, and the admissions criteria for each program as described in the Target Audience. There are no formal educational requirements for this program offered by the USIU-Africa Center for Executive Education."
+                    ],
+                    international: [
+                        "Accommodation: The university does not run student hostels but will assist you in securing affordable accommodation at your own expense for the short duration of your stay.",
+                        "Language of Instruction: United States International University utilizes English as its primary language of instruction, making it essential for students to be proficient in English to effectively engage with academic materials, participate in discussions, and complete coursework successfully."
+                    ],
+                    certification: {
+                        title: "Professional Certification: Certified Business Continuity Professional (CBCP) (Optional)",
+                        data: [
+                            "We will issue certificates on the Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL); however, for those who are interested in getting the title Certified Business Continuity Professional (CBCP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
+                            "The certification is offered by an American Certifying body in conjunction with United States International University."
+                        ],
+                    }
+                }
+            },
+            {
+                id: 1,
+                name: "Developing Emerging Leaders in Higher Learning Institutions - (DEL-HLIP)",
+                slug: "developing-emerging-leaders-in-higher-learning-institutions-(DEL-HLIP)",
+                description: "Developing Emerging Leaders in Higher Learning Institutions program aims at preparing the next set of higher education managers and administrators towards effectiveness, resilience, accountability and courageous management and leadership while instilling the urge to drive their institutions path towards success.",
+                image: p6,
+                duration: "20th April, 2025",
+                tabs: {
+                    about: [
+                        "The USIU Africa DEL-HLIP program aims to equip academic and administrative professionals in higher education with the skills, mindset, and networks needed to effectively lead university initiatives as well as prepare them for transition into senior leadership roles. By focusing on understanding the diverse responsibilities within higher learning institutions, the program fosters professional growth, enhances leadership capabilities, and provides participants with valuable connections and support to advance their careers both in academia and administrative roles in institutions of higher learning across the world."
+                    ],
+                    aim: "Developing Emerging Leaders in Higher Learning Institutions program aims at preparing the next set of higher education managers and administrators towards effectiveness, resilience, accountability and courageous management and leadership while instilling the urge to drive their institutions' path towards success.",
+                    target: [
+                        "Academic, administrative and managerial professionals in higher learning institutions who are exploring opportunities to advance to higher-level administrative positions.",
+                        "Newly appointed academicians, managers and administrators looking to sharpen their leadership skills and mindset."
+                    ],
+                    outcome: [
+                        {
+                            title: "To the Professional",
+                            data: [
+                                "You will gain professional as well as personal growth through a comprehensive understanding of the various aspects of the higher learning institution management and how they relate to each other.",
+                                "You will develop critical skills for managing complex projects and leading institutional positive change towards growth.",
+                                "You will get the correct tools, which will help you to step into leadership roles in higher learning institutions.",
+                                "You will get a broader and possibly global network. You will build a strong and supportive network of peers and mentors.",
+                                "Through your coach&#39;s guidance, you will demonstrate your leadership skills by leading your own chosen project or initiative within your workplace from start to end.",
+                            ]
+                        },
+                        {
+                            title: "To the Organization",
+                            data: [
+                                "Your organization will get increased productivity &amp; performance due to better team synergy, outcomes and organizational results derived from the leadership course.",
+                                "Your organization will have increased employee retention, which will help talent growth while building a strong leadership pipeline.",
+                                "Your organization will have stronger employee motivational and skill growth culture promoted by the culture of continuous learning and development.",
+                            ]
+                        }
+                    ],
+                    delivery: [
+                        "The program spans four modules over eight months, with each module lasting five days and incorporating a blend of three days on campus and two days online/Zoom. One module is delivered internationally through partner institutions in South Africa, Europe, or the USA, providing a global learning experience, while the other three modules are conducted at USIU Africa Campus, offering a balanced mix of local and international engagement.",
+                        "The training program combines industry expert-led and faculty instruction with diverse learning methods like case studies, videos, simulations, role plays, and group discussions to provide a dynamic and practical learning experience. The inclusion of coaching from seasoned professionals further personalizes the training, helping participants apply concepts effectively and develop their skills in real-world scenarios."
+                    ],
+                    contents: [
+                        "Module 1: Self-awareness: Understanding your capabilities in Management and Leadership",
+                        "Module 2: Environment Awareness: Understanding Higher Education Systems",
+                        "Module 3: Developing Management and Leadership skills for higher learning (International)",
+                        "Module 4: Strategic thinking towards the future of higher learning"
+                    ],
+                    costs: [
+                        {
+                            title: "Cost - Kshs 407,000",
+                            data: [
+                                "Module 1: 20th - 24th April 2026 (Nairobi Kenya)",
+                                "Module 2: 6th - 10th July 2026 (International Module South Africa)",
+                                "Module 3: 7th - 11th Sept 2026 (Nairobi Kenya)",
+                                "Module 4: 1st - 5th Dec 2026 (Nairobi Kenya)"
+                            ]
+                        }
+                    ],
+                    coaching: [
+                        "Participants will spearhead a strategic project within their organization during the program, guided by a designated Coach to ensure successful implementation and growth. The project is designed to generate meaningful organizational impact while supporting the participant’s professional development goals, fostering leadership skills and aligning personal aspirations with organizational priorities."
+                    ],
+                    admissions: [
+                        "We admit applicants on a rolling and space-available basis. You are therefore advised to submit your application as soon as possible.", 
+                        "The admissions process is based on your professional experience and achievement, your responsibility in the organisation, and the admissions criteria for each program as described in the Target Audience. There are no formal educational requirements for this program offered by the USIU-Africa Center for Executive Education.",
+                    ],
+                    international: [
+                        "Accommodation: The university does not run student hostels but will assist you in securing affordable accommodation at your own expense for the short duration of your stay.",
+                        "Language of Instruction: United States International University utilizes English as its primary language of instruction, making it essential for students to be proficient in English to effectively engage with academic materials, participate in discussions, and complete coursework successfully."
+                    ],
+                    certification: null
+                }
+            },
         ],
     },
 

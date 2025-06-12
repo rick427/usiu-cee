@@ -129,7 +129,7 @@ export default function CourseDetails() {
                                 About the Course
                             </Title>
                             {course.tabs.about.map((entry, idx) => (
-                                <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                <Text key={idx} c="gray.8" fw={400} fz={14} ta="justify">
                                     {entry}
                                 </Text>
                             ))}
@@ -143,7 +143,7 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 Aim of the Course
                             </Title>
-                            <Text c="gray.8" fw={400} fz={14}>
+                            <Text c="gray.8" fw={400} fz={14} ta="justify">
                                 {course.tabs.aim}
                             </Text>
                         </Stack>
@@ -158,7 +158,9 @@ export default function CourseDetails() {
                             </Title>
                             <List c="gray.8" fw={400} fz={14}>
                                 {course.tabs.target.map((item, idx) => (
-                                    <List.Item key={idx}>{item}</List.Item>
+                                    <List.Item key={idx} ta="justify" my={item.includes("\n") ? "md" : ""}>
+                                        {item}
+                                    </List.Item>
                                 ))} 
                             </List>
                         </Stack>
@@ -171,22 +173,28 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 Outcome of the Program
                             </Title>
-                            <List type="ordered" c="gray.8" fw={400} fz={15}>
+                            <List type="unordered" c="gray.8" fw={400} fz={15}>
                                 {course.tabs.outcome.map((item, idx) => (
                                     <React.Fragment key={idx}>
                                         {item.title ? (
-                                            <List.Item fw={700} mt="md" mb="xs">{item.title}</List.Item>
+                                            <List.Item fw={700} mt="md" mb="xs">
+                                                {item.title}
+                                            </List.Item>
                                         ) : (
-                                            <List.Item fw={400} mt="md" mb="xs">{item.meta}</List.Item>
+                                            <List.Item fw={400} mt="md" mb="xs" ta="justify">
+                                                {item.meta}
+                                            </List.Item>
                                         )}
-                                        <List withPadding listStyleType="revert">
+                                        <List withPadding listStyleType="disc" ta="justify">
                                             {item.data.map((subItem, subIdx) => {
                                                 return (
                                                     <List.Item key={`${idx}-${subIdx}`}>
                                                         <Text fz={14} span fw={400}>
                                                             {subItem.includes(":") ? (
                                                                 <>
-                                                                    <Text span fz={14} fw={600}>{subItem.split(":")[0]}:</Text>
+                                                                    <Text span fz={14} fw={600}>
+                                                                        {subItem.split(":")[0]}:
+                                                                    </Text>
                                                                     {subItem.split(":").slice(1).join(":")}
                                                                 </>
                                                             ) : subItem}
@@ -209,7 +217,7 @@ export default function CourseDetails() {
                                 Mode of Delivery & Duration
                             </Title>
                             {course.tabs.delivery.map((entry, idx) => (
-                                <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                <Text key={idx} c="gray.8" fw={400} fz={14} ta="justify">
                                     {entry}
                                 </Text>
                             ))}
@@ -226,7 +234,7 @@ export default function CourseDetails() {
                             {course.tabs.costs.map((entry, idx) => {
                                 if(typeof entry === "string"){
                                     return (
-                                        <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                        <Text key={idx} c="gray.8" fw={400} fz={14} ta="justify">
                                             {entry}
                                         </Text>
                                     )
@@ -239,7 +247,7 @@ export default function CourseDetails() {
                                         <List c="gray.8" fw={400} fz={15}>
                                             {entry.data.map((item, itemIdx) => (
                                                 <List.Item key={`${idx}-${itemIdx}`} fw={itemIdx === 0 ? 600 : 400}>
-                                                    <Text fz={14} span fw={400}>{item}</Text>
+                                                    <Text fz={14} span fw={400} ta="justify">{item}</Text>
                                                 </List.Item>
                                             ))} 
                                         </List>
@@ -256,28 +264,43 @@ export default function CourseDetails() {
                             <Title order={2} c="gray.9" fw={700}>
                                 Course Contents
                             </Title>
-                            {course.tabs.contents.map((content, idx) => {
-                                if(typeof content === "string"){
+                            {/* Extract and group all string items */}
+                            <List c="gray.8" fw={400} fz={15} spacing="xs">
+                                {course.tabs.contents.map((content, idx) => {
+                                    if (typeof content === "string") {
                                     return (
-                                        <Text key={idx} c="gray.8" fw={400} fz={14}>
-                                            {content}
-                                        </Text>
-                                    )
+                                        <List.Item key={`string-${idx}`}>
+                                            <Text fz={14} span fw={400} ta="justify">
+                                                {content}
+                                            </Text>
+                                        </List.Item>
+                                    );
+                                    }
+                                    return null; // skip non-strings for now
+                                })}
+                            </List>
+
+                            {/* Render the structured content (with title and items) */}
+                            {course.tabs.contents.map((content, idx) => {
+                                if (typeof content !== "string") {
+                                    return (
+                                        <Stack key={`obj-${idx}`} gap="xs">
+                                            <Title order={4} c="gray.9" fw={700}>
+                                                {content.title}
+                                            </Title>
+                                            <List c="gray.8" fw={400} fz={15}>
+                                                {content.data.map((item, itemIdx) => (
+                                                    <List.Item key={`${idx}-${itemIdx}`}>
+                                                        <Text fz={14} span fw={400} ta="justify">
+                                                            {item}
+                                                        </Text>
+                                                    </List.Item>
+                                                ))}
+                                            </List>
+                                        </Stack>
+                                    );
                                 }
-                                return (
-                                    <Stack>
-                                        <Title order={4} c="gray.9" fw={700}>
-                                            {content.title}
-                                        </Title>
-                                        <List c="gray.8" fw={400} fz={15}>
-                                            {content.data.map((item, itemIdx) => (
-                                                <List.Item key={`${idx}-${itemIdx}`}>
-                                                    <Text fz={14} span fw={400}>{item}</Text>
-                                                </List.Item>
-                                            ))} 
-                                        </List>
-                                    </Stack>
-                                )
+                                return null;
                             })}
                         </Stack>
                     </Box>
@@ -290,7 +313,7 @@ export default function CourseDetails() {
                                 Course Coaching
                             </Title>
                             {course.tabs.coaching?.map((entry, idx) => (
-                                <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                <Text key={idx} c="gray.8" fw={400} fz={14} ta="justify">
                                     {entry}
                                 </Text>
                             ))}
@@ -305,7 +328,7 @@ export default function CourseDetails() {
                                 Course Admissions
                             </Title>
                             {course.tabs.admissions.map((entry, idx) => (
-                                <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                <Text key={idx} c="gray.8" fw={400} fz={14} ta="justify">
                                     {entry}
                                 </Text>
                             ))}
@@ -320,10 +343,10 @@ export default function CourseDetails() {
                                 International Participants
                             </Title>
                             {course.tabs.international.map((entry, idx) => (
-                                <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                <Text key={idx} c="gray.8" fw={400} fz={14} ta="justify">
                                     {entry.includes(":") ? (
                                         <>
-                                            <Text span fz={15} fw={600}>{entry.split(":")[0]}:</Text>
+                                            <Text span fz={15} fw={600} ta="justify">{entry.split(":")[0]}:</Text>
                                             {entry.split(":").slice(1).join(":")}
                                         </>
                                     ) : entry}
@@ -341,7 +364,7 @@ export default function CourseDetails() {
                             </Title>
                             {course.tabs.certification?.data?.map((entry, idx) => {
                                 return (
-                                    <Text key={idx} c="gray.8" fw={400} fz={14}>
+                                    <Text key={idx} c="gray.8" fw={400} fz={14} ta="justify">
                                         {entry}
                                     </Text>
                                 )

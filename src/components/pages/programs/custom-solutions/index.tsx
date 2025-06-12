@@ -1,4 +1,4 @@
-import { Tabs, Title, Text, Box, Stack, Button, TextInput, Divider, Select, Textarea, SimpleGrid } from "@mantine/core";
+import { Tabs, Title, Text, Box, Stack, List, Button, TextInput, Divider, Select, Textarea, SimpleGrid } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
@@ -128,51 +128,63 @@ export default function CustomSolutions() {
                             <Title order={2} c="gray.9" fw={700}>
                                 Essential Components
                             </Title>
-                            <Stack gap="xs">
-                                <Text c="gray.8" fw={600} fz={15}>
-                                    Needs Assessment:
-                                </Text>
-                                <Text c="gray.8" fw={400} fz={14}>
-                                    We identify specific skill gaps and learning requirements within your organization through various
-                                    methods such as skills assessments, performance reviews, and employee feedback. 
-                                </Text>
-                            </Stack>
-                            <Stack gap="xs">
-                                <Text c="gray.8" fw={600} fz={15}>
-                                    Tailored Content:
-                                </Text>
-                                <Text c="gray.8" fw={400} fz={14}>
-                                    We develop training materials, activities, and resources that are relevant to your organization&#39;s
-                                    industry, culture, and strategic goals.
-                                </Text>
-                            </Stack>
-                            <Stack gap="xs">
-                                <Text c="gray.8" fw={600} fz={15}>
-                                    Personalized Learning:
-                                </Text>
-                                <Text c="gray.8" fw={400} fz={14}>
-                                    We use various learning modalities, including online modules, workshops, coaching, and simulations,
-                                    to cater to diverse learning styles and preferences.
-                                </Text>
-                            </Stack>
-                            <Stack gap="xs">
-                                <Text c="gray.8" fw={600} fz={15}>
-                                    Practical Application:
-                                </Text>
-                                <Text c="gray.8" fw={400} fz={14}>
-                                    We focus on practical skills development through hands-on exercises, real-world case studies, and
-                                    opportunities for on the job application.
-                                </Text>
-                            </Stack>
-                            <Stack gap="xs">
-                                <Text c="gray.8" fw={600} fz={15}>
-                                    Evaluation and Feedback:
-                                </Text>
-                                <Text c="gray.8" fw={400} fz={14}>
-                                    We measure the effectiveness of the program through assessments, feedback mechanisms, and
-                                    tracking of performance improvements.
-                                </Text>
-                            </Stack>
+                            <List>
+                                <List.Item mb="md">
+                                    <Stack gap="xs">
+                                        <Text c="gray.8" fw={600} fz={15}>
+                                            Needs Assessment:
+                                        </Text>
+                                        <Text c="gray.8" fw={400} fz={14}>
+                                            We identify specific skill gaps and learning requirements within your organization through various
+                                            methods such as skills assessments, performance reviews, and employee feedback. 
+                                        </Text>
+                                    </Stack>
+                                </List.Item>
+                                <List.Item mb="md">
+                                    <Stack gap="xs">
+                                        <Text c="gray.8" fw={600} fz={15}>
+                                            Tailored Content:
+                                        </Text>
+                                        <Text c="gray.8" fw={400} fz={14}>
+                                            We develop training materials, activities, and resources that are relevant to your organization's
+                                            industry, culture, and strategic goals.
+                                        </Text>
+                                    </Stack>
+                                </List.Item>
+                                <List.Item mb="md">
+                                    <Stack gap="xs">
+                                        <Text c="gray.8" fw={600} fz={15}>
+                                            Personalized Learning:
+                                        </Text>
+                                        <Text c="gray.8" fw={400} fz={14}>
+                                            We use various learning modalities, including online modules, workshops, coaching, and simulations,
+                                            to cater to diverse learning styles and preferences.
+                                        </Text>
+                                    </Stack>
+                                </List.Item>
+                                <List.Item mb="md">
+                                    <Stack gap="xs">
+                                        <Text c="gray.8" fw={600} fz={15}>
+                                            Practical Application:
+                                        </Text>
+                                        <Text c="gray.8" fw={400} fz={14}>
+                                            We focus on practical skills development through hands-on exercises, real-world case studies, and
+                                            opportunities for on the job application.
+                                        </Text>
+                                    </Stack>
+                                </List.Item>
+                                <List.Item>
+                                    <Stack gap="xs">
+                                        <Text c="gray.8" fw={600} fz={15}>
+                                            Evaluation and Feedback:
+                                        </Text>
+                                        <Text c="gray.8" fw={400} fz={14}>
+                                            We measure the effectiveness of the program through assessments, feedback mechanisms, and
+                                            tracking of performance improvements.
+                                        </Text>
+                                    </Stack>
+                                </List.Item>
+                            </List>
                         </Stack>
                     </Box>
                 </Tabs.Panel>

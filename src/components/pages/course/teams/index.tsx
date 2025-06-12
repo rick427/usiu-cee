@@ -1,5 +1,5 @@
-import { Stack, Group, Title, Text, Avatar, Badge, Card, Button } from "@mantine/core";
-import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { Stack, Title, Text, Avatar, Badge, Card, Button } from "@mantine/core";
+//import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel } from "@mantine/carousel";
 import { useNavigate } from "react-router";
@@ -8,7 +8,7 @@ import { useRef } from "react";
 import styles from "./teams.module.scss";
 import Reveal from "@/components/shared/io/reveal";
 
-import t1 from "@/assets/teams/1.jpg";
+import t1 from "@/assets/teams/1-2.png";
 import t2 from "@/assets/teams/2.jpg";
 import t3 from "@/assets/teams/3.jpeg";
 import t4 from "@/assets/teams/4.jpg";
@@ -21,7 +21,7 @@ export const teamsData = [
         name: "Caroline Muthoni",
         slug: "caroline-muthoni",
         image: t1,
-        role: "Office Administrator",
+        role: "Administrator",
         description: [
             "Caroline Muthoni, the Administrator at USIU-Africa's Center for Executive Education, plays a vital role in facilitating seamless operations by providing high-level support to the Director's office, coordinating programs, events, meetings, and strategic initiatives that drive the center's growth.",
             "With a Bachelor of Commerce in Finance from Kenyatta University and currently pursuing a Master of Science in Management & Organizational Development at USIU-Africa, she has also completed specialized training in VIP & VVIP Protocol Management and professional development programs in customer experience and adaptive leadership from McKinsey Academy and Acumen Academy.",
@@ -69,8 +69,8 @@ export const teamsData = [
     },
     {
         id: 5,
-        name: "Amb. Prof. Ruthie Chepkoech Rono",
-        slug: "amb-prof-ruthie-chepkoech-rono",
+        name: "Amb. Prof. Ruthie Rono",
+        slug: "amb-prof-ruthie-rono",
         image: t5,
         role: "Professor of Psychology",
         description: [
@@ -175,11 +175,11 @@ export default function Teams() {
                                     {team.description[0]}
                                 </Text>    
 
-                                <Group justify="center" align="center">
+                                {/* <Group justify="center" align="center">
                                     <FaFacebook color="gray" />
                                     <FaInstagram color="gray" />
                                     <FaLinkedin color="gray" />
-                                </Group>
+                                </Group> */}
                                 <Button
                                     size="md"
                                     radius="xs"

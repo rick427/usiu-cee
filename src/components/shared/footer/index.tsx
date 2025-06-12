@@ -12,9 +12,8 @@ export default function Footer() {
 
             <Group>
                 <Link to="/">Home</Link>
-                <a href="/">Virtual Tours</a>
-                <a href="/">Accessibility</a>
-                <a href="/">Privacy Policy</a>
+                <a href="/https://www.usiu.ac.ke/accessibility/" target="_blank" rel="noreferrer">Accessibility</a>
+                <a href="/https://www.usiu.ac.ke/terms-of-use/" target="_blank" rel="noreferrer">Privacy Policy & Terms of Use</a>
             </Group>
         </footer>
     )

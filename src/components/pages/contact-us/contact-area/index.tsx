@@ -21,10 +21,10 @@ export default function ContactArea() {
                     <Divider w="70%" mx="auto" style={{alignSelf: "stretch"}} /> 
                     
                    <Stack gap={10}>
-                        <Text size="sm" fw={500} c="gray.6">
+                        <Text size="sm" fw={400} c="gray.7">
                             Email: ceeinfo@usiu.ac.ke | WhatsApp/Call +254 755 340 340 | 
                         </Text>
-                        <Text size="sm" fw={500} c="gray.6">
+                        <Text size="sm" fw={400} c="gray.7">
                             Call: +254 780 750 020 | Office Ext: 0730116113/286
                         </Text>
                     </Stack>

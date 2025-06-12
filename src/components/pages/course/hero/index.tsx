@@ -31,7 +31,7 @@ export default function Hero() {
 
                     <GoChevronRight color="white" />
                     
-                    <Text fz={13.5} c="white">
+                    <Text fz={13.5} c="white" tt="capitalize">
                         {formatSlug(courseId?.replace(/-/g, " "))}
                     </Text>
                 </Group>

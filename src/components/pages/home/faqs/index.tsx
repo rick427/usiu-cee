@@ -3,7 +3,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { useNavigate } from "react-router";
 
 import styles from "./faqs.module.scss";
-import faqsImage from "@/assets/faqs.webp";
+import faqsImage from "@/assets/faqs-1.jpg";
 import SlideIn from "@/components/shared/io/slide-in";
 
 const faqsData = [
