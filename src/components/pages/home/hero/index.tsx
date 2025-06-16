@@ -50,7 +50,7 @@ export default function Hero() {
                         <div 
                             className={styles.hero__bg}
                             style={{
-                                backgroundImage: `linear-gradient(to bottom, rgba(21, 31, 89, 0.5), rgba(21, 31, 89, 0.8)), url(${slide.image})`,
+                                backgroundImage: `linear-gradient(to bottom, rgba(0,0,0, 0.5), rgba(0,0,0, 0.8)), url(${slide.image})`,
                             }}
                         >
                             <Stack className={styles.hero__stack}>
