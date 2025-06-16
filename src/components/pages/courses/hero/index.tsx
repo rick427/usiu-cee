@@ -13,7 +13,7 @@ export default function Hero() {
     return (
         <section className={styles.hero}>
             <Reveal>
-                <Title order={1} fz={50} c="white">
+                <Title order={1} tt="capitalize" fz={50} c="white">
                     {formatSlug(programId?.replace(/-/g, " "))}
                 </Title>
             </Reveal>

@@ -8,10 +8,11 @@ import p8 from "@/assets/programs/8.jpg";
 import p9 from "@/assets/programs/9.jpg";
 import p10 from "@/assets/programs/10.jpg";
 import p12 from "@/assets/programs/12.jpg";
+import p13 from "@/assets/programs/13.jpg";
 
 interface CourseTabContent {
     about: string[];
-    aim: string;
+    aim: string | string[];
     target: string[];
     outcome: {
         meta?: string;
@@ -345,6 +346,115 @@ export const programs:Program[] = [
                         data: [
                             "We will issue certificates on the New Manager Development Program (NMDP); however, for those who are interested in getting the title Certified Team Leader (CTL) will be required to take a multiple-choice application exam at a separate cost of US$250.", 
                             "The certification is offered by an American Certifying body in conjunction with United States International University.",
+                        ],
+                    }
+                }
+            },
+            {
+                id: 4,
+                name : "Artificial Intelligence for Executives Program (AIEP)",
+                slug: "artificial-intelligence-for-executives-program-(AIEP)",
+                description: "In today's rapidly evolving business environment, Artificial Intelligence (AI) is no longer just a buzzword but a crucial driver of competitive advantage. This intensive training course is designed to equip executives, senior leaders, and decision-makers with the knowledge and practical tools they need to strategically leverage AI within their organizations. Through a blend of theoretical insights, real-world case studies, and hands-on exercises, participants will gain a comprehensive understanding of AI technologies and how they can be applied to achieve significant business outcomes.",
+                image: p13,
+                //duration: "1st - 5th September 2025",
+                amount: 45_000,
+                tabs: {
+                    about: [
+                        "In today's rapidly evolving business environment, Artificial Intelligence (AI) is no longer just a buzzword but a crucial driver of competitive advantage. This intensive training course is designed to equip executives, senior leaders, and decision-makers with the knowledge and practical tools they need to strategically leverage AI within their organizations. Through a blend of theoretical insights, real-world case studies, and hands-on exercises, participants will gain a comprehensive understanding of AI technologies and how they can be applied to achieve significant business outcomes.",
+                    ],
+                    aim: [
+                        "Develop a solid understanding of AI fundamentals and its potential as a competitive advantage.",
+                        "Explore various AI technologies and their applications through hands-on exercises.",
+                        "Analyze and learn from real-life AI case studies to appreciate strategic benefits and challenges.",
+                        "Enhance decision-making skills by identifying appropriate AI and data science approaches for specific business problems.",
+                        "Build strategic AI plans tailored to participant's organizations, fostering long-term success."
+                    ],
+                    target: [
+                        "Decision-makers, senior leaders, and technical leaders responsible for leading AI initiatives.",
+                        "Entrepreneurs and business owners aiming to integrate AI into their business models.",
+                        "Professionals seeking to enhance their capabilities in strategy, leadership, and innovation in the digital age."
+                    ],
+                    outcome: [
+                        {
+                            title: "To the Individual",
+                            data: [
+                                "You will be equipped with the right decision-making skills, fostering your innovation ability towards personal and organisational success",
+                                "You will be equipped with the skills to navigate a rapidly evolving technological landscape, giving you an edge over the technological complexities in the business world.",
+                                "You will be provided with the knowledge and skills to leverage AI for data-driven decision-making, operational efficiency, and ethical leadership."
+                            ]
+                        },
+                    ],
+                    delivery: [],
+                    contents: [
+                        {
+                            title: "Day 1 - Session 1: Understanding AI Fundamentals",
+                            data: [
+                                "Overview of AI, machine learning, and deep learning.",
+                                "Key AI technologies: Definitions and applications.",
+                                "The current AI landscape and its impact on businesses."
+                            ]
+                        },
+                        {
+                            title: "Day 1 - Session 2: Building an AI Strategy",
+                            data: [
+                                "Aligning AI with organizational goals.",
+                                "Road mapping AI integration: Phases, resources, &amp; timelines.",
+                                "Budgeting and resource allocation for AI projects."
+                            ]
+                        },
+                        {
+                            title: "Day 2 - Session 1: Overview of AI Tools and Platforms",
+                            data: [
+                                "Introduction to popular AI tools and platforms.",
+                                "Exploratory Analysis",
+                                "Predictive modeling."
+                            ]
+                        },
+                        {
+                            title: "Day 2 - Session 2: AI for Planning, Scheduling and Optimization",
+                            data: [
+                                "Resource planning",
+                                "Workforce Optimization",
+                                "Scheduling Problems"
+                            ]
+                        },
+                        {
+                            title: "Day 3 - Session 1: Generative AI",
+                            data: [
+                                "Prompt Engineering for Enhanced Searching.",
+                                "Content Creation",
+                                "Interactive tools for Customer Service"
+                            ]
+                        },
+                        {
+                            title: "Day 3 - Session 2: AI in Decision Making",
+                            data: [
+                                "Rule based decision making.",
+                                "Reasoning with Uncertainty",
+                                "Multi Criteria Decision Making"
+                            ]
+                        },
+                    ],
+                    costs: [
+                        {
+                            title: "Cost - Kshs 45,000",
+                            data: []
+                        },
+                    ],
+                    coaching: null,
+                    admissions: [
+                        "We admit applicants on a rolling and space-available basis. You are therefore advised to submit your application as soon as possible.",
+                        "The admissions process is based on your professional experience and achievement, your responsibility in the organisation, and the admissions criteria for each program as described in the Target Audience. There are no formal educational requirements for this program offered by the USIU-Africa Center for Executive Education."
+                    ],
+                    international: [
+                        "Accommodation: The university does not run student hostels but will assist you in securing affordable accommodation at your own expense for the short duration of your stay.",
+                        "Language of Instruction: United States International University, Africa utilizes English as its primary language of instruction, making it essential for students to be proficient in English to effectively engage with academic materials, participate in discussions, and complete coursework successfully."
+                    ],
+                    certification: {
+                        title: "Professional Certification: Certified Business Continuity Professional (CBCP) (Optional)",
+                        data: [
+                            "We will issue certificates on the Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL); however, for those who are interested in getting the title Certified Business Continuity Professional (CBCP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
+                            "The certification is offered by an American Certifying body in conjunction with United States International University."
                         ],
                     }
                 }

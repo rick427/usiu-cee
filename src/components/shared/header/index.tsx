@@ -35,7 +35,7 @@ export default function Header() {
                 </ul>
 
                 <ul className={styles.header__socials}>
-                    <li>Follow Us-</li>
+                    <li>Follow Us</li>
                     <li>
                         <FaFacebook size={16} />
                     </li>

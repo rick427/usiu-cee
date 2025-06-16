@@ -15,7 +15,7 @@ export default function Hero() {
         <section className={styles.hero}>
             <Reveal>
                 <Title order={1} fz={50} c="white">
-                    Course details
+                    Course Details
                 </Title>
             </Reveal>
 

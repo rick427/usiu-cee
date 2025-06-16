@@ -25,7 +25,7 @@ export const teamsData = [
         description: [
             "Caroline Muthoni, the Administrator at USIU-Africa's Center for Executive Education, plays a vital role in facilitating seamless operations by providing high-level support to the Director's office, coordinating programs, events, meetings, and strategic initiatives that drive the center's growth.",
             "With a Bachelor of Commerce in Finance from Kenyatta University and currently pursuing a Master of Science in Management & Organizational Development at USIU-Africa, she has also completed specialized training in VIP & VVIP Protocol Management and professional development programs in customer experience and adaptive leadership from McKinsey Academy and Acumen Academy.",
-            "Passionate about climate change and sustainability, Caroline believes that effective administrative support empowers executives to lead purposefully and impactfully, emphasizing the importance of people, process, and purpose in creating operational efficiency and meaningful engagement."
+            "Caroline believes that effective administrative support empowers executives to lead purposefully and impactfully, emphasizing the importance of people, process, and purpose in creating operational efficiency and meaningful engagement."
         ]
     },
     {
@@ -36,7 +36,7 @@ export const teamsData = [
         role: "Head of Business Development & Ag. Center Director-CEE",
         publication: "https://scholar.google.com/citations?user=E59NuiEAAAAJ&hl=en",
         description: [
-            "Joseph Munyao is a highly accomplished professional with over 15 years of leadership and expertise in strategic management, business development, marketing, and stakeholder relations, currently serving as the Head of Business Development and Acting Center Director at USIU Africa&#39;s Center for Executive Education.",
+            "Joseph Munyao is a highly accomplished professional with over 15 years of leadership and expertise in strategic management, business development, marketing, and stakeholder relations, currently serving as the Head of Business Development and Acting Center Director at USIU Africa's Center for Executive Education.",
             "Joseph is highly passionate about executive transformative through executive education programs translating to organizational growth, performance and success, by focusing on enhancing management &amp; leadership skills for the executives to drive tangible organizational success. His expertise lies in designing Programs and implementing training strategies that foster leadership development, innovation, and change management, enabling organizations to thrive in competitive environments. Through his work, he aims to empower leaders to unlock their full potential and achieve sustainable growth.",
             "His extensive experience includes senior roles at Strathmore University Business School, where he advanced through strategic Management &amp; Leadership, Department start-ups, Executive Academic Students Management, marketing, sales, and Executive Academic program Development management, as well as previous positions at Africa Nazarene University and Cooperative Bank of Kenya.",
             "With a robust academic background including an MBA in Strategic Management, multiple Post Graduate and Advanced Diplomas in project management, General Management, Public Relations Marketing, and ongoing PhD studies, together with a Strategic Leadership training, Joseph combines practical leadership with training &amp; academic rigor, making him a thought leader in Strategic Management and Leadership, Strategic marketing, organizational development &amp; growth, as well as stakeholder engagement."
@@ -47,6 +47,7 @@ export const teamsData = [
         name: "Prof. Amos Njuguna",
         slug: "prof-amos-njuguna",
         image: t2,
+        publication: "https://scholar.google.com/citations?user=1avbk3UAAAAJ&hl=en&oi=ao",
         role: "DVC - Academics, Transaformative Teaching, Learning & Research",
         description: [
             "Prof. Amos Njuguna at USIU-Africa exemplifies transformational leadership in research, spearheading initiatives that address pressing African challenges such as MSME resilience, youth employment in the creative sector, gender bias in politics, aging populations, and the research-practice gap, all with a focus on societal impact.",
