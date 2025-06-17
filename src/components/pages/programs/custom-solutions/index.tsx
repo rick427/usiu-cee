@@ -329,7 +329,7 @@ export default function CustomSolutions() {
                     </Box>
                 </Tabs.Panel>
             </Tabs>
-
+            
             <Teams />
         </section>
     )

@@ -72,7 +72,14 @@ export default function Brochure() {
             if (result.status === 200) {
                 form.reset();
                 toast.success("Brochure downloaded!");
-                //@: Trigger Download Brochure Here
+                
+                // Trigger PDF download
+                const link = document.createElement("a");
+                link.href = "/brochures/ELDP.pdf"; 
+                link.download = "USIU_Course_Brochure.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
             }
         } catch (error) {
             toast.error("Oops! Something went wrong while processing your request.");
@@ -215,6 +222,7 @@ export default function Brochure() {
                         rightSection={<BsDownload />}
                         style={{alignSelf: "baseline"}}
                         classNames={{ label: styles.btnLabel}}
+                        loaderProps={{ size: "xs" }}
                         
                     >
                         Download brochure

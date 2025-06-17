@@ -71,6 +71,14 @@ export default function Enrollment() {
             if (result.status === 200) {
                 form.reset();
                 toast.success("Course application sent!");
+
+                // Trigger PDF download
+                const link = document.createElement("a");
+                link.href = "/brochures/ELDP.pdf"; 
+                link.download = "USIU_Course_Brochure.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
             }
         } catch (error) {
             toast.error("Oops! Something went wrong while processing your request.");
@@ -211,6 +219,7 @@ export default function Enrollment() {
                         color="primary.8"
                         variant="filled"
                         loading={loading}
+                        loaderProps={{ size: "xs" }}
                         style={{alignSelf: "baseline"}}
                         classNames={{ label: styles.btnLabel}}
                         
