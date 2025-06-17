@@ -10,8 +10,8 @@ export default function Home() {
             <Hero />
             <Programs />
             <Banner />
-            <FAQs />
             <Partners />
+            <FAQs />
         </>
     )
 }

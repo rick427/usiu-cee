@@ -38,6 +38,8 @@ export default function Hero() {
                 h="100%"
                 withControls={false}
                 withIndicators={true}
+                onMouseEnter={autoplay.current.stop}
+                onMouseLeave={() => autoplay.current.play()}
                 plugins={[autoplay.current]}
                 styles={{
                     root: { height: "100%" },

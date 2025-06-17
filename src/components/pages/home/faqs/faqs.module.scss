@@ -1,5 +1,7 @@
 .faqs{
     padding: 6rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--mantine-color-gray-1);
 
     @media (max-width: mantine.$mantine-breakpoint-lg) {
         padding: 4rem;

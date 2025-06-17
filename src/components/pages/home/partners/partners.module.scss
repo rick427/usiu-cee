@@ -1,5 +1,5 @@
 .partners{
-    padding: 4rem 6rem 6rem 6rem;
+    padding: 4rem 6rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -13,7 +13,7 @@
     }
 
     &__stack{
-        width: min(40rem, 100%);
+        width: min(35rem, 100%);
         margin: 0 auto;
 
         @media (max-width: mantine.$mantine-breakpoint-xs) {
@@ -36,6 +36,14 @@
                 font-size: 0.9rem !important;
                 text-align: left !important;
             }
+        }
+    }
+
+    img{
+        filter: grayscale(1);
+
+        &:hover{
+            filter: grayscale(0);
         }
     }
 }

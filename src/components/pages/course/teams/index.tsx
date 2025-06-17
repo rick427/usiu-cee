@@ -131,6 +131,8 @@ export default function Teams() {
                 slideSize={{ base: "100%", sm: "50%", md: "33.3%", lg: "25%" }}
                 plugins={[autoplay.current]}
                 slideGap={{ base: "sm", sm: "md", md: "lg" }}
+                onMouseEnter={autoplay.current.stop}
+                onMouseLeave={() => autoplay.current.play()}
                 withIndicators={true}
                 withControls={false}
                 emblaOptions={{
@@ -140,7 +142,7 @@ export default function Teams() {
                 }}
                 styles={{
                     indicator: {
-                        backgroundColor: "var(--mantine-color-primary-8)"
+                        backgroundColor: "var(--mantine-color-dark-8)"
                     }
                 }}
             >
