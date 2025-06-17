@@ -13,12 +13,20 @@
     backdrop-filter: saturate(180%) blur(10px);
     background-color: hsla(0, 0%, 100%, .8);
     border-bottom: 1px solid var(--mantine-color-gray-2);
+
+    @media (max-width: mantine.$mantine-breakpoint-lg) {
+        padding: 1rem 4rem;
+    }
+
+    @media (max-width: mantine.$mantine-breakpoint-md) {
+        padding: 1rem 2rem;
+    }
     
     &__logo{
         // The Logo's dimensions are attrocious, 
         // hence the absolute positioning
         width: 11rem;
-        height: 4.5rem;
+        height: 4rem;
         position: absolute;
         left: 6rem;
         top: 50%;
@@ -26,10 +34,40 @@
         cursor: pointer;
         transform: translateY(-50%);
 
+        @media (max-width: mantine.$mantine-breakpoint-md) {
+            height: 4rem;
+            position: static;
+            left: auto;
+            top: auto;
+            transform: none;
+            margin-right: auto;
+        }
+
+        @media (max-width: mantine.$mantine-breakpoint-xs) {
+            height: 3.5rem;
+            width: 8rem;
+        }
+
         img{
             width: 100%;
             height: 100%;
             object-fit: contain;
+        }
+    }
+
+    &__group{
+        display: flex;
+
+        @media (max-width: mantine.$mantine-breakpoint-md) {
+           display: none;
+        }
+    }
+
+    &__burger{
+        display: none;
+
+        @media (max-width: mantine.$mantine-breakpoint-md) {
+           display: block;
         }
     }
 
@@ -63,14 +101,36 @@
             a{
                 text-decoration: none;
                 color: var(--mantine-color-dark);
-                //border-bottom: 1px solid transparent;
             }
         }
     }
 }
 
 .active{
-    font-weight: 500;
+    font-weight: 600 !important;
     color: var(--mantine-color-primary-9) !important;
-    //border-bottom: 1px solid var(--mantine-color-primary-7);
+}
+
+.drawer{
+    height: 80vh;
+
+    &__logo{
+        width: 12rem;
+        height: 5rem;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    a{
+        text-align: center;
+        text-decoration: none;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: var(--mantine-color-dark);
+    }
 }

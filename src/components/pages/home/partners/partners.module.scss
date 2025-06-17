@@ -4,8 +4,38 @@
     flex-direction: column;
     gap: 4rem;
 
+    @media (max-width: mantine.$mantine-breakpoint-lg) {
+        padding: 4rem;
+    }
+
+    @media (max-width: mantine.$mantine-breakpoint-md) {
+        padding: 4rem 2rem;
+    }
+
     &__stack{
         width: min(40rem, 100%);
         margin: 0 auto;
+
+        @media (max-width: mantine.$mantine-breakpoint-xs) {
+            align-items: flex-start;
+        }
+
+        h1{
+            @media (max-width: mantine.$mantine-breakpoint-sm) {
+                font-size: 3rem !important;
+            }
+
+            @media (max-width: mantine.$mantine-breakpoint-xs) {
+                font-size: 2.2rem !important;
+                text-align: left !important;
+            }
+        }
+
+        p{
+            @media (max-width: mantine.$mantine-breakpoint-xs) {
+                font-size: 0.9rem !important;
+                text-align: left !important;
+            }
+        }
     }
 }

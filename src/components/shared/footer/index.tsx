@@ -10,10 +10,10 @@ export default function Footer() {
                 &copy; {new Date().getFullYear()} USIU-Africa - Center for Executive Education
             </Text>
 
-            <Group>
+            <Group className={styles.footer__links}>
                 <Link to="/">Home</Link>
-                <a href="/https://www.usiu.ac.ke/accessibility/" target="_blank" rel="noreferrer">Accessibility</a>
-                <a href="/https://www.usiu.ac.ke/terms-of-use/" target="_blank" rel="noreferrer">Privacy Policy & Terms of Use</a>
+                <a href="https://www.usiu.ac.ke/accessibility/" target="_blank" rel="noreferrer">Accessibility</a>
+                <a href="https://www.usiu.ac.ke/terms-of-use/" target="_blank" rel="noreferrer">Privacy Policy & Terms of Use</a>
             </Group>
         </footer>
     )

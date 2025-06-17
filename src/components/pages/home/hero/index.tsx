@@ -8,19 +8,19 @@ import Reveal from "@/components/shared/io/reveal";
 
 const slides = [
   {
-    title: "Bridging knowledge with real-world impact",
+    title: "Bridging Knowledge with Real-World Impact",
     description:
       "Explore management and leadership programs at USIU-A Center for Executive Education, where expert faculty bridge theory with hands-on insight.",
     image: "/hero-1.jpg",
   },
   {
-    title: "Shape the future with executive insight",
+    title: "Shape the Future with Executive Insight",
     description:
       "Advance your leadership journey through immersive, high-impact learning experiences tailored for today's executive challenges.",
     image: "/hero-2.jpg",
   },
   {
-    title: "Executive learning for a global mindset",
+    title: "Executive Learning for a Global Mindset",
     description:
       "Develop strategic thinking and global leadership skills through diverse programs led by renowned faculty and seasoned professionals.",
     image: "/hero-3.jpg",
@@ -50,12 +50,15 @@ export default function Hero() {
                         <div 
                             className={styles.hero__bg}
                             style={{
-                                backgroundImage: `linear-gradient(to bottom, rgba(0,0,0, 0.5), rgba(0,0,0, 0.8)), url(${slide.image})`,
+                                backgroundImage: `
+                                    linear-gradient(to bottom, rgba(0,0,0, 0.5), rgba(0,0,0, 0.8)), 
+                                    url(${slide.image})
+                                `,
                             }}
                         >
                             <Stack className={styles.hero__stack}>
                                 <Reveal>
-                                    <Title tt="capitalize" order={1} fz={55} c="white">
+                                    <Title order={1} fz={55} c="white">
                                         {slide.title}
                                     </Title>
                                 </Reveal>

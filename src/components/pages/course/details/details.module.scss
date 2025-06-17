@@ -4,16 +4,27 @@
     flex-direction: column;
     gap: 2rem;
 
-    &__root{
-        border: 1px solid var(--mantine-color-gray-0);
+    @media (max-width: mantine.$mantine-breakpoint-lg) {
+        padding: 4rem;
     }
+
+    @media (max-width: mantine.$mantine-breakpoint-md) {
+        padding: 4rem 2rem;
+    }
+
+    @media (max-width: mantine.$mantine-breakpoint-xs) {
+        gap: 2rem;
+    }
+
+    // &__root{
+    //     border: 1px solid var(--mantine-color-gray-0);
+    // }
 
     &__tab{
         border-radius: 0.1rem;
-        border: 1px solid transparent;
+        border: 1px solid var(--mantine-color-gray-2);
         margin-right: 0.3rem;
-        border-right-color: transparent;
-        background-color: #fcfcfc;
+        background-color: #f7f7f7;
 
         &[data-active] {
             z-index: 1;
@@ -28,8 +39,16 @@
     }
 
     &__panel{
-        padding: 1rem 0;
+        padding: 1rem 4rem;
         background-color: transparent;
+
+        @media (max-width: mantine.$mantine-breakpoint-md) {
+            padding: 1rem 2rem;
+        }
+
+        @media (max-width: mantine.$mantine-breakpoint-xs) {
+            padding: 2rem 0;
+        }
     }
 
     &__box{

@@ -5,15 +5,72 @@
     flex-direction: column;
     gap: 3rem;
 
+    @media (max-width: mantine.$mantine-breakpoint-lg) {
+        padding: 4rem;
+    }
+
+    @media (max-width: mantine.$mantine-breakpoint-md) {
+        padding: 4rem 2rem;
+    }
+
+    @media (max-width: mantine.$mantine-breakpoint-xs) {
+        gap: 2rem;
+    }
+
     &__user{
+        width: 14rem;
+        height: 14rem;
         background: linear-gradient(90deg, var(--mantine-color-primary-9), var(--mantine-color-secondary-3));
         padding: 0.5rem;
         border-radius: 50%;
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__avatar{
+            width: 13rem;
+            height: 13rem;
+
+            @media (max-width: mantine.$mantine-breakpoint-xs) {
+                width: 9rem;
+                height: 9rem;
+            }
+        }
+
+        @media (max-width: mantine.$mantine-breakpoint-xs) {
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+
+    &__badge{
+        @media (max-width: mantine.$mantine-breakpoint-sm) {
+            margin: 0 auto;
+        }
+    }
+
+    &__col{
+        @media (max-width: mantine.$mantine-breakpoint-sm) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     a{
         text-decoration: none;
         color: var(--mantine-color-primary-8);
+    }
+
+    h2{
+        @media (max-width: mantine.$mantine-breakpoint-sm) {
+            font-size: 2rem !important;
+            text-align: center;
+        }
+
+        @media (max-width: mantine.$mantine-breakpoint-xs) {
+            font-size: 1.8rem !important;
+        }
     }
 }

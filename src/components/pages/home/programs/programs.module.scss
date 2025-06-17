@@ -5,9 +5,38 @@
     gap: 4rem;
     background: url("@/assets/bg.webp") no-repeat top center / cover;
 
+    @media (max-width: mantine.$mantine-breakpoint-lg) {
+        padding: 4rem;
+    }
+
+    @media (max-width: mantine.$mantine-breakpoint-md) {
+        padding: 4rem 2rem;
+    }
+
     &__stack{
         width: min(40rem, 100%);
         margin: 0 auto;
+
+        @media (max-width: mantine.$mantine-breakpoint-xs) {
+            align-items: flex-start;
+        }
+
+        h1{
+            @media (max-width: mantine.$mantine-breakpoint-sm) {
+                font-size: 2rem !important;
+            }
+
+            @media (max-width: mantine.$mantine-breakpoint-xs) {
+                font-size: 1.8rem !important;
+                text-align: left !important;
+            }
+        }
+
+        p{
+            @media (max-width: mantine.$mantine-breakpoint-xs) {
+                text-align: left !important;
+            }
+        }
     }
 
     &__card{

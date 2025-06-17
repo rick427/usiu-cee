@@ -1,6 +1,6 @@
 .hero{
     min-height: 40vh;
-    margin-top: 5.5rem;;
+    margin-top: 5.5rem;
     background: linear-gradient(rgba(21, 31, 89, 0.5), rgba(21, 31, 89, 0.8)), url("@/assets/programs-bg-1.jpg") no-repeat center center / cover;
     display: flex;
     flex-direction: column;
@@ -8,6 +8,30 @@
     align-items: center;
     gap: 1rem;
     border-bottom: 5px solid var(--mantine-color-secondary-6);
+
+    @media (max-width: mantine.$mantine-breakpoint-lg) {
+        padding: 4rem;
+    }
+
+    @media (max-width: mantine.$mantine-breakpoint-md) {
+        padding: 4rem 2rem;
+    }
+
+    @media (max-width: mantine.$mantine-breakpoint-xs) {
+        align-items: flex-start;
+        min-height: 30vh;
+    }
+
+    h1{
+        @media (max-width: mantine.$mantine-breakpoint-sm) {
+            font-size: 3rem !important;
+        }
+
+        @media (max-width: mantine.$mantine-breakpoint-xs) {
+            font-size: 2.2rem !important;
+            text-align: left !important;
+        }
+    }
 
     a{
         color: var(--mantine-color-white);

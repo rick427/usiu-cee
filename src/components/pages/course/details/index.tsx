@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router";
+import { useMediaQuery } from '@mantine/hooks';
 import { Tabs, Title, Text, Box, Stack, List } from "@mantine/core";
 
 import styles from "./details.module.scss";
@@ -28,6 +29,7 @@ const TABS = {
 export default function CourseDetails() {
     const [activeTab, setActiveTab] = useState<string | null>(TABS.ABOUT["name"]);
 
+    const isMobile = useMediaQuery('(max-width: 48em)'); // ~576px or XS
     const params = useParams<{ programId: string, courseId: string }>();
     const programId = params.programId;
     const courseId = params.courseId;
@@ -43,14 +45,14 @@ export default function CourseDetails() {
             <Tabs 
                 value={activeTab} 
                 onChange={setActiveTab} 
-                orientation="vertical"
+                orientation={isMobile ? 'horizontal' : 'vertical'}
                 classNames={{ 
                     root: styles.dets__root,
                     tab: styles.dets__tab,
                     panel: styles.dets__panel,
                 }}
             >
-                <Tabs.List>
+                <Tabs.List grow={isMobile}>
                     <Tabs.Tab mb={5} value={TABS.ABOUT["name"]}>
                         <Text tt="uppercase" ta="left" fz={12}>
                             About the Course

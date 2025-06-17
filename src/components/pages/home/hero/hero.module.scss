@@ -13,6 +13,10 @@
         justify-content: center;
         background-size: cover;
         background-position: center;
+
+        @media (max-width: mantine.$mantine-breakpoint-sm) {
+            padding: 4rem 2rem;
+        }
     }
 
     &__stack{
@@ -20,9 +24,27 @@
         margin: 0 auto;
         text-align: center;
 
+        @media (max-width: mantine.$mantine-breakpoint-xs) {
+            text-align: left;
+        }
+
+        h1{
+            @media (max-width: mantine.$mantine-breakpoint-sm) {
+                font-size: 3.2rem !important;
+            }
+
+            @media (max-width: mantine.$mantine-breakpoint-xs) {
+                font-size: 2.2rem !important;
+            }
+        }
+
         p{
             width: min(30rem, 100%);
             margin: 0 auto;
+
+            @media (max-width: mantine.$mantine-breakpoint-xs) {
+                font-size: 0.9rem !important;
+            }
         }
     }
 }

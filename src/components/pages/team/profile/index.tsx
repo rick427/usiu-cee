@@ -15,10 +15,13 @@ export default function Profile() {
     return (
         <section className={styles.profile}>
             <Grid justify="center">
-                <Grid.Col span={{base: 12, md: 4, lg: 3}}>
+                <Grid.Col 
+                    className={styles.profile__col} 
+                    span={{base: 12, sm: 4, md: 4, lg: 4, xl: 3}}
+                >
                     <SlideIn direction="left">
                         <div className={styles.profile__user}>
-                            <Avatar size={220} color="white" src={user.image} alt={user.name}>
+                            <Avatar className={styles.profile__user__avatar} color="white" src={user.image} alt={user.name}>
                                 {user.name
                                     .split(" ")
                                     .map((n:string) => n[0])
@@ -31,15 +34,18 @@ export default function Profile() {
                     </SlideIn>
                 </Grid.Col>
 
-                <Grid.Col span={{base: 12, md: 6, lg: 6}}>
+                <Grid.Col span={{base: 12, sm: 7, md: 6, lg: 7, xl: 6}}>
                     <SlideIn direction="right">
                         <Stack>
-                            <Title size="h2">{user.name}</Title>
+                            <Title order={2} size="h2">
+                                {user.name}
+                            </Title>
                             <Badge 
                                 radius="xs" 
                                 ta="center" 
                                 variant="light"
                                 fz={10} 
+                                className={styles.profile__badge}
                             >
                                 {user.role}
                             </Badge>
@@ -52,7 +58,8 @@ export default function Profile() {
                             {user.publication && (
                                 <Text c="gray.7" fz={14} ta="justify">
                                     His publications can he 
-                                    accessed via this <a href={user.publication} rel="noreferrer" target="_blank">Link</a>
+                                    accessed via this 
+                                    <a href={user.publication} rel="noreferrer" target="_blank">Link</a>
                                 </Text>
                             )}
                         </Stack>

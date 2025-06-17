@@ -1,13 +1,13 @@
-import p1 from "@/assets/programs/1.jpg";
-import p2 from "@/assets/programs/2.jpg";
+import p1 from "@/assets/programs/16.webp";
+import p2 from "@/assets/programs/14.webp";
 import p3 from "@/assets/programs/3.jpg";
-import p4 from "@/assets/programs/4.jpg";
+import p4 from "@/assets/programs/15.webp";
 import p6 from "@/assets/programs/6.jpg";
 import p7 from "@/assets/programs/7.jpg";
 import p8 from "@/assets/programs/8.jpg";
-import p9 from "@/assets/programs/9.jpg";
-import p10 from "@/assets/programs/10.jpg";
-import p12 from "@/assets/programs/12.jpg";
+import p9 from "@/assets/programs/17.webp";
+import p10 from "@/assets/programs/18.webp";
+import p12 from "@/assets/programs/2.jpg";
 import p13 from "@/assets/programs/13.jpg";
 
 interface CourseTabContent {

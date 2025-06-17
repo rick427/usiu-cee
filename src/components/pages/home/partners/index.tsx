@@ -1,5 +1,6 @@
 import { Title, Text, Stack, Image } from "@mantine/core";
 import Autoplay from "embla-carousel-autoplay";
+import { useMediaQuery } from '@mantine/hooks';
 import { Carousel } from "@mantine/carousel";
 import { useRef } from "react";
 
@@ -15,6 +16,10 @@ import Reveal from "@/components/shared/io/reveal";
 
 export default function Partners() {
     const autoplay = useRef(Autoplay({ delay: 5000 }));
+    const isXs = useMediaQuery('(max-width: 36em)');
+    const isSm = useMediaQuery('(max-width: 48em)');
+
+    const slidesToScroll = isXs ? 1 : isSm ? 2 : 3;
     return (
         <section className={styles.partners}>
             <Reveal>
@@ -31,7 +36,7 @@ export default function Partners() {
             </Reveal>
 
             <Carousel
-                slideSize={{ base: "100%", sm: "50%", md: "33.3%", lg: "20%" }}
+                slideSize={{ base: "50%", sm: "50%", md: "33.3%", lg: "20%" }}
                 plugins={[autoplay.current]}
                 slideGap={{ base: "sm", sm: "md", md: "lg" }}
                 withIndicators={true}
@@ -39,7 +44,7 @@ export default function Partners() {
                 emblaOptions={{
                     loop: true,
                     align: 'start', 
-                    slidesToScroll: 3
+                    slidesToScroll,
                 }}
                 styles={{
                     indicator: {

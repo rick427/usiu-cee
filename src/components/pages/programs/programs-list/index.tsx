@@ -44,20 +44,19 @@ export default function ProgramList() {
                 </Stack>
             </Reveal>
 
-
             <Stack gap="xl">
-                <Group justify="center" align="center" gap="xs">
+                <Group className={styles.pl__group} justify="center" align="center" gap="xs">
                     <TextInput 
-                        w={250} 
+                        className={styles.pl__group__input}
                         value={searchTerm}
                         placeholder="Search programs"
                         onChange={(evt) => setSearchTerm(evt.currentTarget.value)}
                     />
                     <Select 
-                        w={120}
                         clearable
                         placeholder="Sort by"
                         value={sortOrder}
+                        className={styles.pl__group__select}
                         disabled={!filteredPrograms.length}
                         onChange={(val) => setSortOrder(val as "asc" | "desc" | null)}
                         data={[
@@ -74,7 +73,7 @@ export default function ProgramList() {
                                 key={program.id} 
                                 data-index={index}
                                 className={styles.pl__gridcol}
-                                span={{base: 12, sm: 6, md: 4, lg: 3}}
+                                span={{base: 12, sm: 6, md: 4, lg: 4, xl: 3}}
                             >
                                 <Card className={styles.pl__card} shadow="sm" p="lg">
                                     <Card.Section>

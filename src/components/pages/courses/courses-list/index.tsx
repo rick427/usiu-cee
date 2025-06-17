@@ -101,7 +101,7 @@ export default function CoursesList() {
                 {program.courses.length > 0 && (
                     <Group justify="center" align="center" gap="xs">
                         <TextInput 
-                            w={250} 
+                            className={styles.cl__group__input}
                             value={searchTerm}
                             placeholder="Search courses"
                             onChange={(e) => setSearchTerm(e.currentTarget.value)}
@@ -111,10 +111,10 @@ export default function CoursesList() {
                             placeholder="Select date range"
                             value={dateRange}
                             onChange={setDateRange}
-                            w={220}
+                            className={styles.cl__group__input}
                         />
                         <NumberInput
-                            w={150}
+                            className={styles.cl__group__input}
                             prefix="Ksh"
                             placeholder="Min amount"
                             value={minAmount}
@@ -126,7 +126,7 @@ export default function CoursesList() {
                         />
 
                         <Select
-                            w={120}
+                            className={styles.cl__group__select}
                             clearable
                             placeholder="Sort by"
                             value={sortOrder}
@@ -146,7 +146,7 @@ export default function CoursesList() {
                                 key={course.id} 
                                 data-index={index}
                                 className={styles.cl__gridcol}
-                                span={{base: 12, sm: 6, md: 4, lg: 3}}
+                                span={{base: 12, sm: 6, md: 4, lg: 4, xl: 3}}
                             >
                                 <Card className={styles.cl__card} shadow="sm" p="lg">
                                     <Card.Section>

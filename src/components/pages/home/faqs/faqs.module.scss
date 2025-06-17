@@ -1,6 +1,14 @@
 .faqs{
     padding: 6rem;
 
+    @media (max-width: mantine.$mantine-breakpoint-lg) {
+        padding: 4rem;
+    }
+
+    @media (max-width: mantine.$mantine-breakpoint-md) {
+        padding: 4rem 2rem;
+    }
+
     &__stack{
         width: min(30rem, 100%);
     }
@@ -8,6 +16,10 @@
     &__image{
         border-top: 5px solid var(--mantine-color-primary-6);
         border-bottom: 5px solid var(--mantine-color-secondary-6);
+
+        @media (max-width: mantine.$mantine-breakpoint-xs) {
+            height: 25rem;
+        }
     }
 }
 

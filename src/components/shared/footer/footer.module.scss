@@ -10,4 +10,24 @@
         text-decoration: none;
         color: white;
     }
+
+    @media (max-width: mantine.$mantine-breakpoint-lg) {
+        padding: 1rem 4rem;
+    }
+
+    @media (max-width: mantine.$mantine-breakpoint-md) {
+        padding: 1rem 2rem;
+    }
+
+    @media (max-width: mantine.$mantine-breakpoint-sm) {
+        justify-content: center;
+    }
+
+    &__links{
+        display: flex;
+        
+        @media (max-width: mantine.$mantine-breakpoint-sm) {
+            display: none;
+        };
+    }
 }

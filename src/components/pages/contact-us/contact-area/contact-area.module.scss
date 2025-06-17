@@ -4,14 +4,43 @@
     flex-direction: column;
     gap: 2rem;
 
+    @media (max-width: mantine.$mantine-breakpoint-lg) {
+        padding: 4rem;
+    }
+
+    @media (max-width: mantine.$mantine-breakpoint-md) {
+        padding: 4rem 2rem;
+    }
+
     &__stack{
         width: min(40rem, 100%);
         margin: 0 auto;
-        text-align: center;
+
+        @media (max-width: mantine.$mantine-breakpoint-xs) {
+            align-items: flex-start;
+        }
+
+        h1{
+            @media (max-width: mantine.$mantine-breakpoint-sm) {
+                font-size: 2.4rem !important;
+                text-align: left !important;
+            }
+
+            @media (max-width: mantine.$mantine-breakpoint-xs) {
+                font-size: 2rem !important;
+                text-align: left !important;
+            }
+        }
 
         p{
             width: min(34rem, 100%);
             margin: 0 auto;
+            text-align: center;
+
+            @media (max-width: mantine.$mantine-breakpoint-xs) {
+                font-size: 0.9rem !important;
+                text-align: left !important;
+            }
         }
     }
 

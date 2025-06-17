@@ -1,5 +1,5 @@
 import { Stack, Title, Text, Avatar, Badge, Card, Button } from "@mantine/core";
-//import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { useMediaQuery } from '@mantine/hooks';
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel } from "@mantine/carousel";
 import { useNavigate } from "react-router";
@@ -107,6 +107,11 @@ export default function Teams() {
     const navigate = useNavigate();
     const autoplay = useRef(Autoplay({ delay: 5000 }));
 
+    const isXs = useMediaQuery('(max-width: 36em)');
+    const isSm = useMediaQuery('(max-width: 48em)');
+
+    const slidesToScroll = isXs ? 1 : isSm ? 2 : 3;
+
     return (
         <section className={styles.teams}>
             <Reveal>
@@ -131,7 +136,7 @@ export default function Teams() {
                 emblaOptions={{
                     loop: true,
                     align: 'start', 
-                    slidesToScroll: 3
+                    slidesToScroll,
                 }}
                 styles={{
                     indicator: {

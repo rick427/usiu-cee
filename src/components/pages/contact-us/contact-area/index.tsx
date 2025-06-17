@@ -18,7 +18,7 @@ export default function ContactArea() {
                         responding in a timely and thoughtful manner.
                     </Text>
 
-                    <Divider w="70%" mx="auto" style={{alignSelf: "stretch"}} /> 
+                    <Divider w="70%" variant="dashed" mx="auto" style={{alignSelf: "stretch"}} /> 
                     
                    <Stack gap={10}>
                         <Text size="sm" fw={400} c="gray.7">

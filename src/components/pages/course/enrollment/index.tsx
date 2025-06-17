@@ -94,7 +94,7 @@ export default function Enrollment() {
                 </Text>
 
                 <form className={styles.form} onSubmit={form.onSubmit(handleSubmit)}>
-                    <SimpleGrid cols={3}>
+                    <SimpleGrid cols={{base: 1, md: 3}}>
                         <TextInput 
                             size="md"
                             withAsterisk 
@@ -130,7 +130,7 @@ export default function Enrollment() {
                         />
                     </SimpleGrid>
 
-                    <SimpleGrid cols={2}>
+                    <SimpleGrid cols={{base: 1, md: 2}}>
                         <TextInput 
                             size="md"
                             withAsterisk 
@@ -158,7 +158,7 @@ export default function Enrollment() {
                         />
                     </SimpleGrid>
                     <Divider label="Professional Information" my="sm" />
-                    <SimpleGrid cols={3}>
+                    <SimpleGrid cols={{base: 1, md: 3}}>
                         <TextInput 
                             size="md"
                             withAsterisk 

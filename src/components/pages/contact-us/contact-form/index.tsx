@@ -65,7 +65,7 @@ export default function ContactForm() {
 
     return (
         <form onSubmit={form.onSubmit(handleSubmit)} className={styles.form}>
-            <SimpleGrid cols={2}>
+            <SimpleGrid cols={{base: 1, sm: 2, md: 2}}>
                 <TextInput 
                     size="md"
                     withAsterisk 
@@ -89,7 +89,7 @@ export default function ContactForm() {
                     }} 
                 />
             </SimpleGrid>
-            <SimpleGrid cols={2}>
+            <SimpleGrid cols={{base: 1, sm: 2, md: 2}}>
                 <TextInput 
                     size="md"
                     withAsterisk 

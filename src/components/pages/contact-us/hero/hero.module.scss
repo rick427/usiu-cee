@@ -9,6 +9,30 @@
     gap: 1rem;
     border-bottom: 5px solid var(--mantine-color-secondary-6);
 
+    @media (max-width: mantine.$mantine-breakpoint-lg) {
+        padding: 4rem;
+    }
+
+    @media (max-width: mantine.$mantine-breakpoint-md) {
+        padding: 4rem 2rem;
+    }
+
+    @media (max-width: mantine.$mantine-breakpoint-xs) {
+        align-items: flex-start;
+        min-height: 30vh;
+    }
+
+    h1{
+        @media (max-width: mantine.$mantine-breakpoint-sm) {
+            font-size: 3rem !important;
+        }
+
+        @media (max-width: mantine.$mantine-breakpoint-xs) {
+            font-size: 2.2rem !important;
+            text-align: left !important;
+        }
+    }
+
     a{
         color: var(--mantine-color-white);
         text-decoration: none;

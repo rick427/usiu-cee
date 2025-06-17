@@ -8,9 +8,28 @@
         margin: 0 auto;
         text-align: center;
 
-        >p{
+        @media (max-width: mantine.$mantine-breakpoint-xs) {
+            align-items: flex-start;
+        }
+
+        h1{
+            @media (max-width: mantine.$mantine-breakpoint-sm) {
+                font-size: 2rem !important;
+            }
+
+            @media (max-width: mantine.$mantine-breakpoint-xs) {
+                font-size: 1.8rem !important;
+                text-align: left !important;
+            }
+        }
+
+        > p{
             width: min(25rem, 100%);
             margin: 0 auto;
+
+            @media (max-width: mantine.$mantine-breakpoint-xs) {
+                text-align: left !important;
+            }
         }
     }
 

@@ -14,7 +14,7 @@ export default function Programs() {
         <section className={styles.programs}>
             <Reveal>
                 <Stack className={styles.programs__stack} align="center">
-                    <Title c="gray.9" order={1}>
+                    <Title ta="center" c="gray.9" order={1}>
                         Browse our Programs
                     </Title>
                     <Text size="sm" ta="center" c="gray.7" fw={400}>
@@ -28,7 +28,7 @@ export default function Programs() {
             
             <Grid justify="center">
                 {programs.map((program, index) => (
-                    <Grid.Col key={program.id} span={{base: 12, sm: 6, md: 4, lg: 3}}>
+                    <Grid.Col key={program.id} span={{base: 12, sm: 6, md: 4, lg: 4, xl: 3}}>
                         <Stagger index={index}>
                             <Card className={styles.programs__card} shadow="sm" p="lg">
                                 <Card.Section>

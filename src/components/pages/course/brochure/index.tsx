@@ -96,7 +96,7 @@ export default function Brochure() {
                 </Text>
 
                 <form className={styles.form} onSubmit={form.onSubmit(handleSubmit)}>
-                    <SimpleGrid cols={3}>
+                    <SimpleGrid cols={{base: 1, md: 3}}>
                         <TextInput 
                             size="md"
                             withAsterisk 
@@ -131,7 +131,7 @@ export default function Brochure() {
                             }} 
                         />
                     </SimpleGrid>
-                    <SimpleGrid cols={2}>
+                    <SimpleGrid cols={{base: 1, md: 2}}>
                         <TextInput 
                             size="md"
                             withAsterisk 
@@ -159,7 +159,7 @@ export default function Brochure() {
                         />
                     </SimpleGrid>
                     <Divider label="Professional Information" my="sm" />
-                    <SimpleGrid cols={3}>
+                    <SimpleGrid cols={{base: 1, md: 3}}>
                         <TextInput 
                             size="md"
                             withAsterisk 
@@ -196,7 +196,7 @@ export default function Brochure() {
                     </SimpleGrid>
                     <Checkbox 
                         label={
-                            <Text fw={300} fz={13} span>
+                            <Text fw={300} fz={13} ta="justify" span>
                                 By submitting this form, I agree to USIU Africa University's collecting and processing
                                 personal data contained in the form for program updates, promotions, and research; to share
                                 information regarding academic research opportunities; and for other purposes described in
