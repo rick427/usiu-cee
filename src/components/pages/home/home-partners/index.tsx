@@ -37,10 +37,10 @@ export default function Partners() {
 
             <Carousel
                 slideSize={{ base: "50%", sm: "50%", md: "33.3%", lg: "20%" }}
-                plugins={[autoplay.current]}
                 slideGap={{ base: "sm", sm: "md", md: "lg" }}
-                onMouseEnter={autoplay.current.stop}
                 onMouseLeave={() => autoplay.current.play()}
+                onMouseEnter={autoplay.current.stop}
+                plugins={[autoplay.current]}
                 withIndicators={true}
                 withControls={false}
                 emblaOptions={{

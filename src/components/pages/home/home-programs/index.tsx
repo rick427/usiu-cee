@@ -18,10 +18,10 @@ export default function Programs() {
                         Browse our Programs
                     </Title>
                     <Text size="sm" ta="center" c="gray.7" fw={400}>
-                        Explore our diverse range of programs designed to empower you with the 
-                        knowledge and skills needed for success in today's dynamic world. 
-                        Whether you're interested in business, technology, arts, or sciences, 
-                        we have something for everyone.
+                        Explore our diverse range of programs designed to empower you with 
+                        the knowledge and skills needed for success in today's dynamic world. 
+                        Our executive programs and micro-credentials help you lead confidently 
+                        and adapt to changes in various fields. We have something for everyone.
                     </Text>
                 </Stack>
             </Reveal>
