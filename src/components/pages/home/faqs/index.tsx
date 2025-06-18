@@ -68,7 +68,7 @@ export default function FAQs() {
                                 {items}
                             </Accordion>
 
-                            <Group align="center">
+                            <Group justify="space-between" align="center">
                                 <Text fw={500}>My question is not here.</Text>
                                 <Button
                                     size="md"

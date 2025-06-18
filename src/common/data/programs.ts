@@ -384,7 +384,9 @@ export const programs:Program[] = [
                             ]
                         },
                     ],
-                    delivery: [],
+                    delivery: [
+                        "The program is delivered in 3 days on campus. The training program combines industry expert-led and faculty instruction with diverse learning methods like case studies, videos, simulations, role plays, and group discussions to provide a dynamic and practical learning experience."
+                    ],
                     contents: [
                         {
                             title: "Day 1 - Session 1: Understanding AI Fundamentals",
@@ -438,7 +440,11 @@ export const programs:Program[] = [
                     costs: [
                         {
                             title: "Cost - Kshs 45,000",
-                            data: []
+                            data: [
+                                "Cohort 1: 10th to 14th Nov 2025",
+                                "Cohort 2: 18th to 20th March 2026",
+                                "Cohort 3: 24th to 26th June 2026",
+                            ]
                         },
                     ],
                     coaching: null,

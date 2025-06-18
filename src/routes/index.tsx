@@ -4,7 +4,6 @@ import Home from "@/pages/home";
 import Team from "@/pages/team";
 import Course from "@/pages/course";
 import Courses from "@/pages/courses";
-import Brochure from "@/pages/brochure";
 import Programs from "@/pages/programs";
 import ContactUs from "@/pages/contact-us";
 
@@ -17,10 +16,6 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />
-            },
-            {
-                path: "/brochure",
-                element: <Brochure />
             },
             {
                 path: "/contact-us",
