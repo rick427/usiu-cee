@@ -37,7 +37,17 @@ The static site will be generated into dist/ and is ready for deployment on Netl
 
 ## Project Structure
 
-<pre lang="txt"><code> src/ ├── assets/ # Static assets (logos, images) ├── components/ │ ├── pages/ # Route-level or feature pages │ └── shared/ # UI building blocks (Button, Card, etc.) ├── services/ # API & business logic (email, teams, delivery) ├── routes/ # React Router setup ├── styles/ # Global and themed SCSS files └── main.tsx # App entry point </code></pre>
+| Path                  | Description                                  |
+|-----------------------|----------------------------------------------|
+| `src/assets/`         | Static assets like images, logos             |
+| `src/components/`     | Main UI components                           |
+| `src/components/pages/` | Route-specific pages                        |
+| `src/components/shared/` | Reusable building blocks (buttons, etc.) |
+| `src/services/`       | API calls and business logic                 |
+| `src/routes/`         | Navigation setup using React Router          |
+| `src/styles/`         | Global SCSS themes and variables             |
+| `src/main.tsx`        | Root application file                        |
+
 
 ## Key Features
 
