@@ -4,7 +4,7 @@ import { Grid, Text, Title, Avatar, Badge, Stack, Divider } from "@mantine/core"
 import styles from "./profile.module.scss";
 
 import SlideIn from "@/components/shared/io/slide-in";
-import { teamsData } from "@/components/pages/course/teams";
+import { teamsData } from "@/components/pages/course/course-teams";
 
 export default function Profile() {
     const params = useParams<{ teamId: string }>();

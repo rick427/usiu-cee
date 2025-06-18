@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { useState } from "react";
 
 import styles from "./custom-solutions.module.scss";
-import Teams from "@/components/pages/course/teams";
+import Teams from "@/components/pages/course/course-teams";
 import countries from "@/common/data/countries.json";
 
 const TABS = {

@@ -35,7 +35,7 @@ export default function Programs() {
                                     <Image h={200} radius="sm" src={program.image} alt={program.slug} />
                                 </Card.Section>
                                 <Stack gap="xs" mt="md">
-                                    <Title fw={600} order={4}>
+                                    <Title fw={600} lh={1.5} order={1} fz={18}>
                                         {program.name}
                                     </Title>
                                     <Text c="gray.6" size="sm" lineClamp={3}>

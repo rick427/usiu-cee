@@ -154,8 +154,8 @@ export default function CoursesList() {
                                     </Card.Section>
                                     <Stack flex={1} gap="xs" mt="md" justify="space-between">
                                         <Stack>
-                                            <Title fw={600} order={4} lineClamp={2}>
-                                            {course.name}
+                                            <Title fw={600} lh={1.5} order={1} fz={18} lineClamp={2}>
+                                                {course.name}
                                             </Title>
                                             <Text c="gray.6" size="sm" lineClamp={3}>
                                                 {course.description}

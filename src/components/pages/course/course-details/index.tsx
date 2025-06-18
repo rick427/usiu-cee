@@ -6,9 +6,9 @@ import { Tabs, Title, Text, Box, Stack, List } from "@mantine/core";
 import styles from "./details.module.scss";
 
 import { programs } from "@/common/data/programs";
-import Teams from "@/components/pages/course/teams";
-import Brochure from "@/components/pages/course/brochure";
-import Enrollment from "@/components/pages/course/enrollment";
+import Teams from "@/components/pages/course/course-teams";
+import Brochure from "@/components/pages/course/course-brochure";
+import Enrollment from "@/components/pages/course/course-enrollment";
 
 const TABS = {
     AIM: { id: 1, name: "AIM" },
