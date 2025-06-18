@@ -49,7 +49,7 @@ export default function Header() {
 
                     <ul className={styles.header__socials}>
                         <li>Follow Us</li>
-                        <li>
+                        <li onClick={() => window.open("https://www.facebook.com/profile.php?id=61577627242516", "_blank")}>
                             <FaFacebook color="#515459" size={16} />
                         </li>
                         <li>
@@ -121,7 +121,9 @@ export default function Header() {
 
                     <Stack align="center">
                         <Group>
-                            <FaFacebook color="#515459" size={16} />
+                            <div onClick={() => window.open("https://www.facebook.com/profile.php?id=61577627242516", "_blank")}>
+                                <FaFacebook color="#515459" size={16} />
+                            </div>
                             <FaLinkedin color="#515459" size={16} />
                             <FaInstagram color="#515459" size={16} />
                         </Group>
