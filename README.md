@@ -35,19 +35,11 @@ npm run build
 ```
 The static site will be generated into dist/ and is ready for deployment on Netlify, Vercel, or any static hosting.
 
-### Project Structure
+## Project Structure
 
-src/
-├── assets/            # Static assets (logos, images)
-├── components/        
-│   ├── pages/         # Route-level or feature pages
-│   └── shared/        # UI building blocks (Button, Card, etc.)
-├── services/          # API & business logic (email, teams, delivery)
-├── routes/            # React Router setup
-├── styles/            # Global and themed SCSS files
-└── main.tsx           # App entry point
+<pre lang="txt"><code> src/ ├── assets/ # Static assets (logos, images) ├── components/ │ ├── pages/ # Route-level or feature pages │ └── shared/ # UI building blocks (Button, Card, etc.) ├── services/ # API & business logic (email, teams, delivery) ├── routes/ # React Router setup ├── styles/ # Global and themed SCSS files └── main.tsx # App entry point </code></pre>
 
-### Key Features
+## Key Features
 
 - Responsive UI powered by Mantine
 - Email submissions (contact form, enrollment) via EmailJS
@@ -57,9 +49,9 @@ src/
 - SEO-ready: meta tags, structured data, sitemap, robots.txt
 - Performance ready: Lighthouse-optimized, image assets, caching
 
-### Configuration & Deployment Notes
+## Configuration & Deployment Notes
 
-#### EmailJS Integration
+### EmailJS Integration
 Make sure to create an .env.local with:
 
 ```
@@ -68,12 +60,12 @@ VITE_EMAILJS_TEMPLATE_BD_ID=your_template_id
 VITE_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
-### SCSS Global Styles
+## SCSS Global Styles
 
 - _mantine.scss defines breakpoints, mixins (smaller-than, etc.)
 - Imported globally via Vite’s css.preprocessorOptions.additionalData
 
-### Sitemap & robots.txt
+## Sitemap & robots.txt
 
 Generated on build via vite-plugin-sitemap:
 
@@ -86,4 +78,9 @@ Sitemap({
   generateRobotsTxt: true
 });
 ```
+## SEO Tips in This Repo
 
+- Static meta tags in public/index.html (Open Graph, Twitter, canonical, etc.)
+- Dynamic meta tags per page using react-helmet-async
+- robots.txt placed under public/, served as /robots.txt
+- sitemap.xml auto-generated along with deploy
