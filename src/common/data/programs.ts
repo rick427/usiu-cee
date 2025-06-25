@@ -441,7 +441,7 @@ export const programs:Program[] = [
                         {
                             title: "Cost - Kshs 45,000",
                             data: [
-                                "Cohort 1: 10th to 14th Nov 2025",
+                                "Cohort 1: 12th to 14th Nov 2025",
                                 "Cohort 2: 18th to 20th March 2026",
                                 "Cohort 3: 24th to 26th June 2026",
                             ]
@@ -457,9 +457,9 @@ export const programs:Program[] = [
                         "Language of Instruction: United States International University, Africa utilizes English as its primary language of instruction, making it essential for students to be proficient in English to effectively engage with academic materials, participate in discussions, and complete coursework successfully."
                     ],
                     certification: {
-                        title: "Professional Certification: Certified Business Continuity Professional (CBCP) (Optional)",
+                        title: "Professional Certification: Certified Artificial Intelligence Professional (CAIP)  (Optional)",
                         data: [
-                           "We will issue certificates on the Artificial intelligence for executives program (AIEP); however, for those who are interested in getting the title Certified Artificial Intelligence Professional (CAIP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
+                           "We will issue certificates on the Artificial Intelligence for Executives Program (AIEP); however, for those who are interested in getting the title Certified Artificial Intelligence Professional (CAIP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
                            "The certification is offered by an American Certifying body in conjunction with United States International University."
                         ],
                     }
@@ -759,7 +759,7 @@ export const programs:Program[] = [
                         {
                             title: "Cost-Kshs 530,000",
                             data: [
-                                "Module 1: Cohort 1: 25th July - 29th Aug 2025 (Nairobi, Kenya)",
+                                "Module 1: Cohort 1: 25th Aug - 29th Aug 2025 (Nairobi, Kenya)",
                                 "Module 2: Cohort 1: 25th - 29th May 2026 (International Module-South Africa)",
                                 "Module 1: Cohort 2: 25th - 29th May 2026 (International Module-South Africa)",
                                 "Module 2: Cohort 2: 7th -11th Dec 2026 (Nairobi Kenya)"
