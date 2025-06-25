@@ -141,9 +141,9 @@ export const programs:Program[] = [
                         {
                             title: "Cost - Kshs 45,000",
                             data: [
-                                "Cohort 1: 27th - 31st Oct 2025",
-                                "Cohort 2: 13th - 17th April 2026",
-                                "Cohort 3: 10th - 14th Aug 2026",
+                                "Cohort 1: 28th - 30th Oct 2025",
+                                "Cohort 2: 14th - 17th April 2026",
+                                "Cohort 3: 11th - 13th Aug 2026",
                             ]
                         },
                     ],
@@ -459,8 +459,8 @@ export const programs:Program[] = [
                     certification: {
                         title: "Professional Certification: Certified Business Continuity Professional (CBCP) (Optional)",
                         data: [
-                            "We will issue certificates on the Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL); however, for those who are interested in getting the title Certified Business Continuity Professional (CBCP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
-                            "The certification is offered by an American Certifying body in conjunction with United States International University."
+                           "We will issue certificates on the Artificial intelligence for executives program (AIEP); however, for those who are interested in getting the title Certified Artificial Intelligence Professional (CAIP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
+                           "The certification is offered by an American Certifying body in conjunction with United States International University."
                         ],
                     }
                 }
@@ -759,10 +759,10 @@ export const programs:Program[] = [
                         {
                             title: "Cost-Kshs 530,000",
                             data: [
-                                "Module 1: Cohort 1: 28 th July - 1 st Aug 2025 (Nairobi, Kenya)",
-                                "Module 2: Cohort 1: 25 th - 29 th May 2026 (International Module-South Africa)",
+                                "Module 1: Cohort 1: 25th July - 29th Aug 2025 (Nairobi, Kenya)",
+                                "Module 2: Cohort 1: 25th - 29th May 2026 (International Module-South Africa)",
                                 "Module 1: Cohort 2: 25th - 29th May 2026 (International Module-South Africa)",
-                                "Module 2: Cohort 2: 7 th -11 th Dec 2026 (Nairobi Kenya)"
+                                "Module 2: Cohort 2: 7th -11th Dec 2026 (Nairobi Kenya)"
                             ]
                         }
                     ],
