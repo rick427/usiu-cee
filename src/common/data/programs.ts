@@ -342,7 +342,7 @@ export const programs:Program[] = [
                         "Language of Instruction: United States International University utilizes English as its primary language of instruction, making it essential for students to be proficient in English to effectively engage with academic materials, participate in discussions, and complete coursework successfully."
                     ],
                     certification: {
-                        title: "Professional Certification: New Manager Development Program (NMDP) (Optional)",
+                        title: "Professional Certification: Certified Team Leader (CTL) (Optional)",
                         data: [
                             "We will issue certificates on the New Manager Development Program (NMDP); however, for those who are interested in getting the title Certified Team Leader (CTL) will be required to take a multiple-choice application exam at a separate cost of US$250.", 
                             "The certification is offered by an American Certifying body in conjunction with United States International University.",
@@ -637,7 +637,7 @@ export const programs:Program[] = [
                                 "Transactional Leadership: Effective in structured environments where tasks are clear.",
                                 "Servant Leadership: Encourage collaboration and empowerment among team members.",
                                 "Autocratic Leadership: Individual control over all decisions",
-                                "Democratic Leadership: Team Members&#39; involvement in decision making",
+                                "Democratic Leadership: Team Members involvement in decision making",
                                 "Laissez-Faire Leadership: Minimal supervision-team members make decisions"
                             ]
                         },
@@ -696,15 +696,15 @@ export const programs:Program[] = [
             },
             {
                 id: 3,
-                name: "Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL)",
-                slug: "executive-leadership-development-program-for-higher-learning-institutions-leaders-(ELDP-HLIL)",
-                description: "The Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape.",
+                name: "Executive Leadership Development Program (ELDP)",
+                slug: "executive-leadership-development-program-(ELDP)",
+                description: "The Executive Leadership Development Program (ELDP) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape.",
                 image: p9,
                 duration: "28th July, 2026",
                 amount: 530_000,
                 tabs: {
                     about: [
-                        "The Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape."
+                        "The Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape."
                     ],
                     aim: "This program is designed to enhance leadership capabilities in higher education by fostering a deep understanding of sustaining an institutional culture rooted in evidence-based decision making through effective data utilization. It also aims to cultivate leadership qualities aligned with the five principles of exemplary leadership, i.e. demonstrating the path, inspiring a shared vision, challenging the status quo, empowering others, and ensuring future resilience and ultimately enabling leaders to guide their institutions with informed, innovative, and collaborative strategies.",
                     target: [
@@ -788,19 +788,28 @@ export const programs:Program[] = [
             },
             {
                 id: 1,
-                name: "Developing Emerging Leaders in Higher Learning Institutions - (DEL-HLIP)",
-                slug: "developing-emerging-leaders-in-higher-learning-institutions-(DEL-HLIP)",
-                description: "Developing Emerging Leaders in Higher Learning Institutions program aims at preparing the next set of higher education managers and administrators towards effectiveness, resilience, accountability and courageous management and leadership while instilling the urge to drive their institutions path towards success.",
+                name: "Developing Emerging Leaders - (DEL)",
+                slug: "developing-emerging-leaders-(DEL)",
+                description: "Developing Emerging Leaders program aims at preparing the next set of higher education managers and administrators towards effectiveness, resilience, accountability and courageous management and leadership while instilling the urge to drive their institutions path towards success.",
                 image: p6,
                 duration: "20th April, 2025",
                 tabs: {
                     about: [
-                        "The USIU Africa DEL-HLIP program aims to equip academic and administrative professionals in higher education with the skills, mindset, and networks needed to effectively lead university initiatives as well as prepare them for transition into senior leadership roles. By focusing on understanding the diverse responsibilities within higher learning institutions, the program fosters professional growth, enhances leadership capabilities, and provides participants with valuable connections and support to advance their careers both in academia and administrative roles in institutions of higher learning across the world."
+                        "The USIU Africa DEL program aims to equip academic and administrative professionals in higher education with the skills, mindset, and networks needed to effectively lead university initiatives as well as prepare them for transition into senior leadership roles. By focusing on understanding the diverse responsibilities within higher learning institutions, the program fosters professional growth, enhances leadership capabilities, and provides participants with valuable connections and support to advance their careers both in academia and administrative roles in institutions of higher learning across the world."
                     ],
-                    aim: "Developing Emerging Leaders in Higher Learning Institutions program aims at preparing the next set of higher education managers and administrators towards effectiveness, resilience, accountability and courageous management and leadership while instilling the urge to drive their institutions' path towards success.",
+                    aim: "Developing Emerging Leaders program aims at preparing the next set of higher education managers and administrators towards effectiveness, resilience, accountability and courageous management and leadership while instilling the urge to drive their institutions' path towards success.",
                     target: [
-                        "Academic, administrative and managerial professionals in higher learning institutions who are exploring opportunities to advance to higher-level administrative positions.",
-                        "Newly appointed academicians, managers and administrators looking to sharpen their leadership skills and mindset."
+                        //"Academic, administrative and managerial professionals in higher learning institutions who are exploring opportunities to advance to higher-level administrative positions.",
+                        //"Newly appointed academicians, managers and administrators looking to sharpen their leadership skills and mindset.",
+                        "The aforementioned groups generally consist of: mid-level managers, recently appointed managers, and employees who have aspirations of assuming managerial roles in the near future.",
+                        "They typically include:",
+                        "Managers and Assistant Managers in HR, Finance, Library, Transport, Procurement, Faculty Affairs, Student Affairs etc",
+                        "Department Managers, Heads, and Assistants",
+                        "Assistant Principals and Deputy Principals",
+                        "Assistant Deans and Deputy Deans",
+                        "Assistant Directors and Deputy Directors",
+                        "Deputy Principals in High School and school Coordinators",
+                        "Newly appointed Principals, Deans, HODs, Managers, Directors, etc"
                     ],
                     outcome: [
                         {
