@@ -300,7 +300,7 @@ export const programs:Program[] = [
                         {
                             title: "To the Organization",
                             data: [
-                                "Increased Productivity &amp; Performance: The training will lead to fostering effective communication, collaboration, and shared goals within a team which enhances synergy, in turn improving overall outcomes and organizational results by leveraging diverse skills and perspectives to achieve common objectives more efficiently.",
+                                "Increased Productivity Performance: The training will lead to fostering effective communication, collaboration, and shared goals within a team which enhances synergy, in turn improving overall outcomes and organizational results by leveraging diverse skills and perspectives to achieve common objectives more efficiently.",
                                 "Increased employee retention: -Implementing effective talent development and succession planning strategies helps the organization retain top talent, foster employee engagement, and build a robust leadership pipeline to ensure long-term organizational success.",
                                 "Stronger Organizational Culture: It helps to promote the culture of continuous learning and development."
                             ]
@@ -400,7 +400,7 @@ export const programs:Program[] = [
                             title: "Day 1 - Session 2: Building an AI Strategy",
                             data: [
                                 "Aligning AI with organizational goals.",
-                                "Road mapping AI integration: Phases, resources, &amp; timelines.",
+                                "Road mapping AI integration: Phases, resources, timelines.",
                                 "Budgeting and resource allocation for AI projects."
                             ]
                         },
@@ -723,7 +723,7 @@ export const programs:Program[] = [
                         {
                             title: "To your Organization",
                             data: [
-                                "Your organization will get increased productivity &amp; performance due to better leadership outcomes and organizational results derived from the expanded capabilities achieved from the leadership upskilling.",
+                                "Your organization will get increased productivity performance due to better leadership outcomes and organizational results derived from the expanded capabilities achieved from the leadership upskilling.",
                                 "Your organization will have stronger organizational skill growth culture promoted by the culture of continuous learning and development.",
                             ]
                         }
@@ -780,7 +780,7 @@ export const programs:Program[] = [
                     certification: {
                         title: "Professional Certification: Certified Business Continuity Professional (CBCP) (Optional)",
                         data: [
-                            "We will issue certificates on the Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP-HLIL); however, for those who are interested in getting the title Certified Business Continuity Professional (CBCP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
+                            "We will issue certificates on the Executive Leadership Development Program (ELDP); however, for those who are interested in getting the title Certified Business Continuity Professional (CBCP) will be required to take a multiple-choice application exam at a separate cost of US$250.",
                             "The certification is offered by an American Certifying body in conjunction with United States International University."
                         ],
                     }
@@ -825,7 +825,7 @@ export const programs:Program[] = [
                         {
                             title: "To the Organization",
                             data: [
-                                "Your organization will get increased productivity &amp; performance due to better team synergy, outcomes and organizational results derived from the leadership course.",
+                                "Your organization will get increased productivity performance due to better team synergy, outcomes and organizational results derived from the leadership course.",
                                 "Your organization will have increased employee retention, which will help talent growth while building a strong leadership pipeline.",
                                 "Your organization will have stronger employee motivational and skill growth culture promoted by the culture of continuous learning and development.",
                             ]
