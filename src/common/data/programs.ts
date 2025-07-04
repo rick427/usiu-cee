@@ -704,7 +704,7 @@ export const programs:Program[] = [
                 amount: 530_000,
                 tabs: {
                     about: [
-                        "The Executive Leadership Development Program for Higher Learning Institutions Leaders (ELDP) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape."
+                        "The Executive Leadership Development Program (ELDP) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape."
                     ],
                     aim: "This program is designed to enhance leadership capabilities in higher education by fostering a deep understanding of sustaining an institutional culture rooted in evidence-based decision making through effective data utilization. It also aims to cultivate leadership qualities aligned with the five principles of exemplary leadership, i.e. demonstrating the path, inspiring a shared vision, challenging the status quo, empowering others, and ensuring future resilience and ultimately enabling leaders to guide their institutions with informed, innovative, and collaborative strategies.",
                     target: [
