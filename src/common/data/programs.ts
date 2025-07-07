@@ -788,8 +788,8 @@ export const programs:Program[] = [
             },
             {
                 id: 1,
-                name: "Developing Emerging Leaders - (DEL)",
-                slug: "developing-emerging-leaders-(DEL)",
+                name: "Developing Emerging Leaders Program - (DELP)",
+                slug: "developing-emerging-leaders-program-(DELP)",
                 description: "Developing Emerging Leaders program aims at preparing the next set of higher education managers and administrators towards effectiveness, resilience, accountability and courageous management and leadership while instilling the urge to drive their institutions path towards success.",
                 image: p6,
                 duration: "20th April, 2025",
