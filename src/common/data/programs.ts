@@ -196,7 +196,7 @@ export const programs:Program[] = [
                             data: [
                                 "Enhanced Customer Loyalty: Positive experiences foster loyalty, leading customers to return for repeat business and recommend the company to others.",
                                 "Improved Customer Retention: Lower customer churn rates are a direct result of increased satisfaction and loyalty, leading to a more stable customer base.",
-                                "Stronger Brand Reputation: Positive customer experiences contribute to a positive brand image, attracting new customers and enhancing the company&#39;s reputation.",
+                                "Stronger Brand Reputation: Positive customer experiences contribute to a positive brand image, attracting new customers and enhancing the company's reputation.",
                             ]
                         }
                     ],
@@ -795,7 +795,7 @@ export const programs:Program[] = [
                 duration: "20th April, 2025",
                 tabs: {
                     about: [
-                        "The USIU Africa DEL program aims to equip academic and administrative professionals in higher education with the skills, mindset, and networks needed to effectively lead university initiatives as well as prepare them for transition into senior leadership roles. By focusing on understanding the diverse responsibilities within higher learning institutions, the program fosters professional growth, enhances leadership capabilities, and provides participants with valuable connections and support to advance their careers both in academia and administrative roles in institutions of higher learning across the world."
+                        "The USIU Africa DELP program aims to equip academic and administrative professionals in higher education with the skills, mindset, and networks needed to effectively lead university initiatives as well as prepare them for transition into senior leadership roles. By focusing on understanding the diverse responsibilities within higher learning institutions, the program fosters professional growth, enhances leadership capabilities, and provides participants with valuable connections and support to advance their careers both in academia and administrative roles in institutions of higher learning across the world."
                     ],
                     aim: "Developing Emerging Leaders program aims at preparing the next set of higher education managers and administrators towards effectiveness, resilience, accountability and courageous management and leadership while instilling the urge to drive their institutions' path towards success.",
                     target: [
@@ -819,7 +819,7 @@ export const programs:Program[] = [
                                 "You will develop critical skills for managing complex projects and leading institutional positive change towards growth.",
                                 "You will get the correct tools, which will help you to step into leadership roles in higher learning institutions.",
                                 "You will get a broader and possibly global network. You will build a strong and supportive network of peers and mentors.",
-                                "Through your coach&#39;s guidance, you will demonstrate your leadership skills by leading your own chosen project or initiative within your workplace from start to end.",
+                                "Through your coach's guidance, you will demonstrate your leadership skills by leading your own chosen project or initiative within your workplace from start to end.",
                             ]
                         },
                         {
