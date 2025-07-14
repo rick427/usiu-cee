@@ -14,8 +14,51 @@ import t3 from "@/assets/teams/3.jpeg";
 import t4 from "@/assets/teams/4.jpg";
 import t5 from "@/assets/teams/5.png";
 import t6 from "@/assets/teams/6.jpg";
+import t7 from "@/assets/teams/7.jpg";
+import t8 from "@/assets/teams/8.jpg";
+import t9 from "@/assets/teams/9.jpg";
+import t10 from "@/assets/teams/10.jpg";
 
 export const teamsData = [
+    {
+        id: 7,
+        name: "Irene Kinuthia MCC",
+        slug: "irene-kinuthia",
+        image: t7,
+        role: "Executive Leadership and Team Coach",
+        expertise: [
+            "Leadership Excellence",
+            "Sales Excellence",
+            "Personal Excellence",
+            "Strategy Execution",
+            "Emotional Intelligence",
+            "Culture Re-design",
+        ],
+        description: [
+            "Irene is one of three Master Coaches in Africa (outside of South Africa) who hold an MCC-Master Certified Coach credential from the International Coach Federation (ICF). She has played a key role in Leadership development and coaching in Africa, working with leading organizations and clients across the globe.",
+            "Irene is very passionate about developing great leaders for the African continent who can take their place at the global table. Having worked in Strathmore Business School for over 13 years, Irene has vast insights into the leadership challenges facing managers, executives, and board members in Africa.",
+            "She now runs a coaching consultancy, THE COACHING HUB, with a fully accredited coach training program that certifies executive coaches under The International Coaching Federation (ICF). Irene also facilitates several leadership training programs.",
+        ],
+        credentials: [
+            "Master Certified Coach (MCC) - International Coach Federation",
+            "The Performance Solution (TPS), UK - ICF ACTP/Professional Coaching Skills",
+            "The Coaching Hub - Accredited Coach Certification Trainer and Mentor",
+            "Gallup - Certified Strengths Coach",
+            "Clarity 4D (UK) - Certified Personality Assessment Coach",
+        ],
+        qualifications: [
+            "Bachelor of Education in Economics",
+            "Masters in Organizational Development (USIU)",
+            "Senior Leadership Development (Strathmore)",
+            "Faculty Development (IESE, Spain)",
+            "Leadership Development courses (GIBS SA)",
+            "Cultural Intelligence (Singapore)",
+            "Business Acumen (Maastricht, Netherlands)"
+        ],
+        clients: [
+            "Senior managers and branch managers, ABSA Bank Kenya and SA; USAID (Kenya, Tanzania, Hawaii, Jamaica, Côte d'Ivoire, Cambodia, Malaysia, and SA), Mastercard Foundation & Invest In Africa (Kenya, Senegal, and Ghana), DFCU Bank (Uganda), Safaricom, Centenary (Bank Uganda), NMB Bank (Tanzania), ILRI (Kenya and Ethiopia), ICPAK."
+        ]
+    },
     {
         id: 1,
         name: "Caroline Muthoni",
@@ -100,6 +143,80 @@ export const teamsData = [
             phone: "+254 799 744 560",
             email: "drojiambo@gmail.com"
         }
+    },
+    {
+        id: 8,
+        name: "Dr. Leah Mutanu Mwaura",
+        slug: "dr-leah-mutanu-mwaura",
+        image: t8,
+        role: "Full-Time Faculty United States International University-Africa",
+        expertise: [
+            "Software Engineering",
+            "Artificial Intelligence",
+            "Data Analytics",
+        ],
+        description: [
+            "Dr. Leah Mutanu Mwaura is a distinguished scholar and full-time faculty member at USIU-Africa’s Department of Computing and Informatics. With over 15 years of experience in academia, she brings a deep commitment to teaching, research, and mentorship, anchored in AI-driven solutions for societal impact, autonomous computing architectures, and advanced data analytics.",
+            "She holds a Ph.D. in Computer Science from Lancaster University, UK, where her doctoral research focused on service-oriented applications and runtime adaptation, laying the foundation for her pioneering work in Autonomous Computing and Artificial Intelligence for development. She also holds advanced degrees in Information Systems and Education from the University of Nairobi and Egerton University, respectively.",
+            "Dr. Mwaura teaches Software Development and Artificial Intelligence across undergraduate and graduate programs and supervises student research in machine learning, systems design, and applied computing. Her academic contributions extend beyond the classroom through active engagement in policy development and knowledge-sharing initiatives that shape Kenya's digital future.",
+            "Her research portfolio reflects a strategic focus on AI for development, including Early Warning Systems for infectious diseases, resource-efficient computing frameworks, and IoT-powered health solutions. These innovations have secured national research funding and led to high-impact publications in top-tier journals, global conferences, and edited academic volumes.",
+            "As a member of the Association for Computing Machinery (ACM), Dr. Mwaura champions ethical technology education, contributing to curriculum design and digital literacy initiatives at both institutional and national levels. Her work seamlessly integrates cutting-edge AI research with practical application, influencing academic thought, technology governance, and public policy.",
+        ],
+        qualifications: [
+            "PhD in Information Systems, University of South Africa, Pretoria, South Africa",
+            "Master of Science in Information Technology (Information Systems Security and Audit), Strathmore University, Nairobi, Kenya.",
+            "Bachelor of Science in Applied Computer Science, Daystar University, Nairobi, Kenya.",
+            "Graduate Certificate in Instructional Design and Performance Improvement, Arizona States University"
+        ]
+    },
+    {
+        id: 9,
+        name: "Dr. Stanley M. Githinji.",
+        slug: "dr-stanley-m-githinji",
+        image: t9,
+        role: "Assistant Professor of Information Systems - Security.",
+        expertise: [
+            "Information Security,",
+            "Cryptography",
+            "Forensics",
+            "Electronic Security",
+            "Distributed Systems",
+        ],
+        description: [
+            "Dr. Stanley Githinji is Assistant Professor of Information Systems. He has vast experience in Information Security, research and consultancy, and educational development. He previously worked at Kenya Methodist University as Head of Computer Science department, ESRI as a Support Engineer and as a Database Developer in implementation of school mapping program, Institute of Policy analysis and Research (IPAR) as a Head of IT department and serves as a board member at Applied Information Technology Research Center (AITREC).",
+            "Dr. Stanley has vast knowledge and experience in Applied Cryptography, Computer Forensics, Enterprise Risk Management of Information Systems, Information Security Audit, IT Governance and implementation of ISO 27001 standards. His research, teaching, and interests are in the area of applied cryptography, Information Security, Distributed Systems and Integration of InfoSec Solutions. Stanley has consulted widely and trained professionals in Information Technology and Cybersecurity, both in the private and public sector.",
+        ],
+        courses: [
+           "ISC 6110: Network Security and Management",
+           "ISC 6220: Advanced Cryptography",
+           "ISC 6310: Digital Forensics",
+           "APT 4900: Information Technology Project",
+           "APT 3090: Cryptography and network Security",
+           "FIC 4010: Introduction to Information Security",
+           "FIC 4030: Information Security and Audit",
+           "DST 4010: Distributed Systems" 
+        ]
+    },
+    {
+        id: 10,
+        name: "Dr. Edward Ombui",
+        slug: "dr-edward-ombui",
+        image: t10,
+        publication: "https://scholar.google.com/citations?user=aWOCFdIAAAAJ&hl=en",
+        role: "Assistant Professor of Artificial Intelligence at USIU-Africa",
+        expertise: [
+            "Artificial Intelligence",
+            "Natural Language Processing",
+            "Machine Learning",
+            "Big Data"
+        ],
+        description: [
+            "Dr. Ombui’s primary research interests lie in Natural Language Processing (NLP), particularly in the classification and computational understanding of language within multilingual environments. He has published extensively on hate speech classification, codeswitched text processing, and the development of corpora tailored for Kenyan languages. His work is notable for its grounding in both academic rigor and real-world impact, especially in addressing issues like online toxicity and linguistic representation in computational systems.",
+            "One of the core areas of his research is the computational processing of African languages, with a focus on indigenous languages such as Swahili, Dholuo, and Luhya. Recognizing the scarcity of digital resources and tools for these languages, Dr. Ombui has made significant contributions toward creating linguistic datasets and NLP models that support and preserve local linguistic diversity. His research helps ensure that African languages are not left behind in the global AI revolution.",
+            "Dr. Ombui is also active in the broader field of machine learning and deep learning, applying these technologies to various NLP tasks, including machine translation, question answering, and transcription in multilingual communities. His work often intersects with the social dimensions of technology, exploring how AI can be used to empower marginalized voices and support inclusive development.",
+            "Among his most prominent projects is Kencorpus, a landmark initiative that collected and stored both text and speech data in Swahili, Dholuo, and Luhya. This resource serves as a foundational dataset for machine learning tasks involving Kenyan languages and supports further research in language modeling and speech recognition. Another key contribution is his work in hate speech classification, where he has focused on identifying harmful content within codeswitched social media texts—an important challenge in multilingual African online spaces.",
+            "Through these efforts, Dr. Edward Ombui continues to shape the future of AI in Africa, contributing not only to technological advancement but also to linguistic equity and cultural preservation. His work exemplifies how artificial intelligence can be made more inclusive, local, and socially relevant",
+        ],
     },
 ];
 
