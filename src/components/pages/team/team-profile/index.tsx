@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import { Grid, Text, Title, Avatar, Badge, Stack, Divider } from "@mantine/core";
+import { Grid, Text, Title, Avatar, List,  Badge, Stack, Divider } from "@mantine/core";
 
 import styles from "./profile.module.scss";
 
@@ -55,11 +55,45 @@ export default function Profile() {
                                     {el}
                                 </Text>
                             ))}
+                            {user.credentials && (
+                                <Stack>
+                                    <Text fw={600}>Coaching Credentials</Text>
+                                    <List>
+                                        {user.credentials.map((el, idx) => (
+                                            <List.Item c="gray.7" fz={14} key={`${el}-${idx}`}>
+                                                {el}
+                                            </List.Item>
+                                        ))}
+                                    </List>
+                                </Stack>
+                            )}
+                            {user.qualifications && (
+                                <Stack>
+                                    <Text fw={600}>Educational & Professional Qualifications</Text>
+                                    <List>
+                                        {user.qualifications.map((el, idx) => (
+                                            <List.Item c="gray.7" fz={14} key={`${el}-${idx}`}>
+                                                {el}
+                                            </List.Item>
+                                        ))}
+                                    </List>
+                                </Stack>
+                            )}
+                            {user.clients && (
+                                <Stack>
+                                    <Text fw={600}>Notable Team Coaching & Training Clients</Text>
+                                    {user.clients.map(el => (
+                                        <Text c="gray.7" fz={14} ta="justify">
+                                            {el}
+                                        </Text>
+                                    ))}
+                                </Stack>
+                            )} 
                             {user.publication && (
                                 <Text c="gray.7" fz={14} ta="justify">
                                     His publications can he 
-                                    accessed via this 
-                                    <a href={user.publication} rel="noreferrer" target="_blank">Link</a>
+                                    accessed via this
+                                    <a href={user.publication} rel="noreferrer" target="_blank"> Link</a>
                                 </Text>
                             )}
                         </Stack>

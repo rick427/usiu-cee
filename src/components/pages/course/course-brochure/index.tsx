@@ -9,13 +9,15 @@ import { useState } from "react";
 import styles from "./brochure.module.scss";
 
 import { formatSlug } from "@/utils";
+import { programs } from "@/common/data/programs";
 import countries from "@/common/data/countries.json";
 
 export default function Brochure() {
     const [loading, setLoading] = useState<boolean>(false);
 
-    const params = useParams<{ courseId: string }>();
+    const params = useParams<{ programId:string, courseId: string }>();
     const courseId = params.courseId;
+    const programId = params.programId;
 
     const form = useForm({
         initialValues: {
@@ -63,20 +65,34 @@ export default function Brochure() {
                 currentDate: new Date().toLocaleDateString()
             };
 
+            const program = programs.find(item => item.slug === programId);
+            const course = program?.courses.find(course => course.slug === courseId);
+            if(!course) return toast.error("Error - Course not found!");
+
+            // 🔍 Check if brochure file exists
+            const brochurePath = `/brochures/${course.code}.pdf`;
+            const brochureExists = await fetch(brochurePath, { method: "HEAD" }).then(res => res.ok);
+
+            if (!brochureExists) {
+                toast.error("Sorry, this course does not have a brochure yet.");
+                return;
+            }
+
             const result = await emailjs.send(
                 import.meta.env.VITE_EMAILJS_SERVICE_ID,
                 import.meta.env.VITE_EMAILJS_TEMPLATE_BD_ID,
                 templateParams,
                 import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             );
+            
             if (result.status === 200) {
                 form.reset();
                 toast.success("Brochure downloaded!");
-                
-                // Trigger PDF download
+
+                // 🎯 Download the brochure
                 const link = document.createElement("a");
-                link.href = "/brochures/ELDP.pdf"; 
-                link.download = "USIU_Course_Brochure.pdf";
+                link.href = brochurePath;
+                link.download = `USIU-Course-Brochure-${course.code}.pdf`;
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);

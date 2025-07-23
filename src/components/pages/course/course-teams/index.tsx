@@ -18,6 +18,8 @@ import t7 from "@/assets/teams/7.jpg";
 import t8 from "@/assets/teams/8.jpg";
 import t9 from "@/assets/teams/9.jpg";
 import t10 from "@/assets/teams/10.jpg";
+import t11 from "@/assets/teams/11.jpg";
+import t12 from "@/assets/teams/12.jpg";
 
 export const teamsData = [
     {
@@ -156,7 +158,7 @@ export const teamsData = [
             "Data Analytics",
         ],
         description: [
-            "Dr. Leah Mutanu Mwaura is a distinguished scholar and full-time faculty member at USIU-Africa’s Department of Computing and Informatics. With over 15 years of experience in academia, she brings a deep commitment to teaching, research, and mentorship, anchored in AI-driven solutions for societal impact, autonomous computing architectures, and advanced data analytics.",
+            "Dr. Leah Mutanu Mwaura is a distinguished scholar and full-time faculty member at USIU-Africa's Department of Computing and Informatics. With over 15 years of experience in academia, she brings a deep commitment to teaching, research, and mentorship, anchored in AI-driven solutions for societal impact, autonomous computing architectures, and advanced data analytics.",
             "She holds a Ph.D. in Computer Science from Lancaster University, UK, where her doctoral research focused on service-oriented applications and runtime adaptation, laying the foundation for her pioneering work in Autonomous Computing and Artificial Intelligence for development. She also holds advanced degrees in Information Systems and Education from the University of Nairobi and Egerton University, respectively.",
             "Dr. Mwaura teaches Software Development and Artificial Intelligence across undergraduate and graduate programs and supervises student research in machine learning, systems design, and applied computing. Her academic contributions extend beyond the classroom through active engagement in policy development and knowledge-sharing initiatives that shape Kenya's digital future.",
             "Her research portfolio reflects a strategic focus on AI for development, including Early Warning Systems for infectious diseases, resource-efficient computing frameworks, and IoT-powered health solutions. These innovations have secured national research funding and led to high-impact publications in top-tier journals, global conferences, and edited academic volumes.",
@@ -211,12 +213,41 @@ export const teamsData = [
             "Big Data"
         ],
         description: [
-            "Dr. Ombui’s primary research interests lie in Natural Language Processing (NLP), particularly in the classification and computational understanding of language within multilingual environments. He has published extensively on hate speech classification, codeswitched text processing, and the development of corpora tailored for Kenyan languages. His work is notable for its grounding in both academic rigor and real-world impact, especially in addressing issues like online toxicity and linguistic representation in computational systems.",
+            "Dr. Ombui's primary research interests lie in Natural Language Processing (NLP), particularly in the classification and computational understanding of language within multilingual environments. He has published extensively on hate speech classification, codeswitched text processing, and the development of corpora tailored for Kenyan languages. His work is notable for its grounding in both academic rigor and real-world impact, especially in addressing issues like online toxicity and linguistic representation in computational systems.",
             "One of the core areas of his research is the computational processing of African languages, with a focus on indigenous languages such as Swahili, Dholuo, and Luhya. Recognizing the scarcity of digital resources and tools for these languages, Dr. Ombui has made significant contributions toward creating linguistic datasets and NLP models that support and preserve local linguistic diversity. His research helps ensure that African languages are not left behind in the global AI revolution.",
             "Dr. Ombui is also active in the broader field of machine learning and deep learning, applying these technologies to various NLP tasks, including machine translation, question answering, and transcription in multilingual communities. His work often intersects with the social dimensions of technology, exploring how AI can be used to empower marginalized voices and support inclusive development.",
             "Among his most prominent projects is Kencorpus, a landmark initiative that collected and stored both text and speech data in Swahili, Dholuo, and Luhya. This resource serves as a foundational dataset for machine learning tasks involving Kenyan languages and supports further research in language modeling and speech recognition. Another key contribution is his work in hate speech classification, where he has focused on identifying harmful content within codeswitched social media texts—an important challenge in multilingual African online spaces.",
             "Through these efforts, Dr. Edward Ombui continues to shape the future of AI in Africa, contributing not only to technological advancement but also to linguistic equity and cultural preservation. His work exemplifies how artificial intelligence can be made more inclusive, local, and socially relevant",
         ],
+    },
+    {
+        id: 11,
+        name: "Muthoni Muchai",
+        slug: "muthoni-muchai",
+        image: t11,
+        role: "Strategic Marketing Leader | Executive Coach | Business Faculty | Founder, Tilvera Consulting & The Boardroom of Life",
+        description: [
+            "Muthoni Muchai is a powerhouse in strategic marketing and branding architecture, executive coaching, and leadership development. With over 15 years of experience across African markets, she is known for driving growth, sparking transformation, and equipping professionals to lead with authenticity and boldness.",
+            "As the Founder of Tilvera Consulting and The Boardroom of Life, Muthoni has worked with global brands, healthcare institutions, startups, MSMEs, and C-suite leaders to align strategy, purpose, and performance. Her coaching practice is focused on career clarity, personal branding, executive presence, and entrepreneurial acceleration, delivering real results with lasting impact.",
+            "As a respected educator in marketing strategy, brand building and business development, Muthoni is passionate about turning complex theory into practical tools for today’s dynamic business environment. She is passionate about bridging the gap between theory and high-performance practice. Her approach combines her experience as a Pan-African industry practitioner, business intelligence, deep personal insight, and cultural relevance, making her a relatable, dynamic, and thought-provoking speaker.",
+            "Currently pursuing a Doctorate in Business Administration, her research explores the role of social media in healthcare decision-making, blending her passion for digital innovation and social impact.",
+            "Muthoni Muchai is known for her ability to facilitate practical, thought-provoking sessions that drive meaningful transformation. With a style that is both engaging and results-oriented, she creates space for professionals, entrepreneurs, and leadership teams to reflect deeply, challenge assumptions, and walk away with clear, sometimes unorthodox, actionable strategies for growth and leadership.",
+            "With Muthoni, transformation isn’t just a goal; it’s a journey toward living authentically and leading audaciously."
+        ],
+    },
+    {
+        id: 12,
+        name: "Dr. Joshua Rumo Arongo Ndiege",
+        slug: "dr-joshua-rumo-arongo-ndiege",
+        image: t12,
+        role: "Assistant Professor, Information Systems",
+        description: [
+            "Dr. Joshua Rumo Arongo Ndiege brings over 16 years of academic experience, including five years as the head of Computing Departments at notable institutions such as United States International University – Africa and the University of Eastern Africa, Baraton. Currently serving as an Assistant Professor of Information Systems at USIU-Africa, Dr. Ndiege’s expertise lies in Knowledge Management, Development Informatics, ICT4D, SMEs, IT Adoption, and Business Informatics.",
+            "He has contributed extensively to scholarly literature, authoring and co-authoring numerous peer-reviewed journal articles and conference papers. In addition to his research, Dr. Ndiege actively participates in the academic community as a reviewer for prominent journals like the South African Journal of Information Management and the African Journal of Information Systems. He also serves on the International Program Committees of various international conferences.",
+            "Dr. Ndiege has supervised many postgraduate students and serves as an external examiner for master’s and doctoral programs across universities in Kenya and South Africa. His commitment to academic governance is evident through his involvement in several university committees, including the Senate, Educational Effectiveness Committee, and Academic Standards Committee.",
+            "He holds a PhD in Information Systems, a Master of Commerce in Information Systems, a Master’s in e-Commerce, and a Bachelor of Commerce degree, underscoring his strong academic foundation and dedication to advancing the field of Information Systems."
+        ],
+        publication: "https://scholar.google.com/citations?user=Gwl8avUAAAAJ&hl=en",
     },
 ];
 

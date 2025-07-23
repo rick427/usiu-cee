@@ -45,6 +45,7 @@ interface Program {
     description: string;
     courses: {
         id: string | number;
+        code: string;
         name: string;
         slug: string;
         description: string;
@@ -66,6 +67,7 @@ export const programs:Program[] = [
         courses: [
             {
                 id: 1,
+                code: "BAEP",
                 name : "Business Analytics for Executives Program - (BAEP)",
                 slug: "business-analytics-for-executives-program-(BAEP)",
                 description: "The Business Analytics for Executives Program (BAEP) is tailored to empower leaders with the skills to harness data-driven strategies, enabling informed decision-making and a competitive edge in today's fast-paced market. By integrating internal and external data sources, participants will learn to foster innovation, optimize business processes, and enhance productivity, ultimately allowing organizations to reinvent their products and better respond to evolving market demands.",
@@ -167,6 +169,7 @@ export const programs:Program[] = [
             },
             {
                 id: 2,
+                code: "CEEP",
                 name : "Client Experience Excellence Program - (CEEP)",
                 slug: "client-experience-excellence-program-(CEEP)",
                 description: "The Client Experience Excellence Program (CEEP) at USIU Africa is designed to go beyond traditional training by enabling executives to implement innovative strategies that truly transform customer interactions and foster deep loyalty. Focusing on practical application and leadership, CEEP is designed to help executives turn satisfied customers into passionate advocates, driving organizational success through a superior and memorable client experience.",
@@ -272,6 +275,7 @@ export const programs:Program[] = [
             },
             {
                 id: 3,
+                code: "NMDP",
                 name : "New Manager Development Program - (NMDP)",
                 slug: "new-manager-development-program-(NMDP)",
                 description: "The New Manager Development Program aims to equip new managers with a solid understanding of business processes, management principles, and essential skills, helping them grasp how core functions interrelate and enhancing their ability to lead effectively within their organizations.",
@@ -352,6 +356,7 @@ export const programs:Program[] = [
             },
             {
                 id: 4,
+                code: "AIEP",
                 name : "Artificial Intelligence for Executives Program (AIEP)",
                 slug: "artificial-intelligence-for-executives-program-(AIEP)",
                 description: "In today's rapidly evolving business environment, Artificial Intelligence (AI) is no longer just a buzzword but a crucial driver of competitive advantage. This intensive training course is designed to equip executives, senior leaders, and decision-makers with the knowledge and practical tools they need to strategically leverage AI within their organizations. Through a blend of theoretical insights, real-world case studies, and hands-on exercises, participants will gain a comprehensive understanding of AI technologies and how they can be applied to achieve significant business outcomes.",
@@ -477,6 +482,7 @@ export const programs:Program[] = [
         courses: [
             {
                 id: 2,
+                code: "SMDP",
                 name: "Strategic Management Development Program (SMDP)",
                 slug: "strategic-management-development-program-(SMDP)",
                 description: "The Strategic Management Development Program (SMDP) is designed to enhance managers effectiveness by developing their skills, building leadership abilities, and preparing them for strategic leadership roles, which collectively contribute to improved organizational performance and sustained success.",
@@ -560,6 +566,7 @@ export const programs:Program[] = [
             },
             {
                 id: 4,
+                code: "SLDP",
                 name: "Senior Leadership Development Program (SLDP)",
                 slug: "senior-leadership-development-program-(SLDP)",
                 description: "Executive Leadership Development Program (SLDP) at USIU Africa aims at developing the next set of College Principals, University DVCs and VCs for higher learning institutions. The program aims to develop a wide range of skills that senior executives in higher learning institutions will need to meet the challenges of today's educational environment and serve the students.",
@@ -696,6 +703,7 @@ export const programs:Program[] = [
             },
             {
                 id: 3,
+                code: "ELDP",
                 name: "Executive Leadership Development Program (ELDP)",
                 slug: "executive-leadership-development-program-(ELDP)",
                 description: "The Executive Leadership Development Program (ELDP) at USIU Africa is designed to equip senior leaders of colleges and universities worldwide, public and private, with essential skills and strategies to effectively navigate the unique challenges of higher education management, foster innovative leadership, enhance institutional governance, and promote sustainable growth in a rapidly evolving global academic landscape.",
@@ -788,6 +796,7 @@ export const programs:Program[] = [
             },
             {
                 id: 1,
+                code: "DELP",
                 name: "Developing Emerging Leaders Program - (DELP)",
                 slug: "developing-emerging-leaders-program-(DELP)",
                 description: "Developing Emerging Leaders program aims at preparing the next set of higher education managers and administrators towards effectiveness, resilience, accountability and courageous management and leadership while instilling the urge to drive their institutions path towards success.",
