@@ -1,4 +1,5 @@
 import path from 'node:path';
+import fs from 'node:fs';
 import { defineConfig } from 'vite';
 import Sitemap from 'vite-plugin-sitemap';
 import react from '@vitejs/plugin-react-swc';
@@ -6,6 +7,15 @@ import react from '@vitejs/plugin-react-swc';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
+    {
+      name: 'ensure-dist-folder',
+      closeBundle() {
+        const distPath = path.resolve(__dirname, 'dist');
+        if (!fs.existsSync(distPath)) {
+          fs.mkdirSync(distPath, { recursive: true });
+        }
+      }
+    },
     react(),
     Sitemap({
       hostname: 'https://usiu-cee.netlify.app',
