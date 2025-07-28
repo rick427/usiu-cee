@@ -27,7 +27,7 @@ const slides = [
   },
 ];
 
-// --- linear-gradient(to bottom, rgba(21, 31, 89, 0.5), rgba(21, 31, 89, 0.8)), 
+// ---> linear-gradient(to bottom, rgba(21, 31, 89, 0.5), rgba(21, 31, 89, 0.8)), 
 
 export default function Hero() {
     const autoplay = useRef(Autoplay({
