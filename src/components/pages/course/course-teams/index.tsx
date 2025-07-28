@@ -271,7 +271,7 @@ export default function Teams() {
                     <Text size="sm" ta="center" c="gray.7" fw={400}>
                         Our Internationally acclaimed researchers and teachers are all 
                         dedicated and gifted individuals who contribute 
-                        directly to USIU-A's reputation of excellence.
+                        directly to USIU-Africa's reputation of excellence.
                     </Text>
                 </Stack>
             </Reveal>

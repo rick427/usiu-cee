@@ -531,7 +531,7 @@ export const programs:Program[] = [
                         {
                             title: "Cost-Kshs 360,000",
                             data: [
-                                "Module 1: 18th - 22nd Aug 2025 (Nairobi Kenya) Cohort 1",
+                                "Module 1: 15th - 19th Aug 2025 (Nairobi Kenya) Cohort 1",
                                 "Module 2: 17th - 21st Nov 2025 (Nairobi Kenya) Cohort 1",
                                 "Module 3: 16th - 20th Feb 2026 (International Module-South Africa) Cohort 1 & 2",
                                 "Module 4: 18th - 22nd May 2026 (Nairobi Kenya) Cohort 1"

@@ -1,4 +1,4 @@
-# USIU-A: Center for Executive Education
+# USIU-Africa: Center for Executive Education
 
 This is the frontend for the USIU‑A Center for Executive Education, built using React and Vite. It serves as a modern web portal to browse programs, enroll in courses, and access resources.
 

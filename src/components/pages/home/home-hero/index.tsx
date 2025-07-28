@@ -10,7 +10,7 @@ const slides = [
   {
     title: "Bridging Knowledge with Real-World Impact",
     description:
-      "Explore management and leadership programs at USIU-A Center for Executive Education, where expert faculty bridge theory with hands-on insight.",
+      "Explore management and leadership programs at USIU-Africa Center for Executive Education, where expert faculty bridge theory with hands-on insight.",
     image: "/hero-1.jpg",
   },
   {
@@ -26,6 +26,8 @@ const slides = [
     image: "/hero-3.jpg",
   },
 ];
+
+// --- linear-gradient(to bottom, rgba(21, 31, 89, 0.5), rgba(21, 31, 89, 0.8)), 
 
 export default function Hero() {
     const autoplay = useRef(Autoplay({
@@ -53,7 +55,7 @@ export default function Hero() {
                             className={styles.hero__bg}
                             style={{
                                 backgroundImage: `
-                                    linear-gradient(to bottom, rgba(21, 31, 89, 0.5), rgba(21, 31, 89, 0.8)), 
+                                    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), 
                                     url(${slide.image})
                                 `,
                             }}

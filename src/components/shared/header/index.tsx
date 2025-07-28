@@ -84,7 +84,7 @@ export default function Header() {
                                 <img src={brand} alt="usiu-cee" />
                             </div>
                             <Text fs="italic" c="gray.7" w="85%" fz={13} fw={300} ta="center">
-                                Explore management and leadership programs at USIU-A Center for Executive Education, 
+                                Explore management and leadership programs at USIU-Africa Center for Executive Education, 
                                 where expert faculty bridge theory with hands-on insight.
                             </Text>
                         </Stack>
