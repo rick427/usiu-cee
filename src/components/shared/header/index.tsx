@@ -3,7 +3,7 @@ import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Link, useNavigate, useLocation } from "react-router";
 import { useDisclosure } from '@mantine/hooks';
 
-import brand from "@/assets/brand.png";
+import brand from "@/assets/brand-2.png";
 import styles from "./header.module.scss";
 
 export default function Header() {
