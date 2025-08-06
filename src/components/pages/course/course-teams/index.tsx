@@ -78,7 +78,7 @@ export const teamsData = [
         name: "Joseph Munyao",
         slug: "joseph-munyao",
         image: t4,
-        role: "Head of Business Development & Ag. Center Director-CEE",
+        role: "Head of Business Development - CEE",
         publication: "https://scholar.google.com/citations?user=E59NuiEAAAAJ&hl=en",
         description: [
             "Joseph Munyao is a highly accomplished professional with over 15 years of leadership and expertise in strategic management, business development, marketing, and stakeholder relations, currently serving as the Head of Business Development and Acting Center Director at USIU Africa's Center for Executive Education.",
