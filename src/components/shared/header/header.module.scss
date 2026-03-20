@@ -10,9 +10,11 @@
     width: 100%;
     overflow: hidden;
     z-index: 5;
-    backdrop-filter: saturate(180%) blur(10px);
-    background-color: hsla(0, 0%, 100%, .8);
-    border-bottom: 1px solid var(--mantine-color-gray-2);
+    color: var(--mantine-color-white);
+    backdrop-filter: none;
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease, border-bottom 0.3s ease;
 
     @media (max-width: mantine.$mantine-breakpoint-lg) {
         padding: 1rem 4rem;
@@ -25,14 +27,14 @@
     &__logo{
         // The Logo's dimensions are attrocious, 
         // hence the absolute positioning
-        width: 11rem;
+        width: 12rem;
         height: 4rem;
         position: absolute;
         left: 6rem;
-        top: 50%;
+        top: 55%;
         opacity: 1;
         cursor: pointer;
-        transform: translateY(-50%);
+        transform: translateY(-55%);
 
         @media (max-width: mantine.$mantine-breakpoint-md) {
             height: 4rem;
@@ -51,7 +53,9 @@
         img{
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
+            filter: brightness(0) invert(1);
+            transition: filter 0.25s ease;
         }
     }
 
@@ -78,12 +82,13 @@
         gap: 1.5rem;
 
         > li{
-            font-size: 0.8rem;
-            text-transform: uppercase;
+            font-size: 0.9rem;
 
             a{
                 text-decoration: none;
-                color: var(--mantine-color-dark);
+                color: inherit;
+                transition: color 0.25s ease;
+                position: relative; 
             }
         }
     }
@@ -95,16 +100,38 @@
         gap: 1rem;
 
         > li{
-            font-size: 0.8rem;
-            text-transform: uppercase;
+            font-size: 0.9rem;
             cursor: pointer;
+            color: inherit;
+            transition: color 0.25s ease;
         }
     }
 }
 
+.header__links > li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.4rem;
+    width: 1.5rem;
+    height: 0.1rem;
+    background-color: var(--mantine-color-white);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.header__links > li a.active::before {
+    opacity: 1;
+}
+
 .active{
     font-weight: 600 !important;
-    color: var(--mantine-color-primary-9) !important;
+    color: var(--mantine-color-white) !important;
+
+    &::before {
+        width: 100%;
+        opacity: 1;
+    }
 }
 
 .drawer{
@@ -128,5 +155,25 @@
         text-transform: uppercase;
         font-weight: 400;
         color: var(--mantine-color-dark);
+    }
+}
+
+.scrolled {
+    background-color: hsla(0, 0%, 100%, .8);
+    border-bottom: 1px solid transparent;
+    backdrop-filter: saturate(180%) blur(10px);
+    color: var(--mantine-color-dark);
+
+    .active{
+        font-weight: 600 !important;
+        color: var(--mantine-color-primary-8) !important;
+
+        &::before {
+            background-color: var(--mantine-color-primary-8); 
+        }
+    }
+    
+    .header__logo img{
+        filter: none;
     }
 }

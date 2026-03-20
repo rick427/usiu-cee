@@ -9,7 +9,7 @@ export default function Hero() {
     return (
         <section className={styles.hero}>
             <Reveal>
-                <Title order={1} fz={50} c="white">Programs</Title>
+                <Title order={1} fz={50} c="white">Our Programs</Title>
             </Reveal>
 
             <Reveal delay={200}>

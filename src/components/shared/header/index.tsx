@@ -2,19 +2,30 @@ import { Group, Drawer, Burger, Stack, Divider, Text } from "@mantine/core";
 import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Link, useNavigate, useLocation } from "react-router";
 import { useDisclosure } from '@mantine/hooks';
+import { useState, useEffect } from "react";
 
 import brand from "@/assets/brand-2.png";
 import styles from "./header.module.scss";
 
 export default function Header() {
     const [opened, { toggle }] = useDisclosure();
+    const [scrolled, setScrolled] = useState(false);
 
     const navigate = useNavigate();
     const location = useLocation();
     const currentPath = location.pathname;
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 10);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
     return (
         <>
-            <header className={styles.header}>
+            <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
                 <div onClick={() => navigate("/")} className={styles.header__logo}>
                     <img src={brand} alt="usiu-cee" />
                 </div>
@@ -50,13 +61,13 @@ export default function Header() {
                     <ul className={styles.header__socials}>
                         <li>Follow Us</li>
                         <li onClick={() => window.open("https://www.facebook.com/profile.php?id=61577627242516", "_blank")}>
-                            <FaFacebook color="#515459" size={16} />
+                            <FaFacebook size={16} />
                         </li>
                         <li>
-                            <FaLinkedin color="#515459" size={16} />
+                            <FaLinkedin size={16} />
                         </li>
                         <li>
-                            <FaInstagram color="#515459" size={16} />
+                            <FaInstagram size={16} />
                         </li>
                     </ul>
                 </Group>
@@ -67,6 +78,7 @@ export default function Header() {
                     onClick={toggle} 
                     aria-label="Toggle navigation" 
                     className={styles.header__burger} 
+                    color={scrolled ? "dark" : "white"}
                 />
             </header>
 
@@ -101,7 +113,7 @@ export default function Header() {
                                 to="/programs"
                                 className={currentPath.includes("programs") ? styles.active : ""} 
                             >
-                                Programs
+                                Our Programs
                             </Link>
                             <Link 
                                 to="/contact-us"

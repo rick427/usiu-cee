@@ -1,8 +1,8 @@
 .hero{
-    margin-top: 5.5rem;
-    height: 60vh;
+    //margin-top: 5.5rem;
+    height: 100vh;
     position: relative;
-    border-bottom: 5px solid var(--mantine-color-secondary-6);
+    //border-bottom: 5px solid var(--mantine-color-secondary-6);
 
     &__bg{
         height: 100%;
@@ -47,4 +47,9 @@
             }
         }
     }
+}
+
+.btnLabel{
+    font-size: 0.75rem;
+    text-transform: uppercase;
 }

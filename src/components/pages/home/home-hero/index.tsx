@@ -1,6 +1,8 @@
-import { Title, Text, Stack } from "@mantine/core";
+import { Title, Text, Button, Stack } from "@mantine/core";
 import Autoplay from "embla-carousel-autoplay";
+import { BsArrowRight } from "react-icons/bs";
 import { Carousel } from '@mantine/carousel';
+import { useNavigate } from "react-router";
 import { useRef } from "react";
 
 import styles from "./hero.module.scss";
@@ -30,6 +32,8 @@ const slides = [
 // ---> linear-gradient(to bottom, rgba(21, 31, 89, 0.5), rgba(21, 31, 89, 0.8)), 
 
 export default function Hero() {
+    const navigate = useNavigate();
+
     const autoplay = useRef(Autoplay({
         delay: 6_000, 
         stopOnInteraction: false,
@@ -40,8 +44,8 @@ export default function Hero() {
                 h="100%"
                 withControls={false}
                 withIndicators={true}
-                onMouseEnter={autoplay.current.stop}
-                onMouseLeave={() => autoplay.current.play()}
+                //onMouseEnter={autoplay.current.stop}
+                //onMouseLeave={() => autoplay.current.play()}
                 plugins={[autoplay.current]}
                 styles={{
                     root: { height: "100%" },
@@ -55,7 +59,7 @@ export default function Hero() {
                             className={styles.hero__bg}
                             style={{
                                 backgroundImage: `
-                                    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), 
+                                    linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), 
                                     url(${slide.image})
                                 `,
                             }}
@@ -70,6 +74,20 @@ export default function Hero() {
                                     <Text c="white">
                                         {slide.description}    
                                     </Text>
+                                </Reveal>
+                                <Reveal delay={400}>
+                                    <Button
+                                        mt="lg"
+                                        size="md"
+                                        radius="xs"
+                                        variant="filled"
+                                        color="primary.8"
+                                        rightSection={<BsArrowRight />}
+                                        classNames={{ label: styles.btnLabel}}
+                                        onClick={() => navigate(`/programs`)}
+                                    >
+                                        Get Started Now
+                                    </Button>
                                 </Reveal>
                             </Stack>
                         </div>

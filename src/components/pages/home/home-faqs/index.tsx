@@ -49,8 +49,8 @@ export default function FAQs() {
 
     return (
         <section className={styles.faqs}>
-            <Grid gutter="xl" justify="center" align="center">
-                <Grid.Col span={{base: 12, sm: 6, md: 6, lg: 6, xl: 5}}>
+            <Grid gutter={60} justify="center" align="center">
+                <Grid.Col span={{base: 12, sm: 6, md: 6, lg: 6, xl: 6}}>
                     <SlideIn direction="left">
                         <Stack gap="xl">
                             <Stack className={styles.faqs__stack}>
@@ -70,7 +70,7 @@ export default function FAQs() {
 
                             <Group justify="space-between" align="center">
                                 <Text size="sm" c="gray.7" fw={400}>
-                                    My question is not here.
+                                    Still confused? Get in touch with us!
                                 </Text>
                                 <Button
                                     size="md"
@@ -88,7 +88,7 @@ export default function FAQs() {
                     </SlideIn>
                 </Grid.Col>
                 
-                <Grid.Col span={{base: 12, sm: 6, md: 6, lg: 5, xl: 4}}>
+                <Grid.Col span={{base: 12, sm: 6, md: 6, lg: 5, xl: 5}}>
                     <SlideIn direction="right">
                         <Image 
                             width={600}

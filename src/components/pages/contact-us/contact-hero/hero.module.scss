@@ -1,13 +1,13 @@
 .hero{
-    min-height: 40vh;
-    margin-top: 5.5rem;;
+    min-height: 50vh;
+    //margin-top: 5.5rem;;
     background: linear-gradient(rgba(21, 31, 89, 0.5), rgba(21, 31, 89, 0.8)), url("@/assets/programs-bg-1.jpg") no-repeat center center / cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    border-bottom: 5px solid var(--mantine-color-secondary-6);
+    //border-bottom: 5px solid var(--mantine-color-secondary-6);
 
     @media (max-width: mantine.$mantine-breakpoint-lg) {
         padding: 4rem;
